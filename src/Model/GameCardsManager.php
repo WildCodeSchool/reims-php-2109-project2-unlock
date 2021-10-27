@@ -25,4 +25,27 @@ class GameCardsManager extends AbstractManager
 
         return $statement->fetchAll();
     }
+
+    public function insert(int $gameId, int $cardId, int $cardNumber): void
+    {
+        $query = "INSERT INTO "
+        . self::TABLE
+        . " (game_id, card_id, card_number) VALUES (:game_id, :card_id, :card_number)";
+
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue("game_id", $gameId, \PDO::PARAM_INT);
+        $statement->bindValue("card_id", $cardId, \PDO::PARAM_INT);
+        $statement->bindValue("card_number", $cardNumber, \PDO::PARAM_INT);
+        $statement->execute();
+    }
+
+    public function getNextCardNumber(int $id): array
+    {
+        $query = "select COUNT(*) as number from " . self::TABLE . " where game_id = :game_id";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue("game_id", $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
 }
