@@ -1,21 +1,15 @@
-{% extends '/../layout.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block content %}
     <h1>New Card : </h1>
 
     <form method="post" accept-charset="UTF-8">
 
-        <label for="cardTitle">Title : </label>
-            <input type="text" name="cardTitle" id="cardTitle"/>
-        <label for="cardImage">Image : </label>
-            <input type="file" name="cardImage" id="cardImage" accept=".jpg, .jpeg, .png"/>
-        <label for="cardDescription">Description : </label>
-            <input type="textarea" name="cardDescription" id="cardDescription"/>
-        <label for="cardType">Type : </label>
-            <select name="cardType" id="cardType">
-                <option value="">1</option>
-                <option value="">2</option>
-            </select>
+        <label for="name">Title : </label>
+        <input type="text" name="name" id="name"/>
+        <label for="description">Description : </label>
+        <input type="textarea" name="description" id="description"/>
+        <br>
         <input type="submit" value="OK">
 
     </form>
