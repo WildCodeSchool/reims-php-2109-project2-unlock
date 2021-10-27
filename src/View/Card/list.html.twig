@@ -1,10 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>A big list of card</h1>
-    <ul>
+<section class="card-list">
+    <h1 class="list-title">Card list</h1>
     {% for card in cards %}
-        <li>{{ card.name }} - {{ card.description }}</li>
+        {% include "Card/_card.html.twig" with card %}
     {% endfor %}
-    </ul>
+</section>    
 {% endblock %}

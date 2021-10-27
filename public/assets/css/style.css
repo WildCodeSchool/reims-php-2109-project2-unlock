@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    overflow-x: hidden;
+}
+body {
+    position: relative
+}
+
+.list-title {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    grid-auto-flow: row dense;
+    align-items: stretch;
+
+    padding: 1rem;
+}
+
+.card {
+    aspect-ratio: 2/3;
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: ease-out .2s;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 680px){
+    .list-title {
+        grid-column: 1/6;
+    }
+
+    .card:hover{
+        transform:scale(1.05)
+    }
+
+    .card-list {
+        grid-template-columns: repeat(5,  1fr);
+    }
+}
