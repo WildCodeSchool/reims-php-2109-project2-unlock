@@ -23,6 +23,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `game`
+--
+
+CREATE TABLE `unlock_db`.`game` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(100) NOT NULL,
+  `image_url` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+/*
+--
 -- Structure de la table `item`
 --
 
@@ -32,10 +45,37 @@ CREATE TABLE IF NOT EXISTS `item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `card` (
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100),
-  description TEXT
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(100),
+  `description` TEXT
 );
+
+CREATE TABLE IF NOT EXISTS `game` (
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(200),
+  `description` TEXT
+);
+
+CREATE TABLE IF NOT EXISTS `gamecards` (
+  `game_id` INT NOT NULL,
+  `card_id` INT NOT NULL,
+  `card_number` INT NOT NULL
+);
+
+ALTER TABLE `gamecards`
+  ADD CONSTRAINT `fk_game_id`
+  FOREIGN KEY (`game_id`)
+  REFERENCES `game`(`id`)
+  ON DELETE CASCADE;
+
+ALTER TABLE `gamecards`
+  ADD CONSTRAINT `fk_card_id`
+  FOREIGN KEY (`card_id`)
+  REFERENCES `card`(`id`)
+  ON DELETE CASCADE;
+
+ALTER TABLE `gamecards`
+  ADD UNIQUE (`game_id`, `card_id`);
 --
 -- Contenu de la table `item`
 --
@@ -66,3 +106,4 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+*/
