@@ -13,5 +13,6 @@ return [
     'game/show' => ['GameController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'card/add' => ['CardController', 'add',],
     'cards' => ['CardController', 'list',],
 ];
