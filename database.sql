@@ -36,6 +36,12 @@ CREATE TABLE IF NOT EXISTS `card` (
   name VARCHAR(100),
   description TEXT
 );
+
+CREATE TABLE IF NOT EXISTS `game` (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(200),
+  description TEXT
+);
 --
 -- Contenu de la table `item`
 --
