@@ -7,13 +7,13 @@ use App\Model\GameManager;
 class GameController extends AbstractController
 {
     public function list(): string
-  { 
-      $gameManager = new GameManager();
-      $games = $gameManager->selectAll();
-      return $this->twig->render('Game/list.html.twig', ['games' => $games]);
-  }
+    {
+        $gameManager = new GameManager();
+        $games = $gameManager->selectAll();
+        return $this->twig->render('Game/list.html.twig', ['games' => $games]);
+    }
 
-     //name, description, image url
+    //name, description, image url
     public function add(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
