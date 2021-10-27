@@ -32,11 +32,21 @@ body {
     background-color: #f4f4f4;
     border-radius: 1rem;
     padding: 1rem;
+    transition: ease-out .2s;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 680px){
     .list-title {
         grid-column: 1/6;
+    }
+
+    .card:hover{
+        transform:scale(1.05)
     }
 
     .card-list {
