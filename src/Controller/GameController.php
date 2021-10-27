@@ -6,9 +6,29 @@ use App\Model\GameManager;
 
 class GameController extends AbstractController
 {
-    public function list()
+    public function list(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        $gameManager = new GameManager();
+        $games = $gameManager->selectAll();
+        return $this->twig->render('Game/list.html.twig', ['games' => $games]);
+    }
+
+    //name, description, image url
+    public function add(): string
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // clean $_POST data
+            $game = array_map('trim', $_POST);
+
+            // TODO validations (length, format...)
+
+            // if validation is ok, insert and redirection
+            $gameManager = new GameManager();
+            $id = $gameManager->insert($game);
+            header('Location:/Game/show?id=' . $id);
+        }
+
+        return $this->twig->render('Game/add.html.twig');
     }
 
     /**
