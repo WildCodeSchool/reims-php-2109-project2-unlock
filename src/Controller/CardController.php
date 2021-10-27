@@ -30,4 +30,14 @@ class CardController extends AbstractController
         $cards = $cardManager->selectAll();
         return $this->twig->render("Card/list.html.twig", ["cards" => $cards]);
     }
+    /*
+    ** Show informations for a specific card
+    */
+    public function show(int $id): string
+    {
+        $cardManager = new CardManager();
+        $cards = $cardManager->selectOneById($id);
+
+        return $this->twig->render('Card/show.html.twig', ['cards' => $cards]);
+    }
 }
