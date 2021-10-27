@@ -10,7 +10,6 @@ body {
 }
 
 .list-title {
-    width: 100vw;
     grid-row: 1;
     grid-column: 1/3;
 }
