@@ -14,6 +14,7 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'games/list' => ['GameController', 'list',],
     'games/show' => ['GameController', 'show', ['id']],
+    'games/cards/add' => ['GameCardsController', 'add', ['id']],
     'cards' => ['CardController', 'list',],
     'cards/add' => ['CardController', 'add',],
     'cards/show' => ['CardController', 'show', ['id']],
