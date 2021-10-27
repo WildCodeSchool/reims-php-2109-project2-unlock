@@ -10,12 +10,8 @@ class CardController extends AbstractController
     public function add(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
             $card = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
-
-            // if validation is ok, insert and redirection
             $cardManager = new cardManager();
             $id = $cardManager->insert($card);
             header('Location:/cards/show?id=' . $id);
