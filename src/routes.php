@@ -10,11 +10,11 @@ return [
     '' => ['HomeController', 'index',],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
-    'game/show' => ['GameController', 'show', ['id']],
+    'games/show' => ['GameController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'games/add' => ['GameController', 'add',],
-    'card/add' => ['CardController', 'add',],
+    'cards/add' => ['CardController', 'add',],
     'cards' => ['CardController', 'list',],
 
 ];
