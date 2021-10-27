@@ -23,6 +23,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `game`
+--
+
+CREATE TABLE `unlock_db`.`game` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(100) NOT NULL,
+  `image_url` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+/*
+--
 -- Structure de la table `item`
 --
 
@@ -72,3 +85,4 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+*/
