@@ -45,16 +45,37 @@ CREATE TABLE IF NOT EXISTS `item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `card` (
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100),
-  description TEXT
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(100),
+  `description` TEXT
 );
 
 CREATE TABLE IF NOT EXISTS `game` (
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(200),
-  description TEXT
+  `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(200),
+  `description` TEXT
 );
+
+CREATE TABLE IF NOT EXISTS `gamecards` (
+  `game_id` INT NOT NULL,
+  `card_id` INT NOT NULL,
+  `card_number` INT NOT NULL
+);
+
+ALTER TABLE `gamecards`
+  ADD CONSTRAINT `fk_game_id`
+  FOREIGN KEY (`game_id`)
+  REFERENCES `game`(`id`)
+  ON DELETE CASCADE;
+
+ALTER TABLE `gamecards`
+  ADD CONSTRAINT `fk_card_id`
+  FOREIGN KEY (`card_id`)
+  REFERENCES `card`(`id`)
+  ON DELETE CASCADE;
+
+ALTER TABLE `gamecards`
+  ADD UNIQUE (`game_id`, `card_id`);
 --
 -- Contenu de la table `item`
 --
