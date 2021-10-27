@@ -4,7 +4,7 @@
     <h1>A big list of card</h1>
     <ul>
     {% for card in cards %}
-        <li>{{ card.name }} - {{ card.description }}</li>
+        {% include "Card/_card.html.twig" with card %}
     {% endfor %}
     </ul>
 {% endblock %}
