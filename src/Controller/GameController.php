@@ -10,7 +10,7 @@ class GameController extends AbstractController
     {
         return $this->twig->render('Home/index.html.twig');
     }
-    
+
     /**
     * Show informations for a specific game
     */
