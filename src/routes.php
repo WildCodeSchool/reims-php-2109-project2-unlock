@@ -15,5 +15,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'card/add' => ['CardController', 'add',],
     'cards' => ['CardController', 'list',],
-    'games/list' => ['GameController', 'list',],
+    'games' => ['GameController', 'list',],
 ];

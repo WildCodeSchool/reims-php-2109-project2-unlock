@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Games</h1>
+    <ul>
+        {% for game in games %}
+            <li><a href="/games/show?id={{ game.id }}">{{ game.id }}. {{ game.name }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/games/add">Ajouter</a>
+{% endblock %}

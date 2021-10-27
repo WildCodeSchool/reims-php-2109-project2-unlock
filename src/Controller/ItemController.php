@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\ItemManager;
+use App\Controller\AbstractController;
 
 class ItemController extends AbstractController
 {
