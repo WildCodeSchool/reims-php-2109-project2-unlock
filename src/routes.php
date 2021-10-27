@@ -11,11 +11,10 @@ return [
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'games/show' => ['GameController', 'show', ['id']],
+    'games' => ['GameController', 'list',],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'games/add' => ['GameController', 'add',],
     'cards' => ['CardController', 'list',],
     'cards/add' => ['CardController', 'add',],
-    'games/list' => ['GameController', 'list',],
-
 ];

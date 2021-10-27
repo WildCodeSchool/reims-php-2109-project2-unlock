@@ -6,9 +6,12 @@ use App\Model\GameManager;
 
 class GameController extends AbstractController
 {
-    /**
-     * Add a new Game
-     */
+    public function list(): string
+  { 
+      $gameManager = new GameManager();
+      $games = $gameManager->selectAll();
+      return $this->twig->render('Game/list.html.twig', ['games' => $games]);
+  }
 
      //name, description, image url
     public function add(): string
@@ -27,13 +30,6 @@ class GameController extends AbstractController
 
         return $this->twig->render('Game/add.html.twig');
     }
-
-
-    public function list()
-    {
-        return $this->twig->render('Home/index.html.twig');
-    }
-
 
     /**
     * Show informations for a specific game
