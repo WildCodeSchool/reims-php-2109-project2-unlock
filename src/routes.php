@@ -13,7 +13,7 @@ return [
     'game/show' => ['GameController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'game/add' => ['GameController', 'add',],
+    'games/add' => ['GameController', 'add',],
     'card/add' => ['CardController', 'add',],
     'cards' => ['CardController', 'list',],
 
