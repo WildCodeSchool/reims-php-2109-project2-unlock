@@ -1,9 +1,11 @@
 {# TODO : manage errors display #}
 
 <form method="post">
-	<input type="hidden" value="{{ game.id }}" name="id">
-	<input type="text" value="{{ game.title }}" name="title">
-    <input type="text" value="{{ game.description }}" name="description">
-    <input type="text" value="{{ game.url }}" name="url">
+    <label for="title">Enter the title game</label>
+	<input type="text" name="title">
+    <label for="description">Enter the description game</label>
+    <input type="text" name="description">
+    <label for="image_url">Enter the url image game</label>
+    <input type="text" name="image_url">
 	<input type="submit" value="Valider">
 </form>
