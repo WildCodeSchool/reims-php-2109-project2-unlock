@@ -5,7 +5,7 @@ namespace App\Model;
 class CardManager extends AbstractManager
 {
 
-    public const TABLE = "card";
+  public const TABLE = "card";
 
     public function insert(array $card): int
     {

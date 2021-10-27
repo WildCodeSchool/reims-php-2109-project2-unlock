@@ -6,6 +6,7 @@ use App\Model\CardManager;
 
 class CardController extends AbstractController
 {
+
     public function add(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -23,4 +24,10 @@ class CardController extends AbstractController
         return $this->twig->render('Card/add.html.twig');
     }
 
+    public function list()
+    {
+        $cardManager = new CardManager();
+        $cards = $cardManager->selectAll();
+        return $this->twig->render("Card/list.html.twig", ["cards" => $cards]);
+    }
 }
