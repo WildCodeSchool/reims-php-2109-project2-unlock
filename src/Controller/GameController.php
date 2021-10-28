@@ -24,8 +24,8 @@ class GameController extends AbstractController
 
             // if validation is ok, insert and redirection
             $gameManager = new GameManager();
-            $id = $gameManager->insert($game);
-            header('Location:/Game/show?id=' . $id);
+            $gameManager->insert($game);
+            header('Location:/games/list');
         }
 
         return $this->twig->render('Game/add.html.twig');
