@@ -1,12 +1,12 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layout.html.twig' %} {% block content %}
 
-{% block content %}
-
-    <h1>UNLOCK !</h1>
-    <h2>Sherlock Adventure</h2>
+<h1 class="unlock-title">UNLOCK !</h1>
+<h2>Sherlock Adventure</h2>
+<div class="game-description">
     <h2>{{ game.name }}</h2>
     <p>{{ game.description }}</p>
     <p>{{ game.instructions }}</p>
     <button>JOUER</button>
-    
+</div>
+
 {% endblock %}
