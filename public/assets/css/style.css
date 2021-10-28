@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'Playfair Display', serif;
-    src: url();
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Teko', sans-serif;
+    src: url(../fonts/Teko/Teko-SemiBold.ttf) format('ttf');
 }
 
 :root {
@@ -30,11 +35,12 @@ body {
     font-family: var(--text-font);
     background-color: var(--gunmetal);
     color: var(--isabelline);
-    padding: 1vh 5vh;
+    padding: 1rem;
 }
 
 button {
     font-family: var(--unlock-button-font);
+    margin: 4vh 0;
 }
 
 .list-title {
@@ -69,13 +75,27 @@ button {
 
 /* Game SHOW part */
 
+.game-description-screen {
+    margin: auto;
+}
+
 .game-description {
+    background-color: var(--gray-web);
     text-align: center;
+    padding: 30vh 0;
+    border: 0.5rem double;
+    border-color: var(--border-color);
+    border-radius: 1rem;
+    margin: 5vh 2vh;
+}
+
+.game-description-p {
+    padding: 1vh;
 }
 
 .unlock-title {
     font-family: var(--unlock-button-font);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 @media screen and (min-width: 680px) {

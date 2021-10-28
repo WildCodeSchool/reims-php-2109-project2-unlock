@@ -1,12 +1,13 @@
 {% extends 'layout.html.twig' %} {% block content %}
-
-<h1 class="unlock-title">UNLOCK !</h1>
-<h2>Sherlock Adventure</h2>
-<div class="game-description">
-    <h2>{{ game.name }}</h2>
-    <p>{{ game.description }}</p>
-    <p>{{ game.instructions }}</p>
-    <button>JOUER</button>
+<div class="game-desription-screen">
+    <h1 class="unlock-title">UNLOCK !</h1>
+    <h2>Sherlock Adventure</h2>
+    <div class="game-description">
+        <h2>{{ game.name }}</h2>
+        <p class="game-description-p">{{ game.description }}</p>
+        <p>{{ game.instructions }}</p>
+        <button>JOUER</button>
+    </div>
 </div>
 
 {% endblock %}
