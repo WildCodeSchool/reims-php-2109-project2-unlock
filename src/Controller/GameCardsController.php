@@ -23,7 +23,7 @@ class GameCardsController extends AbstractController
                 }
             }
 
-            header("Location: /games/cards/add?id=" . $id);
+            header("Location: /games/cards?id=" . $id);
         }
 
         $cards = $gameCardsManager->selectCardsNotFromGame($id);
