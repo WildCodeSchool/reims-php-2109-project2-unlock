@@ -68,6 +68,7 @@ button {
     border-radius: 1rem;
     padding: 1rem;
     transition: ease-out 0.2s;
+    overflow-x: hidden;
 }
 
 .game-h2 {
@@ -77,6 +78,7 @@ button {
 .card-title {
     margin-bottom: 1rem;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .addTitle, .addFormList {
@@ -93,6 +95,19 @@ button {
 
 .checkbox:checked+.card {
     border-color: lightgreen;
+}
+
+.add-cards-link {
+    text-decoration: none;
+    color: var(--isabelline);
+    font-size: 2rem;
+    position: relative;
+}
+
+.add-cards-span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
