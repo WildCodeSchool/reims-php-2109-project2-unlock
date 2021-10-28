@@ -7,7 +7,7 @@ class GameCardsManager extends AbstractManager
 
     public const TABLE = "gamecards";
 
-    public function selectCardsFromGame(int $id): array
+    public function selectCardsNotFromGame(int $id): array
     {
         $query = "select * from "
         . CardManager::TABLE
@@ -47,5 +47,10 @@ class GameCardsManager extends AbstractManager
         $statement->execute();
 
         return $statement->fetchAll();
+    }
+
+    public function selectCardsFromGame(int $id)
+    {
+        return $id;
     }
 }
