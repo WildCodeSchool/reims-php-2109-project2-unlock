@@ -1,12 +1,40 @@
-*{
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url();
+}
+
+:root {
+    --border-color: #b29e84;
+    --jet: #423e3a;
+    --gunmetal: #253439;
+    --gray-web: #7c898b;
+    --isabelline: #f6f4f1;
+    /* first font to use */
+    --text-font: 'Playfair Display', serif;
+    /* use only for title UNLOCK and BUTTON */
+    --unlock-button-font: 'Teko', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
-html, body {
+
+html,
+body {
     overflow-x: hidden;
 }
+
 body {
-    position: relative
+    position: relative;
+    font-family: var(--text-font);
+    background-color: var(--gunmetal);
+    color: var(--isabelline);
+    padding: 1vh 5vh;
+}
+
+button {
+    font-family: var(--unlock-button-font);
 }
 
 .list-title {
@@ -14,7 +42,12 @@ body {
     grid-column: 1/3;
 }
 
-.card-list {
+.game-title {
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-list, .game-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3rem 1fr;
@@ -22,11 +55,14 @@ body {
     grid-gap: 1rem;
     grid-auto-flow: row dense;
     align-items: stretch;
-
     padding: 1rem;
 }
 
-.card {
+.game-list {
+    grid-template-rows: 1fr 1fr;
+}
+
+.card, .game{
     aspect-ratio: 2/3;
     background-color: #f4f4f4;
     border-radius: 1rem;
@@ -52,16 +88,25 @@ body {
 }
 
 
-@media screen and (min-width: 680px){
+/* Game SHOW part */
+
+.game-description {
+    text-align: center;
+}
+
+.unlock-title {
+    font-family: var(--unlock-button-font);
+    font-size: 4rem;
+}
+
+@media screen and (min-width: 680px) {
     .list-title {
         grid-column: 1/6;
     }
-
-    .card:hover{
-        transform:scale(1.05)
+    .card:hover {
+        transform: scale(1.05)
     }
-
     .card-list {
-        grid-template-columns: repeat(5,  1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
