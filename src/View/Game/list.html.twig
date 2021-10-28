@@ -4,7 +4,7 @@
     <h1>Games</h1>
     <ul>
         {% for game in games %}
-            <li><a href="/games/show?id={{ game.id }}">{{ game.id }}. {{ game.name }}</a></li>
+            <li><a href="/games/show?id={{ game.id }}">{{ game.id }}. {{ game.name }}</a><a href="/games/cards/add?id={{ game.id }}">Add Cards</a></li>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
