@@ -74,7 +74,7 @@ button {
     text-align: center;
 }
 
-.checked {
+.checkbox:checked+.card {
     border-color: lightgreen;
 }
 

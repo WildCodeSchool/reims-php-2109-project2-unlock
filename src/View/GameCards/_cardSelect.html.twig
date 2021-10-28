@@ -1,5 +1,7 @@
-{% extends "Card/_card.html.twig" %}
-
-{% block variation %}
-	<input type="checkbox" name="cardN{{ card.id }}" hidden>
-{% endblock %}
+<label for="cardN{{ card.id }}">
+	<input type="checkbox" id="cardN{{ card.id }}" name="cardN{{ card.id }}" class="checkbox" hidden>
+	<div class="card">
+		<h2 class="card-title">{{ card.name }}</h2>
+		<p>{{ card.description }}</p>
+	</div>
+</label>
