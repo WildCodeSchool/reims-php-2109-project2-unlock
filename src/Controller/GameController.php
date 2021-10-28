@@ -37,8 +37,8 @@ class GameController extends AbstractController
     public function show(int $id): string
     {
         $gameManager = new GameManager();
-        $game = $gameManager->selectOneById($id);
+        $games = $gameManager->selectOneById($id);
 
-        return $this->twig->render('Game/show.html.twig', ['game' => $game]);
+        return $this->twig->render('Game/show.html.twig', ['games' => $games]);
     }
 }
