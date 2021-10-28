@@ -47,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `item` (
 CREATE TABLE IF NOT EXISTS `card` (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(100),
-  `description` TEXT
+  `description` TEXT,
+  `type` VARCHAR(100),
 );
 
 CREATE TABLE IF NOT EXISTS `game` (
