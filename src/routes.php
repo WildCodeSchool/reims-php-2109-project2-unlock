@@ -12,6 +12,7 @@ return [
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'games/add' => ['GameController', 'add',],
     'games/list' => ['GameController', 'list',],
     'games/show' => ['GameController', 'show', ['id']],
     'games/cards/add' => ['GameCardsController', 'add', ['id']],

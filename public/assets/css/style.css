@@ -39,6 +39,19 @@ body {
     text-align: center;
 }
 
+.addTitle, .addFormList {
+    text-align: center;
+}
+
+.addFormList {
+    list-style-type: none;
+}
+
+.addFormList li {
+    margin : 2em;
+}
+
+
 @media screen and (min-width: 680px){
     .list-title {
         grid-column: 1/6;
