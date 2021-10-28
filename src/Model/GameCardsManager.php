@@ -49,8 +49,19 @@ class GameCardsManager extends AbstractManager
         return $statement->fetchAll();
     }
 
-    public function selectCardsFromGame(int $id)
+    public function selectCardsFromGame(int $id): array
     {
-        return $id;
+        $query = "select c.name as name, c.description as description from "
+        . self::TABLE
+        . " right join "
+        . CardManager::TABLE
+        . " c on c.id = card_id left join "
+        . GameManager::TABLE
+        . " g on g.id = game_id where g.id = :game_id";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue("game_id", $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
     }
 }
