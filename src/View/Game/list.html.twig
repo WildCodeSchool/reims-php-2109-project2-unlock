@@ -4,13 +4,31 @@
     <h1 class="game-title">Games list</h1>
     <ul class="game-list">
         {% for game in games %}
-            <li class="game" style="background : url('{{ game.image_url }}')"><a href="/games/show?id={{ game.id }}"></a></li>
-            <h2 class="game-h2">{{ game.id }}.{{ game.name }}</h2>
+            <li class="game">
+                <a href="/games/show?id={{ game.id }}">
+                    <figure class="card">
+                        <img class="card-image" src="/home/wilder/Documents/reims-php-2109-project2-unlock/public/assets/images/favicon.png" alt="{{game.name}}">
+                        <figcaption class="card-caption">{{ game.id }}.{{ game.name }}</figcaption>
+                    </figure>
+                </a>
+            </li>
         {% else %}
-            <li class="game" style="background : url('{{ game.image_url }}')"></li>
-            <h2 class="game-h2">Nothing to display</h2>
+            <li class="game">
+                <a href="/games/show?id={{ game.id }}">
+                    <figure class="card">
+                        <img class="card-image" src="" alt="Nothing to display">
+                        <figcaption class="card-caption">Nothing to display</figcaption>
+                    </figure>
+                </a>
+            </li>
         {% endfor %}
-            <li class="game" style="background : url('{{ game.image_url }}')"><a href="/games/cards/add?id={{ game.id }}"></a></li>
-            <h2 class="game-h2">Add Cards</h2>
+            <li class="game">
+                <a href="/games/show?id={{ game.id }}">
+                    <figure class="card">
+                        <img class="card-image" src="" alt="Add Cards">
+                        <figcaption class="card-caption">Add Cards</figcaption>
+                    </figure>
+                </a>
+            </li>
     </ul>
 {% endblock %}
