@@ -75,6 +75,10 @@ button {
     text-align: center;
 }
 
+.checkbox:checked+.card {
+    border-color: lightgreen;
+}
+
 
 /* Game SHOW part */
 
