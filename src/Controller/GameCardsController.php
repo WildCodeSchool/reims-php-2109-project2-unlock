@@ -29,4 +29,9 @@ class GameCardsController extends AbstractController
         $cards = $gameCardsManager->selectCardsFromGame($id);
         return $this->twig->render("GameCards/cardsForm.html.twig", ["cards" => $cards]);
     }
+
+    public function list(/*int $id*/)
+    {
+        return $this->twig->render("GameCards/cardsList.html.twig");
+    }
 }
