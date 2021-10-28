@@ -83,7 +83,7 @@ button {
 }
 
 .addFormList li {
-    margin : 2em;
+    margin : 2rem;
 }
 
 .checkbox:checked+.card {
