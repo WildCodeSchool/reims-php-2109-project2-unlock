@@ -64,7 +64,7 @@ button {
     aspect-ratio: 2/3;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
-    border-radius: 1rem;
+    border-radius: 6%;
     padding: 1rem;
     transition: ease-out 0.2s;
 }
@@ -80,7 +80,7 @@ button {
     margin-top: 17vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
-    border-radius: 1rem;
+    border-radius: 6%;
     padding: 2%;
 }
 
@@ -107,8 +107,7 @@ button {
 .add_card textarea {
     display: flex;
     flex-direction: column;
-    margin: 5%;
-    margin-left: 5%;
+    margin: 0.6rem;
     width: 90%;
     
 }
