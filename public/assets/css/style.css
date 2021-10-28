@@ -113,6 +113,10 @@ button {
 }
 
 @media screen and (min-width: 680px){
+.checkbox:checked+.card {
+    border-color: lightgreen;
+}
+
 
 /* Game SHOW part */
 
