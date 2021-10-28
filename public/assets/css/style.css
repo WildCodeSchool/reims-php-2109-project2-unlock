@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'Playfair Display', serif;
-    src: url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format('ttf');
-}
-
-@font-face {
-    font-family: 'Teko', sans-serif;
-    src: url(../fonts/Teko/Teko-SemiBold.ttf) format('ttf');
-}
-
+@import "../fonts/playfair/stylesheet.css";
+@import "../fonts/teko/stylesheet.css";
 :root {
     --border-color: #b29e84;
     --jet: #423e3a;
@@ -15,9 +7,9 @@
     --gray-web: #7c898b;
     --isabelline: #f6f4f1;
     /* first font to use */
-    --text-font: 'Playfair Display', serif;
+    --text-font: "playfair_displayregular", serif;
     /* use only for title UNLOCK and BUTTON */
-    --unlock-button-font: 'Teko', sans-serif;
+    --unlock-button-font: "tekoregular", sans-serif;
 }
 
 * {
@@ -48,7 +40,13 @@ button {
     grid-column: 1/3;
 }
 
-.card-list {
+.game-title {
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-list,
+.game-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3rem 1fr;
@@ -56,15 +54,20 @@ button {
     grid-gap: 1rem;
     grid-auto-flow: row dense;
     align-items: stretch;
-    padding: 1rem;
 }
 
-.card {
+.game-list {
+    grid-template-rows: 1fr 1fr;
+}
+
+.card,
+.game {
     aspect-ratio: 2/3;
-    background-color: #f4f4f4;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
     border-radius: 1rem;
     padding: 1rem;
-    transition: ease-out .2s;
+    transition: ease-out 0.2s;
 }
 
 .card-title {
@@ -75,14 +78,22 @@ button {
 
 /* Game SHOW part */
 
-.game-description-screen {
-    margin: auto;
+.game-desription-screen {
+    height: 100vh;
+}
+
+.unlock {
+    font-family: var(--unlock-button-font);
+}
+
+.game-title {
+    margin-top: 3vh;
 }
 
 .game-description {
     background-color: var(--gray-web);
     text-align: center;
-    padding: 30vh 0;
+    align-items: stretch;
     border: 0.5rem double;
     border-color: var(--border-color);
     border-radius: 1rem;
@@ -91,11 +102,7 @@ button {
 
 .game-description-p {
     padding: 1vh;
-}
-
-.unlock-title {
-    font-family: var(--unlock-button-font);
-    font-size: 3rem;
+    margin: 5vh 0;
 }
 
 @media screen and (min-width: 680px) {
@@ -103,7 +110,7 @@ button {
         grid-column: 1/6;
     }
     .card:hover {
-        transform: scale(1.05)
+        transform: scale(1.05);
     }
     .card-list {
         grid-template-columns: repeat(5, 1fr);
