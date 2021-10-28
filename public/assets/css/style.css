@@ -30,7 +30,7 @@ body {
     font-family: var(--text-font);
     background-color: var(--gunmetal);
     color: var(--isabelline);
-    padding: 1vh 5vh;
+    padding: 1rem;
 }
 
 button {
@@ -56,7 +56,6 @@ button {
     grid-gap: 1rem;
     grid-auto-flow: row dense;
     align-items: stretch;
-    padding: 1rem;
 }
 
 .game-list {
