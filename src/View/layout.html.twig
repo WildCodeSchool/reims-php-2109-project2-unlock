@@ -1,24 +1,20 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>{% block title %}{% endblock %}</title>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Teko&display=swap');
-    </style>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
-    <link rel="icon" href="/assets/images/favicon.png">
-</head>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
 
-<body>
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-</body>
+		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
+		<link rel="icon" href="/assets/images/favicon.png">
+	</head>
+
+	<body>
+		{% block content %}{% endblock %}
+		{% block javascript %}{% endblock %}
+	</body>
 </html>
-
-

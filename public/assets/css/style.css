@@ -25,6 +25,7 @@ body {
     font-family: var(--text-font);
     background-color: var(--gunmetal);
     color: var(--isabelline);
+    padding: 1vh 5vh;
 }
 
 button {
@@ -58,6 +59,18 @@ button {
 .card-title {
     margin-bottom: 1rem;
     text-align: center;
+}
+
+
+/* Game SHOW part */
+
+.game-description {
+    text-align: center;
+}
+
+.unlock-title {
+    font-family: var(--unlock-button-font);
+    font-size: 4rem;
 }
 
 @media screen and (min-width: 680px) {
