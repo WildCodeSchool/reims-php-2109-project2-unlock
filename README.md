@@ -18,10 +18,17 @@ define('APP_DB_NAME', 'your_db_name');
 define('APP_DB_USER', 'your_db_user_wich_is_not_root');
 define('APP_DB_PASSWORD', 'your_db_password');
 ```
-4. Import *database.sql* in your SQL server, you can do it manually or use the *migration.php* script which will import a *database.sql* file.
-5. Run the internal PHP webserver with `php -S localhost:8000 -t public/`. The option `-t` with `public` as parameter means your localhost will target the `/public` folder.
-6. Go to `localhost:8000` with your favorite browser.
-7. From this starter kit, create your own web application.
+4. Import *db.sql* in your SQL server, you can do it manually by running the following command:
+```bash
+mysql -u <username> -p < db.sql
+```
+5. Run the following command if you want to populate your database with a sample of data:
+```bash
+mysql -u <username> -p < populate.sql
+```
+6. Run the internal PHP webserver with `php -S localhost:8000 -t public/`. The option `-t` with `public` as parameter means your localhost will target the `/public` folder.
+7. Go to `localhost:8000` with your favorite browser.
+8. From this starter kit, create your own web application.
 
 ### Windows Users
 
