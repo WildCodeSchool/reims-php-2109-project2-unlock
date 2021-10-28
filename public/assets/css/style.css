@@ -79,6 +79,18 @@ button {
     text-align: center;
 }
 
+.addTitle, .addFormList {
+    text-align: center;
+}
+
+.addFormList {
+    list-style-type: none;
+}
+
+.addFormList li {
+    margin : 2rem;
+}
+
 .checkbox:checked+.card {
     border-color: lightgreen;
 }
