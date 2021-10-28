@@ -8,9 +8,10 @@
 		<title>
 			{% block title %}{% endblock %}
 		</title>
-
-		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
-		<link rel="icon" href="/assets/images/favicon.png">
+		{% block stylesheet %}
+			<link rel="stylesheet" href="/assets/css/style.css">
+			<link rel="icon" href="/assets/images/favicon.png">
+		{% endblock %}
 	</head>
 
 	<body>
