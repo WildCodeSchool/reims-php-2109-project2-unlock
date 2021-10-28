@@ -59,6 +59,7 @@ button {
 }
 
 .game-list {
+    list-style: none;
     grid-template-rows: 1fr 1fr;
 }
 
