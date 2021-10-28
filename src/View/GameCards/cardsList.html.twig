@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <div class="card-list" method="POST" action="">
+        <h1 class="list-title">Cards of the game</h1>
+        {% for card in cards %}
+            {% include "/Card/_card.html.twig" with card %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
