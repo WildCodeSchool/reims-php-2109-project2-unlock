@@ -9,8 +9,8 @@ class GameController extends AbstractController
     public function list(): string
     {
         $gameManager = new GameManager();
-        $games = $gameManager->selectAll();
-        return $this->twig->render('Game/list.html.twig', ['games' => $games]);
+        $game = $gameManager->selectAll();
+        return $this->twig->render('Game/list.html.twig', ['game' => $game]);
     }
 
     //name, description, image url
