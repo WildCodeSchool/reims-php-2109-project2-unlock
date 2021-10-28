@@ -23,10 +23,17 @@ class GameCardsController extends AbstractController
                 }
             }
 
-            header("Location: /games/cards/add?id=" . $id);
+            header("Location: /games/cards?id=" . $id);
         }
 
-        $cards = $gameCardsManager->selectCardsFromGame($id);
+        $cards = $gameCardsManager->selectCardsNotFromGame($id);
         return $this->twig->render("GameCards/cardsForm.html.twig", ["cards" => $cards]);
+    }
+
+    public function list(int $id)
+    {
+        $gameCardsManager = new GameCardsManager();
+        $cards = $gameCardsManager->selectCardsFromGame($id);
+        return $this->twig->render("GameCards/cardsList.html.twig", ["cards" => $cards]);
     }
 }

@@ -16,6 +16,7 @@ return [
     'games/list' => ['GameController', 'list',],
     'games/show' => ['GameController', 'show', ['id']],
     'games/cards/add' => ['GameCardsController', 'add', ['id']],
+    'games/cards' => ['GameCardsController', 'list', ['id']],
     'cards' => ['CardController', 'list',],
     'cards/add' => ['CardController', 'add',],
     'cards/show' => ['CardController', 'show', ['id']],
