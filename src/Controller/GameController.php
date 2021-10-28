@@ -9,8 +9,8 @@ class GameController extends AbstractController
     public function list(): string
     {
         $gameManager = new GameManager();
-        $game = $gameManager->selectAll();
-        return $this->twig->render('Game/list.html.twig', ['game' => $game]);
+        $games = $gameManager->selectAll();
+        return $this->twig->render('Game/list.html.twig', ['games' => $games]);
     }
 
     //name, description, image url
@@ -37,8 +37,8 @@ class GameController extends AbstractController
     public function show(int $id): string
     {
         $gameManager = new GameManager();
-        $games = $gameManager->selectOneById($id);
+        $game = $gameManager->selectOneById($id);
 
-        return $this->twig->render('Game/show.html.twig', ['games' => $games]);
+        return $this->twig->render('Game/show.html.twig', ['game' => $game]);
     }
 }
