@@ -12,9 +12,6 @@ class CardController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $card = array_map('trim', $_POST);
 
-            $stock = __DIR__ . '/public/assets/images';
-            move_uploaded_file($_FILES['image']['tmp_name'], $stock);
-
             $cardManager = new cardManager();
             $id = $cardManager->insert($card);
             header('Location:/cards/show?id=' . $id);
