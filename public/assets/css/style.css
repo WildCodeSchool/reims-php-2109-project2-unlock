@@ -1,8 +1,5 @@
-@font-face {
-    font-family: 'Playfair Display', serif;
-    src: url();
-}
-
+@import "../fonts/playfair/stylesheet.css";
+@import "../fonts/teko/stylesheet.css";
 :root {
     --border-color: #b29e84;
     --jet: #423e3a;
@@ -10,9 +7,9 @@
     --gray-web: #7c898b;
     --isabelline: #f6f4f1;
     /* first font to use */
-    --text-font: 'Playfair Display', serif;
+    --text-font: "playfair_displayregular", serif;
     /* use only for title UNLOCK and BUTTON */
-    --unlock-button-font: 'Teko', sans-serif;
+    --unlock-button-font: "tekoregular", sans-serif;
 }
 
 * {
@@ -30,7 +27,7 @@ body {
     font-family: var(--text-font);
     background-color: var(--gunmetal);
     color: var(--isabelline);
-    padding: 1vh 5vh;
+    padding: 1rem;
 }
 
 button {
@@ -47,7 +44,8 @@ button {
     margin: 2rem;
 }
 
-.card-list, .game-list {
+.card-list,
+.game-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3rem 1fr;
@@ -55,7 +53,6 @@ button {
     grid-gap: 1rem;
     grid-auto-flow: row dense;
     align-items: stretch;
-    padding: 1rem;
 }
 
 .game-list {
@@ -63,12 +60,14 @@ button {
     grid-template-rows: 1fr 1fr;
 }
 
-.card, .game{
+.card,
+.game {
     aspect-ratio: 2/3;
-    background-color: #f4f4f4;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
     border-radius: 1rem;
     padding: 1rem;
-    transition: ease-out .2s;
+    transition: ease-out 0.2s;
 }
 
 .game-h2 {
@@ -78,6 +77,10 @@ button {
 .card-title {
     margin-bottom: 1rem;
     text-align: center;
+}
+
+.checkbox:checked+.card {
+    border-color: lightgreen;
 }
 
 
@@ -97,7 +100,7 @@ button {
         grid-column: 1/6;
     }
     .card:hover {
-        transform: scale(1.05)
+        transform: scale(1.05);
     }
     .card-list {
         grid-template-columns: repeat(5, 1fr);
