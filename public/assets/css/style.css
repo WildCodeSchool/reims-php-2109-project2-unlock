@@ -64,7 +64,7 @@ button {
     aspect-ratio: 2/3;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
-    border-radius: 6%;
+    border-radius: 2rem;
     padding: 1rem;
     transition: ease-out 0.2s;
 }
@@ -75,13 +75,13 @@ button {
 }
 
 .add_card form{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
     margin-top: 17vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
-    border-radius: 6%;
-    padding: 2%;
+    border-radius: 2rem;
+    padding: 0.35rem;
 }
 
 .add_card h1 {
@@ -91,15 +91,15 @@ button {
 
 .add_card label ,
 .add_card button{
-    margin-top: 10%;
-    margin-left: 3%;
+    margin-top: 1.2rem;
+    margin-left: 0.4rem;
 }
 
 .add_card button {
-    margin-top: 15%;
-    width: 30%;
-    margin-left: 35%;
-    margin-bottom: 5%;
+    margin-top: 1.8rem;
+    width: 4.4rem;
+    margin-left: 5.4rem;
+    margin-bottom: 0.6rem;
 }
 
 .add_card input,
