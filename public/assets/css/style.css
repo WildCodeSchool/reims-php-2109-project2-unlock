@@ -75,9 +75,13 @@ button {
 }
 
 .add_card form{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 17vh;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 1rem;
+    padding: 2%;
 }
 
 .add_card h1 {
@@ -95,6 +99,7 @@ button {
     margin-top: 15%;
     width: 30%;
     margin-left: 35%;
+    margin-bottom: 5%;
 }
 
 .add_card input,
