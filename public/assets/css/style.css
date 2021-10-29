@@ -60,9 +60,7 @@ button {
     grid-template-rows: 1fr 1fr;
 }
 
-.card,
-.game,
-.game-image {
+.card {
     aspect-ratio: 2/3;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
@@ -73,6 +71,17 @@ button {
     display: grid;
     grid-template-rows: 4rem auto 2rem;
     grid-template-columns: 1fr;
+}
+
+.game,
+.game-image {
+    aspect-ratio: 2/3;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
 }
 
 .card-description {
