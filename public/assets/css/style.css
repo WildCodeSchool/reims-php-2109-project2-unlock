@@ -81,7 +81,25 @@ button {
     overflow-wrap: break-word;
 }
 
-.addTitle, .addFormList {
+.card-link-to-details {
+    display: block;
+    text-decoration: none;
+    color: var(--isabelline);
+    border: solid 2px var(--border-color);
+    border-radius: 1rem;
+    height: 2rem;
+    position: relative;
+}
+
+.card-details-span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.addTitle,
+.addFormList {
     text-align: center;
 }
 
@@ -90,7 +108,7 @@ button {
 }
 
 .addFormList li {
-    margin : 2rem;
+    margin: 2rem;
 }
 
 .checkbox:checked+.card {
