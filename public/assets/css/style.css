@@ -227,7 +227,8 @@ button {
         color: var(--gunmetal);
         border-color: var(--isabelline);
     }
-    .card-list .game-list {
+    .card-list,
+    .game-list {
         grid-template-columns: repeat(5, 1fr);
     }
     .add_card form {
