@@ -61,7 +61,8 @@ button {
 }
 
 .card,
-.game {
+.game,
+.game-image {
     aspect-ratio: 2/3;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
@@ -71,8 +72,27 @@ button {
     overflow-x: hidden;
 }
 
-.game-h2 {
-    grid-column: 2;
+.game {
+    padding: 0;
+}
+
+.game-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.game-image {
+    padding: 0;
+    aspect-ratio: initial;
+}
+
+.game-caption {
+    color: var(--isabelline);
+    font-size: 1.2rem;
+    align-self: center;
+    margin-block-end: auto;
+    
 }
 
 .card-title {
@@ -172,7 +192,9 @@ button {
     .card:hover {
         transform: scale(1.05);
     }
-    .card-list {
+    .card-list,
+    .game-list
+    {
         grid-template-columns: repeat(5, 1fr);
     }
 }
