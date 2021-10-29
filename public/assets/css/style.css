@@ -60,7 +60,19 @@ button {
     grid-template-rows: 1fr 1fr;
 }
 
-.card,
+.card {
+    aspect-ratio: 2/3;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+}
+
 .game,
 .game-image {
     aspect-ratio: 2/3;
@@ -70,6 +82,10 @@ button {
     padding: 1rem;
     transition: ease-out 0.2s;
     overflow-x: hidden;
+}
+
+.card-description {
+    overflow-x: scroll;
 }
 
 .game {
@@ -92,16 +108,34 @@ button {
     font-size: 1.2rem;
     align-self: center;
     margin-block-end: auto;
-    
 }
 
 .card-title {
-    margin-bottom: 1rem;
     text-align: center;
     overflow-wrap: break-word;
+    min-width: 0;
 }
 
-.add_card form{
+.card-link-to-details {
+    text-decoration: none;
+    color: var(--isabelline);
+    border: solid 2px var(--border-color);
+    border-radius: 1rem;
+    height: 2rem;
+    transition: ease-in-out .2s;
+    text-align: center;
+}
+
+.card-details-span {
+    vertical-align: middle;
+}
+
+.addTitle,
+.addFormList {
+    text-align: center;
+}
+
+.add_card form {
     margin-left: 0.6rem;
     margin-right: 0.6rem;
     margin-top: 17vh;
@@ -138,15 +172,9 @@ button {
     margin-top: 0.6rem;
     margin-bottom: auto;
     width: 90%;
-    
 }
 
 .add_card select {
-    text-align: center;
-}
-
-@media screen and (min-width: 680px){
-.addTitle, .addFormList {
     text-align: center;
 }
 
@@ -155,7 +183,7 @@ button {
 }
 
 .addFormList li {
-    margin : 2rem;
+    margin: 2rem;
 }
 
 .checkbox:checked+.card {
@@ -188,29 +216,30 @@ button {
 }
 
 @media screen and (min-width: 680px) {
+    .addTitle,
+    .addFormList {
+        text-align: center;
+    }
     .list-title {
         grid-column: 1/6;
     }
     .card:hover {
         transform: scale(1.05);
     }
+    .card-link-to-details:hover {
+        background-color: var(--isabelline);
+        color: var(--gunmetal);
+        border-color: var(--isabelline);
+    }
     .card-list,
-    .game-list
-    {
+    .game-list {
         grid-template-columns: repeat(5, 1fr);
     }
-
     .add_card form {
         max-width: 30vw;
         margin: auto;
     }
-
     .add_card button {
         margin-left: 9rem;
     }
-
-
-}
-
-
 }
