@@ -3,7 +3,8 @@ USE `unlock_db`;
 INSERT INTO `game` (`name`, `description`) VALUES 
 ("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock"),
 ("Sherlock et le mystère de Pandore", "Vous serez plongé dans un tout nouvel univers!"),
-("Sherlock dans le égout de londre", "Une aventure nauséabonde et visieuse vous attend");
+("Sherlock dans le égout de londre", "Une aventure nauséabonde et visieuse vous attend"),
+("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !");
 
 INSERT INTO `card` (`name`, `description`) VALUES 
 ("Key", "Here is a key to open door"),
