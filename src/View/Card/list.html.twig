@@ -1,10 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<section class="card-list">
-    <h1 class="list-title">Card list</h1>
-    {% for card in cards %}
-        {% include "Card/_card.html.twig" with card %}
-    {% endfor %}
-</section>    
+	<section class="card-list">
+		<h1 class="list-title">Card list</h1>
+		{% for card in cards %}
+			{% include "Card/_card.html.twig" with card %}
+		{% endfor %}
+		<a class="card add-cards-link" href="/cards/add">
+			<span class="add-cards-span">CREATE NEW CARD</span>
+		</a>
+	</section>
 {% endblock %}
