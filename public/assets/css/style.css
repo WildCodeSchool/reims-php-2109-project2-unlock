@@ -10,6 +10,7 @@
     --text-font: "playfair_displayregular", serif;
     /* use only for title UNLOCK and BUTTON */
     --unlock-button-font: "tekoregular", sans-serif;
+    font-size: 16px;
 }
 
 * {
@@ -32,6 +33,7 @@ body {
 
 button {
     font-family: var(--unlock-button-font);
+    margin: 4vh 0;
 }
 
 .list-title {
@@ -42,6 +44,7 @@ button {
 .game-title {
     text-align: center;
     margin: 2rem;
+    font-size: 1rem;
 }
 
 .card-list,
@@ -206,13 +209,55 @@ button {
 
 /* Game SHOW part */
 
+.game-desription-screen {
+    height: 100vh;
+}
+
+.unlock {
+    font-size: 2rem;
+    font-family: var(--unlock-button-font);
+}
+
+.unlock-title2 {
+    font-size: 1rem;
+}
+
+.game-title {
+    margin-top: 3rem;
+}
+
 .game-description {
+    background-color: var(--gray-web);
+    text-align: center;
+    align-items: stretch;
+    border: 0.5rem double;
+    border-color: var(--border-color);
+    border-radius: 1rem;
+    margin: 5rem 2rem;
+}
+
+.game-description-p {
+    padding: 1rem;
+    margin: 5rem 0;
+}
+
+.car-show {
+    margin: 1rem;
+    background-color: var(--gray-web);
+    color: var(--isabelline);
+    border-radius: 1rem;
+    border: 0.2rem solid;
+    border-color: var(--border-color);
     text-align: center;
 }
 
-.unlock-title {
-    font-family: var(--unlock-button-font);
-    font-size: 4rem;
+.card-name {
+    margin: 1.5rem 0;
+}
+
+.card-description {
+    padding: 1rem;
+    margin: 2rem 0;
 }
 
 @media screen and (min-width: 680px) {

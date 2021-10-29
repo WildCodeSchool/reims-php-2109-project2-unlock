@@ -33,7 +33,6 @@ class CardController extends AbstractController
     {
         $cardManager = new CardManager();
         $card = $cardManager->selectOneById($id);
-
         return $this->twig->render('Card/show.html.twig', ['card' => $card]);
     }
 }
