@@ -116,8 +116,7 @@ button {
     margin-bottom: 10%;
 }
 
-.add_card label ,
-.add_card button{
+.add_card label {
     margin-top: 1.2rem;
     margin-left: 0.4rem;
 }
@@ -134,7 +133,10 @@ button {
 .add_card textarea {
     display: flex;
     flex-direction: column;
-    margin: 0.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.6rem;
+    margin-bottom: auto;
     width: 90%;
     
 }
@@ -197,6 +199,17 @@ button {
     {
         grid-template-columns: repeat(5, 1fr);
     }
+
+    .add_card form {
+        max-width: 30vw;
+        margin: auto;
+    }
+
+    .add_card button {
+        margin-left: 9rem;
+    }
+
+
 }
 
 
