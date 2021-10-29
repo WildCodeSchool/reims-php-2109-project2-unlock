@@ -89,6 +89,7 @@ button {
     border-radius: 1rem;
     height: 2rem;
     position: relative;
+    transition: ease-in-out .2s;
 }
 
 .card-details-span {
@@ -146,6 +147,11 @@ button {
     }
     .card:hover {
         transform: scale(1.05);
+    }
+    .card-link-to-details:hover {
+        background-color: var(--isabelline);
+        color: var(--gunmetal);
+        border-color: var(--isabelline);
     }
     .card-list {
         grid-template-columns: repeat(5, 1fr);
