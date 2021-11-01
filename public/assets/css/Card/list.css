@@ -28,7 +28,6 @@
 }
 
 .option {
-    width: 50vw;
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -36,7 +35,6 @@
 }
 
 .label-option {
-    min-width: 20vw;
     padding: .5rem;
     border: solid .2rem var(--border-color);
     text-align: center;
@@ -45,6 +43,7 @@
 .card-label-option {
     border-right: unset;
     border-radius: 2rem 0 0 2rem;
+    animation: ease-in-out .2s;
 }
 
 .list-label-option {
@@ -62,6 +61,12 @@
 
 @media screen and (min-width: 680px) {
     .list-title {
+        grid-column: 1/6;
+    }
+    .label-option {
+        padding: 1rem;
+    }
+    .option {
         grid-column: 1/6;
     }
     .card-list {
