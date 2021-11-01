@@ -1,0 +1,9 @@
+.addTitle {
+    text-align: center;
+}
+
+@media screen and (min-width: 680px) {
+    .addTitle {
+        text-align: center;
+    }
+}

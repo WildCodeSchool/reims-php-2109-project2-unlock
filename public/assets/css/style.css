@@ -90,10 +90,6 @@ button {
     margin-block-end: auto;
 }
 
-.addTitle {
-    text-align: center;
-}
-
 .checkbox:checked+.card {
     border-color: lightgreen;
 }
@@ -125,9 +121,6 @@ button {
 }
 
 @media screen and (min-width: 680px) {
-    .addTitle {
-        text-align: center;
-    }
     .game-list {
         grid-template-columns: repeat(5, 1fr);
     }
