@@ -1,0 +1,30 @@
+.game-title {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.game-desription-screen {
+    height: 100vh;
+}
+
+.game-description {
+    background-color: var(--gray-web);
+    text-align: center;
+    align-items: stretch;
+    border: 0.5rem double;
+    border-color: var(--border-color);
+    border-radius: 1rem;
+    margin: 5rem 2rem;
+}
+
+.game-description-p {
+    padding: 1rem;
+    margin: 5rem 0;
+}
+
+.unlock {
+    font-size: 2rem;
+    font-family: var(--unlock-button-font);
+}

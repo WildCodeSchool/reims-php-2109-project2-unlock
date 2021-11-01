@@ -42,26 +42,3 @@ button {
 
 
 /* Game SHOW part */
-
-.game-desription-screen {
-    height: 100vh;
-}
-
-.game-title {
-    margin-top: 3rem;
-}
-
-.game-description {
-    background-color: var(--gray-web);
-    text-align: center;
-    align-items: stretch;
-    border: 0.5rem double;
-    border-color: var(--border-color);
-    border-radius: 1rem;
-    margin: 5rem 2rem;
-}
-
-.game-description-p {
-    padding: 1rem;
-    margin: 5rem 0;
-}
