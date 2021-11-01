@@ -28,3 +28,8 @@
 		</form>
 	</section>
 {% endblock %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/Card/addCard.css">
+{% endblock %}
