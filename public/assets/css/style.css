@@ -36,60 +36,6 @@ button {
     margin: 4vh 0;
 }
 
-.game-title {
-    text-align: center;
-    margin: 2rem;
-    font-size: 1rem;
-}
-
-.game-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem 1fr;
-    grid-auto-rows: 1fr;
-    grid-gap: 1rem;
-    grid-auto-flow: row dense;
-    align-items: stretch;
-}
-
-.game-list {
-    list-style: none;
-    grid-template-rows: 1fr 1fr;
-}
-
-.game,
-.game-image {
-    aspect-ratio: 2/3;
-    background-color: var(--jet);
-    border: solid 0.2rem var(--border-color);
-    border-radius: 2rem;
-    padding: 1rem;
-    transition: ease-out 0.2s;
-    overflow-x: hidden;
-}
-
-.game {
-    padding: 0;
-}
-
-.game-figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.game-image {
-    padding: 0;
-    aspect-ratio: initial;
-}
-
-.game-caption {
-    color: var(--isabelline);
-    font-size: 1.2rem;
-    align-self: center;
-    margin-block-end: auto;
-}
-
 .checkbox:checked+.card {
     border-color: lightgreen;
 }
@@ -118,10 +64,4 @@ button {
 .game-description-p {
     padding: 1rem;
     margin: 5rem 0;
-}
-
-@media screen and (min-width: 680px) {
-    .game-list {
-        grid-template-columns: repeat(5, 1fr);
-    }
 }
