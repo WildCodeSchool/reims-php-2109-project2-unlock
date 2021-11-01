@@ -12,6 +12,7 @@ class GameCardsController extends AbstractController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $cards = array_map('trim', $_POST);
+            unset($cards["option"]);
 
             foreach ($cards as $key => $value) {
                 if ($value === "on") {
