@@ -1,0 +1,37 @@
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    grid-auto-flow: row dense;
+    align-items: stretch;
+}
+
+.list-title {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.add-cards-link {
+    text-decoration: none;
+    color: var(--isabelline);
+    font-size: 2rem;
+    position: relative;
+}
+
+.add-cards-span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-list {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (min-width: 680px) {
+    .list-title {
+        grid-column: 1/6;
+    }
+}

@@ -30,3 +30,14 @@
 .card-details-span {
     vertical-align: middle;
 }
+
+@media screen and (min-width: 680px) {
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card-link-to-details:hover {
+        background-color: var(--isabelline);
+        color: var(--gunmetal);
+        border-color: var(--isabelline);
+    }
+}
