@@ -2,7 +2,7 @@
 .card-list {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem 1fr;
+    grid-template-rows: 3rem 4rem 1fr;
     grid-auto-rows: 1fr;
     grid-gap: 1rem;
     grid-auto-flow: row dense;
@@ -25,6 +25,39 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.option {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-self: end;
+}
+
+.label-option {
+    min-width: 20vw;
+    padding: .5rem;
+    border: solid .2rem var(--border-color);
+    text-align: center;
+}
+
+.card-label-option {
+    border-right: unset;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.list-label-option {
+    border-left: unset;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.card-option:checked+.card-label-option {
+    background-color: var(--border-color);
+}
+
+.list-option:checked+.list-label-option {
+    background-color: var(--border-color);
 }
 
 @media screen and (min-width: 680px) {
