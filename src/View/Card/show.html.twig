@@ -9,3 +9,8 @@
 		<p class="card-description">{{ card.description }}</p>
 	</div>
 {% endblock %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/Card/showCard.css">
+{% endblock %}
