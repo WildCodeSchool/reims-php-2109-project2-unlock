@@ -35,10 +35,3 @@ button {
     font-family: var(--unlock-button-font);
     margin: 4vh 0;
 }
-
-.checkbox:checked+.card {
-    border-color: lightgreen;
-}
-
-
-/* Game SHOW part */

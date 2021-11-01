@@ -1,0 +1,3 @@
+.checkbox:checked+.card {
+    border-color: lightgreen;
+}
