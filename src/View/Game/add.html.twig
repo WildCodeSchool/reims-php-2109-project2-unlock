@@ -4,3 +4,9 @@
 	<h1 class="addTitle">Add a new game</h1>
 	{% include 'Game/_form.html.twig' %}
 {% endblock %}
+
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/Game/addGame.css">
+{% endblock %}
