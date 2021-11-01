@@ -1,0 +1,32 @@
+.card {
+    aspect-ratio: 2/3;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+}
+
+.card-title {
+    text-align: center;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+.card-link-to-details {
+    text-decoration: none;
+    color: var(--isabelline);
+    border: solid 2px var(--border-color);
+    border-radius: 1rem;
+    height: 2rem;
+    transition: ease-in-out .2s;
+    text-align: center;
+}
+
+.card-details-span {
+    vertical-align: middle;
+}
