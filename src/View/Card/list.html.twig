@@ -11,3 +11,8 @@
 		</a>
 	</section>
 {% endblock %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/Card/listCard.css">
+{% endblock %}
