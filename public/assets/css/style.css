@@ -133,15 +133,6 @@ button {
     height: 100vh;
 }
 
-.unlock {
-    font-size: 2rem;
-    font-family: var(--unlock-button-font);
-}
-
-.unlock-title2 {
-    font-size: 1rem;
-}
-
 .game-title {
     margin-top: 3rem;
 }
@@ -159,20 +150,6 @@ button {
 .game-description-p {
     padding: 1rem;
     margin: 5rem 0;
-}
-
-.car-show {
-    margin: 1rem;
-    background-color: var(--gray-web);
-    color: var(--isabelline);
-    border-radius: 1rem;
-    border: 0.2rem solid;
-    border-color: var(--border-color);
-    text-align: center;
-}
-
-.card-name {
-    margin: 1.5rem 0;
 }
 
 @media screen and (min-width: 680px) {
