@@ -1,8 +1,18 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+	<section class="card-list">
+		<div id="option" class="option">
+			<input class="card-option" id="card-option" type="radio" name="option" hidden checked>
+			<label class="card-label-option label-option" for="card-option">
+				Card
+			</label>
 
-	<div class="card-list" method="POST" action="">
+			<input class="list-option" id="list-option" type="radio" name="option" hidden>
+			<label class="list-label-option label-option" for="list-option">
+				List
+			</label>
+		</div>
 		<h1 class="list-title">Cards of the game</h1>
 		{% for card in cards %}
 			{% include "/Card/_card.html.twig" with card %}
@@ -10,11 +20,15 @@
 		<a class="card add-cards-link" href="/games/cards/add?id={{ game_id }}">
 			<span class="add-cards-span">ADD NEW CARDS</span>
 		</a>
-	</div>
+	</section>
 
 {% endblock %}
 
 {% block stylesheet %}
 	{{ parent() }}
 	<link rel="stylesheet" href="/assets/css/GameCards/list.css">
+{% endblock %}
+
+{% block javascript %}
+	<script src="/assets/js/Card/list.js"></script>
 {% endblock %}

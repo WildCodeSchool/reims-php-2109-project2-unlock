@@ -5,7 +5,8 @@
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 1rem;
-    transition: transform .2s ease-out;
+    transition: .2s ease-out;
+    transition-property: transform, border;
     overflow-x: hidden;
     display: grid;
     grid-template-rows: 1fr 6fr 4rem;

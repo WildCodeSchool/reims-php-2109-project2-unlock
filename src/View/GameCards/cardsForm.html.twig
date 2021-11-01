@@ -1,18 +1,31 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-
 	<form class="card-list" method="POST" action="">
+		<div id="option" class="option">
+			<input class="card-option" id="card-option" type="radio" name="option" hidden checked>
+			<label class="card-label-option label-option" for="card-option">
+				Card
+			</label>
+
+			<input class="list-option" id="list-option" type="radio" name="option" hidden>
+			<label class="list-label-option label-option" for="list-option">
+				List
+			</label>
+		</div>
 		<h1 class="list-title">Select cards you want to add</h1>
 		{% for card in cards %}
 			{% include "/GameCards/_cardSelect.html.twig" with card %}
 		{% endfor %}
 		<button type="submit">Add</button>
 	</form>
-
 {% endblock %}
 
 {% block stylesheet %}
 	{{ parent() }}
 	<link rel="stylesheet" href="/assets/css/GameCards/form.css">
+{% endblock %}
+
+{% block javascript %}
+	<script src="/assets/js/Card/list.js"></script>
 {% endblock %}
