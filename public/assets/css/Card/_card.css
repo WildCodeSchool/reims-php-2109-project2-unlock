@@ -28,7 +28,8 @@
     border: solid 2px var(--border-color);
     border-radius: 2rem;
     height: 4rem;
-    transition: ease-in-out .2s;
+    transition: .2s ease-in-out;
+    transition-property: background-color, color, border-color;
 }
 
 .card-description {
