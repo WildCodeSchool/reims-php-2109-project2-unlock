@@ -13,3 +13,8 @@
 	</div>
 
 {% endblock %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/GameCards/list.css">
+{% endblock %}
