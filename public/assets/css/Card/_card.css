@@ -5,11 +5,29 @@
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 1rem;
-    transition: ease-out 0.2s;
+    transition: scale .2s ease-out;
     overflow-x: hidden;
     display: grid;
     grid-template-rows: 1fr 6fr 4rem;
     grid-template-columns: 1fr;
+}
+
+.list-style {
+    border: unset;
+    font-size: unset;
+    height: unset;
+    border-radius: unset;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+.list-style .card-description {
+    display: none;
+}
+
+.list-style .card-link-to-details {
+    height: unset;
+    padding: .5rem;
 }
 
 .card-title {
