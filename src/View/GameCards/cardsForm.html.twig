@@ -12,6 +12,7 @@
 
 {% endblock %}
 
-{% block javascript %}
-	<script src="/assets/js/cardsForm.js"></script>
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/GameCards/form.css">
 {% endblock %}
