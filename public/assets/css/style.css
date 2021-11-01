@@ -90,17 +90,8 @@ button {
     margin-block-end: auto;
 }
 
-.addTitle,
-.addFormList {
+.addTitle {
     text-align: center;
-}
-
-.addFormList {
-    list-style-type: none;
-}
-
-.addFormList li {
-    margin: 2rem;
 }
 
 .checkbox:checked+.card {
@@ -134,8 +125,7 @@ button {
 }
 
 @media screen and (min-width: 680px) {
-    .addTitle,
-    .addFormList {
+    .addTitle {
         text-align: center;
     }
     .game-list {

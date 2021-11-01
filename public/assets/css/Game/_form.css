@@ -1,0 +1,14 @@
+.addFormList {
+    text-align: center;
+    list-style-type: none;
+}
+
+.addFormList li {
+    margin: 2rem;
+}
+
+@media screen and (min-width: 680px) {
+    .addFormList {
+        text-align: center;
+    }
+}
