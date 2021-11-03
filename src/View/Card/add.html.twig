@@ -1,16 +1,24 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>New Card : </h1>
+    <section class="add_card">
+    
+        <form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+            
+            <h1>New Card : </h1>
+            
+            <label for="name">Title : </label>
+            <input type="text" placeholder="Your card title" name="name" id="name"/>
+            <label for="description">Description : </label>
+            <textarea rows="10" placeholder="Your card description" name="description" id="description"></textarea>
+            <label for="type">Type : </label>
+            <select name="type" id="type">
+                <option value=""> -- Please choose a type -- </option>
+                <option value="Standard">Standard</option>
+                <option value="Machine">Machine</option>
+            </select>
+            <button type="submit">Create</button> 
 
-    <form method="post" accept-charset="UTF-8">
-
-        <label for="name">Title : </label>
-        <input type="text" name="name" id="name"/>
-        <label for="description">Description : </label>
-        <input type="textarea" name="description" id="description"/>
-        <br>
-        <input type="submit" value="OK">
-
-    </form>
-{% endblock %}
+        </form>
+    </section>
+    {% endblock %}

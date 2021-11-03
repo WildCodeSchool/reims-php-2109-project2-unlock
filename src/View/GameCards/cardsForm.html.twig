@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+	<form class="card-list" method="POST" action="">
+		<h1 class="list-title">Select cards you want to add</h1>
+		{% for card in cards %}
+			{% include "/GameCards/_cardSelect.html.twig" with card %}
+		{% endfor %}
+		<button type="submit">Add</button>
+	</form>
+
+{% endblock %}
+
+{% block javascript %}
+	<script src="/assets/js/cardsForm.js"></script>
+{% endblock %}

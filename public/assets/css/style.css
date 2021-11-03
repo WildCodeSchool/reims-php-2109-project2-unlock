@@ -1,12 +1,39 @@
-*{
+@import "../fonts/playfair/stylesheet.css";
+@import "../fonts/teko/stylesheet.css";
+:root {
+    --border-color: #b29e84;
+    --jet: #423e3a;
+    --gunmetal: #253439;
+    --gray-web: #7c898b;
+    --isabelline: #f6f4f1;
+    /* first font to use */
+    --text-font: "playfair_displayregular", serif;
+    /* use only for title UNLOCK and BUTTON */
+    --unlock-button-font: "tekoregular", sans-serif;
+    font-size: 16px;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
-html, body {
+
+html,
+body {
     overflow-x: hidden;
 }
+
 body {
-    position: relative
+    position: relative;
+    font-family: var(--text-font);
+    background-color: var(--gunmetal);
+    color: var(--isabelline);
+    padding: 1rem;
+}
+
+button {
+    font-family: var(--unlock-button-font);
+    margin: 4vh 0;
 }
 
 .list-title {
@@ -14,7 +41,14 @@ body {
     grid-column: 1/3;
 }
 
-.card-list {
+.game-title {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1rem;
+}
+
+.card-list,
+.game-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3rem 1fr;
@@ -22,33 +56,233 @@ body {
     grid-gap: 1rem;
     grid-auto-flow: row dense;
     align-items: stretch;
+}
 
-    padding: 1rem;
+.game-list {
+    list-style: none;
+    grid-template-rows: 1fr 1fr;
 }
 
 .card {
     aspect-ratio: 2/3;
-    background-color: #f4f4f4;
-    border-radius: 1rem;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
     padding: 1rem;
-    transition: ease-out .2s;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+}
+
+.game,
+.game-image {
+    aspect-ratio: 2/3;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+}
+
+.game {
+    padding: 0;
+}
+
+.game-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.game-image {
+    padding: 0;
+    aspect-ratio: initial;
+}
+
+.game-caption {
+    color: var(--isabelline);
+    font-size: 1.2rem;
+    align-self: center;
+    margin-block-end: auto;
 }
 
 .card-title {
-    margin-bottom: 1rem;
+    text-align: center;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+.card-link-to-details {
+    text-decoration: none;
+    color: var(--isabelline);
+    border: solid 2px var(--border-color);
+    border-radius: 1rem;
+    height: 2rem;
+    transition: ease-in-out .2s;
     text-align: center;
 }
 
-@media screen and (min-width: 680px){
+.card-details-span {
+    vertical-align: middle;
+}
+
+.addTitle,
+.addFormList {
+    text-align: center;
+}
+
+.add_card form {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    margin-top: 17vh;
+    background-color: var(--jet);
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    padding: 0.35rem;
+}
+
+.add_card h1 {
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.add_card label {
+    margin-top: 1.2rem;
+    margin-left: 0.4rem;
+}
+
+.add_card button {
+    margin-top: 1.8rem;
+    width: 35%;
+    margin-left: 5.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.add_card input,
+.add_card select,
+.add_card textarea {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.6rem;
+    margin-bottom: auto;
+    width: 90%;
+}
+
+.add_card select {
+    text-align: center;
+}
+
+.addFormList {
+    list-style-type: none;
+}
+
+.addFormList li {
+    margin: 2rem;
+}
+
+.checkbox:checked+.card {
+    border-color: lightgreen;
+}
+
+.add-cards-link {
+    text-decoration: none;
+    color: var(--isabelline);
+    font-size: 2rem;
+    position: relative;
+}
+
+.add-cards-span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Game SHOW part */
+
+.game-desription-screen {
+    height: 100vh;
+}
+
+.unlock {
+    font-size: 2rem;
+    font-family: var(--unlock-button-font);
+}
+
+.unlock-title2 {
+    font-size: 1rem;
+}
+
+.game-title {
+    margin-top: 3rem;
+}
+
+.game-description {
+    background-color: var(--gray-web);
+    text-align: center;
+    align-items: stretch;
+    border: 0.5rem double;
+    border-color: var(--border-color);
+    border-radius: 1rem;
+    margin: 5rem 2rem;
+}
+
+.game-description-p {
+    padding: 1rem;
+    margin: 5rem 0;
+}
+
+.car-show {
+    margin: 1rem;
+    background-color: var(--gray-web);
+    color: var(--isabelline);
+    border-radius: 1rem;
+    border: 0.2rem solid;
+    border-color: var(--border-color);
+    text-align: center;
+}
+
+.card-name {
+    margin: 1.5rem 0;
+}
+
+
+/*
+.card-description {
+    padding: 1rem;
+    margin: 2rem 0;
+}*/
+
+@media screen and (min-width: 680px) {
+    .addTitle,
+    .addFormList {
+        text-align: center;
+    }
     .list-title {
         grid-column: 1/6;
     }
-
-    .card:hover{
-        transform:scale(1.05)
+    .card:hover {
+        transform: scale(1.05);
     }
-
-    .card-list {
-        grid-template-columns: repeat(5,  1fr);
+    .card-link-to-details:hover {
+        background-color: var(--isabelline);
+        color: var(--gunmetal);
+        border-color: var(--isabelline);
+    }
+    .card-list,
+    .game-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .add_card form {
+        max-width: 30vw;
+        margin: auto;
+    }
+    .add_card button {
+        margin-left: 9rem;
     }
 }

@@ -1,13 +1,33 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Games</h1>
-    <ul>
+    <h1 class="game-title">Games list</h1>
+    <ul class="game-list">
         {% for game in games %}
-            <li><a href="/games/show?id={{ game.id }}">{{ game.id }}. {{ game.name }}</a></li>
+            <li class="game">
+                <a href="/games/show?id={{ game.id }}">
+                    <figure class="game-figure">
+                        <img class="game-image" src="https://picsum.photos/200/250" alt="{{game.name}}">
+                        <figcaption class="game-caption">{{ game.id }}.{{ game.name }}</figcaption>
+                    </figure>
+                </a>
+            </li>
         {% else %}
-            <li>Nothing to display</li>
+            <li class="game">
+                    <figure class="game-figure">
+                        <img class="game-image" src="https://picsum.photos/200/250" alt="No game yet">
+                        <figcaption class="game-caption">No game yet</figcaption>
+                    </figure>
+                </a>
+            </li>
         {% endfor %}
+            <li class="game">
+                <a href="/games/add">
+                    <figure class="game-figure">
+                        <img class="game-image" src="https://picsum.photos/200/250" alt="Add Cards">
+                        <figcaption class="game-caption">Add Cards</figcaption>
+                    </figure>
+                </a>
+            </li>
     </ul>
-    <a href="/games/add">Ajouter</a>
 {% endblock %}
