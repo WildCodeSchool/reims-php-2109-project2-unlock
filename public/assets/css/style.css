@@ -203,6 +203,7 @@ button {
     transform: translateY(-50%);
 }
 
+
 /* Game SHOW part */
 
 .game-show-desription-screen {
@@ -255,42 +256,40 @@ button {
     border: 2px solid var(--jet);
     border-radius: 10px;
     box-shadow: 5px 5px 5px var(--shadow-jet);
-  }
+}
+
 
 /*  CARD - DETAILS - SHOW */
 
-.card-container {
+.card-detail {
+    margin: 1rem auto;
+    height: 30rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.card-show {
-    height: 500px;
-    width: 300px;
-    margin: 4rem 1rem;
-    background-color: var(--gray-web);
-    color: var(--isabelline);
-    border-radius: 1rem;
-    border: 0.2rem solid;
-    border-color: var(--border-color);
-    text-align: center;
-}
-
-.card-head {
+.card-detail-title-container {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
     align-items: center;
-    padding: 0.5rem 1rem;
 }
 
-.card-name {
-    padding-left: 1.5rem;
+.card-detail .card-name {
+    text-align: center;
+    margin-left: 2rem;
 }
 
-.card-description {
-    padding-top: 1.5rem;
-    font-style: oblique;
+.card-detail .card-number {
+    height: 4rem;
+}
+
+.card-detail .card-description {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-img {
+    width: 20rem;
+    margin-top: 1rem;
 }
 
 
@@ -309,17 +308,16 @@ button {
     text-align: center;
 }
 
-.Unlock-hiddenCard{
+.Unlock-hiddenCard {
     font-family: var(--unlock-button-font);
     font-size: 4rem;
     color: var(--gunmetal);
 }
 
-.Merge{
+.Merge {
     border-radius: 30px;
     background: #253439;
-    box-shadow:  10px -10px 20px #0f1517,
-    -10px 10px 20px #3b535b;
+    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
     font-family: var(--unlock-button-font);
     color: white;
     font-size: 4rem;
@@ -327,7 +325,7 @@ button {
 
 .Merge:hover {
     transform: scale(0.95);
-    transition:  ease-out 0.2s;
+    transition: ease-out 0.2s;
 }
 
 @media screen and (min-width: 680px) {
