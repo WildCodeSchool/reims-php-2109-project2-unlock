@@ -1,10 +1,6 @@
 {% extends 'layout.html.twig' %} 
 
 {% block content %}
-    <pre>
-        {{ dump() }}
-    </pre>
-    
 	<form class="card-list" method="POST" action="">
 		<h1 class="list-title">Select cards you want to merge</h1>
 		{% for card in cards_discovered %}
@@ -19,7 +15,4 @@
             {% include "GameCards/_cardHidden.html.twig" with card %}
         {% endfor %}
     </div>
-
-
-
 {% endblock %}
