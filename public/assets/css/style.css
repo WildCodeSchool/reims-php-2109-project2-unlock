@@ -3,6 +3,7 @@
 :root {
     --border-color: #b29e84;
     --jet: #423e3a;
+    --shadow-jet: #70675d;
     --gunmetal: #253439;
     --gray-web: #7c898b;
     --isabelline: #f6f4f1;
@@ -254,6 +255,7 @@ button {
     padding: 0.2rem;
     border: 2px solid var(--jet);
     border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--shadow-jet);
 }
 
 
