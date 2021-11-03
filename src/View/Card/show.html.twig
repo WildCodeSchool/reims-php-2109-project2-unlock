@@ -2,9 +2,15 @@
 
 <h1 class="unlock">UNLOCK !</h1>
 <h2 class="unlock-title2">Sherlock Adventure</h2>
-<div class="car-show">
-    <h2 class="card-name">{{ card.name }}</h2>
-    <img alt="image de la carte">
-    <p class="card-description">{{ card.description }}</p>
+<div class="card-show">
+    <div class="card-head">
+        <img src="/assets/images/card-icon.png" alt="numéro de carte" width="60rem">
+        <p> {{card.number}} </p>
+        <h2 class="card-name ">{{ card.name }}</h2>
+    </div>
+    <figcaption class="card-body ">
+        <img alt="image de la carte ">
+        <p class="card-description ">{{ card.description }}</p>
+    </figcaption>
 </div>
 {% endblock %}

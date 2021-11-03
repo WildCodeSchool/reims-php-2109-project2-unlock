@@ -237,8 +237,12 @@ button {
     margin: 5rem 0;
 }
 
-.car-show {
-    margin: 1rem;
+
+/*  CARD - DETAILS - SHOW */
+
+.card-show {
+    height: 65vh;
+    margin: 4rem 1rem;
     background-color: var(--gray-web);
     color: var(--isabelline);
     border-radius: 1rem;
@@ -247,16 +251,18 @@ button {
     text-align: center;
 }
 
-.card-name {
-    margin: 1.5rem 0;
+.card-head {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #f6f4f1;
 }
 
-
-/*
-.card-description {
-    padding: 1rem;
-    margin: 2rem 0;
-}*/
+.card-name {
+    padding-left: 1.5rem;
+}
 
 @media screen and (min-width: 680px) {
     .addTitle,
