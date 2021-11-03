@@ -258,6 +258,22 @@ button {
     margin: 2rem 0;
 }*/
 
+
+/* Game play start here */
+
+.card-hidden {
+    aspect-ratio: 2/3;
+    background-color: var(--gray-web);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+}
+
+
 @media screen and (min-width: 680px) {
     .addTitle,
     .addFormList {
