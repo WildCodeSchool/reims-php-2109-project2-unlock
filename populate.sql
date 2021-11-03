@@ -7,6 +7,7 @@ INSERT INTO `game` (`name`, `description`) VALUES
 ("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !");
 
 INSERT INTO `card` (`name`, `description`) VALUES 
+("Sherlock house", "You wake up in your living room, a little bit drunk. But where are youor house key !?!"),
 ("Key", "Here is a key to open door"),
 ("Door", "Here is a door. Find a key to open it"),
 ("Sword", "You can probably kill someone with it, be carefull"),
