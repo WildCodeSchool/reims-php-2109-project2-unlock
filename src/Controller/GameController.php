@@ -79,7 +79,7 @@ class GameController extends AbstractController
 
             if ($this->isFinished()) {
                 session_destroy();
-                header("Location: /games?id=" . $gameId);
+                header("Location: /games");
             }
         }
         return $this->twig->render('Game/play.html.twig', [
