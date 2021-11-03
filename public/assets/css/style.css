@@ -33,7 +33,6 @@ body {
 
 button {
     font-family: var(--unlock-button-font);
-    margin: 4vh 0;
 }
 
 .list-title {
@@ -41,7 +40,7 @@ button {
     grid-column: 1/3;
 }
 
-.game-title {
+.game-list-title {
     text-align: center;
     margin: 2rem;
     font-size: 1rem;
@@ -100,6 +99,7 @@ button {
 .game-image {
     padding: 0;
     aspect-ratio: initial;
+    height: 23vh;
 }
 
 .game-caption {
@@ -202,41 +202,58 @@ button {
     transform: translateY(-50%);
 }
 
-
 /* Game SHOW part */
 
-.game-desription-screen {
+.game-show-desription-screen {
     height: 100vh;
 }
 
-.unlock {
-    font-size: 2rem;
+.game-show-unlock {
+    font-size: 1.5rem;
     font-family: var(--unlock-button-font);
 }
 
-.unlock-title2 {
-    font-size: 1rem;
+.game-show-title {
+    font-size: 1.3rem;
+    margin: 3rem 0;
 }
 
-.game-title {
-    margin-top: 3rem;
-}
-
-.game-description {
+.game-show-description {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-color: var(--gray-web);
     text-align: center;
     align-items: stretch;
     border: 0.5rem double;
     border-color: var(--border-color);
     border-radius: 1rem;
-    margin: 5rem 2rem;
+    margin: 3rem 2rem 0 2rem;
 }
 
-.game-description-p {
+.game-show-description-p {
+    height: 40vh;
+    text-align: center;
     padding: 1rem;
-    margin: 5rem 0;
+    background-image: url("/assets/images/game-the-appartment.png");
 }
 
+.game-show-instruction-p {
+    text-align: justify;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.game-show-link {
+    text-decoration: none;
+    color: var(--isabelline);
+    background-color: var(--jet);
+    font-size: 2rem;
+    margin: 1rem 5rem;
+    padding: 0.2rem;
+    border: 2px solid var(--jet);
+    border-radius: 10px;
+  }
 
 /*  CARD - DETAILS - SHOW */
 
@@ -272,6 +289,43 @@ button {
 .card-description {
     padding-top: 1.5rem;
     font-style: oblique;
+}
+
+
+/* Game play start here */
+
+.card-hidden {
+    aspect-ratio: 2/3;
+    background-color: var(--gray-web);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.Unlock-hiddenCard{
+    font-family: var(--unlock-button-font);
+    font-size: 4rem;
+    color: var(--gunmetal);
+}
+
+.Merge{
+    border-radius: 30px;
+    background: #253439;
+    box-shadow:  10px -10px 20px #0f1517,
+    -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+}
+
+.Merge:hover {
+    transform: scale(0.95);
+    transition:  ease-out 0.2s;
 }
 
 @media screen and (min-width: 680px) {
