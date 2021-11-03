@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\GameCardsManager;
 use App\Model\GameManager;
 
 class GameController extends AbstractController
@@ -42,8 +43,19 @@ class GameController extends AbstractController
         return $this->twig->render('Game/show.html.twig', ['game' => $game]);
     }
 
-    public function play(): string
+    public function play(int $gameId): string
     {
-        return $this->twig->render('Game/play.html.twig');
+        session_start();
+        if (!isset($_SESSION["cards"])) {
+            $gameCardsManager = new GameCardsManager();
+            $cards = $gameCardsManager->selectCardsFromGame($gameId);
+            $sessionCards = ["discovered" => $cards, "hidden" => [], "used" => []];
+            $_SESSION["cards"] = $sessionCards;
+        }
+        return $this->twig->render('Game/play.html.twig', [
+            "cards_discovered" => $_SESSION["cards"]["discovered"],
+            "cards_hidden" => $_SESSION["cards"]["hidden"],
+            "cards_used" => $_SESSION["cards"]["used"]
+        ]);
     }
 }
