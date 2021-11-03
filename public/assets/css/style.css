@@ -33,7 +33,6 @@ body {
 
 button {
     font-family: var(--unlock-button-font);
-    margin: 4vh 0;
 }
 
 .list-title {
@@ -271,8 +270,29 @@ button {
     display: grid;
     grid-template-rows: 4rem auto 2rem;
     grid-template-columns: 1fr;
+    text-align: center;
 }
 
+.Unlock-hiddenCard{
+    font-family: var(--unlock-button-font);
+    font-size: 4rem;
+    color: var(--gunmetal);
+}
+
+.Merge{
+    border-radius: 30px;
+    background: #253439;
+    box-shadow:  10px -10px 20px #0f1517,
+    -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+}
+
+.Merge:hover {
+    transform: scale(0.95);
+    transition:  ease-out 0.2s;
+}
 
 @media screen and (min-width: 680px) {
     .addTitle,
