@@ -85,7 +85,7 @@ class GameController extends AbstractController
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
             "cards_hidden" => $_SESSION["cards"]["hidden"],
-            "cards_used" => $_SESSION["cards"]["used"]
+            "cards_used" => $_SESSION["cards"]["used"],
         ]);
     }
 
