@@ -49,8 +49,12 @@ class GameController extends AbstractController
         if (!isset($_SESSION["cards"])) {
             $gameCardsManager = new GameCardsManager();
             $cards = $gameCardsManager->selectCardsFromGame($gameId);
-            var_dump($cards);
-            $sessionCards = ["discovered" => $cards, "hidden" => [], "used" => []];
+            $sessionCards = ["discovered" => [], "hidden" => [], "used" => []];
+            foreach ($cards as $card) {
+                $card["aob"]
+                    ? array_push($sessionCards["discovered"], $card)
+                    : array_push($sessionCards["hidden"], $card);
+            }
             $_SESSION["cards"] = $sessionCards;
         }
         return $this->twig->render('Game/play.html.twig', [
