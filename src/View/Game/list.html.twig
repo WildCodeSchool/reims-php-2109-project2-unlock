@@ -1,13 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class="game-title">Games list</h1>
+    <h1 class="game-list-title">Games list</h1>
     <ul class="game-list">
         {% for game in games %}
             <li class="game">
                 <a href="/games/show?id={{ game.id }}">
                     <figure class="game-figure">
-                        <img class="game-image" src="https://picsum.photos/200/250" alt="{{game.name}}">
+                        <img class="game-image" src="../assets/images/game-the-appartment.png" alt="{{game.name}}">
                         <figcaption class="game-caption">{{ game.id }}.{{ game.name }}</figcaption>
                     </figure>
                 </a>
@@ -15,7 +15,7 @@
         {% else %}
             <li class="game">
                     <figure class="game-figure">
-                        <img class="game-image" src="https://picsum.photos/200/250" alt="No game yet">
+                        <img class="game-image" src=""../assets/images/game-the-appartment.png" alt="No game yet">
                         <figcaption class="game-caption">No game yet</figcaption>
                     </figure>
                 </a>
@@ -24,7 +24,7 @@
             <li class="game">
                 <a href="/games/add">
                     <figure class="game-figure">
-                        <img class="game-image" src="https://picsum.photos/200/250" alt="Add Cards">
+                        <img class="game-image" src="../assets/images/game-the-appartment.png" alt="Add Cards">
                         <figcaption class="game-caption">Add Cards</figcaption>
                     </figure>
                 </a>
