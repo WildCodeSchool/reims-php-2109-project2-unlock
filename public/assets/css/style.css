@@ -33,7 +33,6 @@ body {
 
 button {
     font-family: var(--unlock-button-font);
-    margin: 4vh 0;
 }
 
 .list-title {
@@ -276,6 +275,43 @@ button {
     padding: 1rem;
     margin: 2rem 0;
 }*/
+
+
+/* Game play start here */
+
+.card-hidden {
+    aspect-ratio: 2/3;
+    background-color: var(--gray-web);
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: ease-out 0.2s;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 4rem auto 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.Unlock-hiddenCard{
+    font-family: var(--unlock-button-font);
+    font-size: 4rem;
+    color: var(--gunmetal);
+}
+
+.Merge{
+    border-radius: 30px;
+    background: #253439;
+    box-shadow:  10px -10px 20px #0f1517,
+    -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+}
+
+.Merge:hover {
+    transform: scale(0.95);
+    transition:  ease-out 0.2s;
+}
 
 @media screen and (min-width: 680px) {
     .addTitle,
