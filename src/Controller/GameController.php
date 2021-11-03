@@ -49,6 +49,7 @@ class GameController extends AbstractController
         if (!isset($_SESSION["cards"])) {
             $gameCardsManager = new GameCardsManager();
             $cards = $gameCardsManager->selectCardsFromGame($gameId);
+            var_dump($cards);
             $sessionCards = ["discovered" => $cards, "hidden" => [], "used" => []];
             $_SESSION["cards"] = $sessionCards;
         }
