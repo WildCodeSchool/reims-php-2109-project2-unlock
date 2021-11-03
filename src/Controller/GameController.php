@@ -75,16 +75,12 @@ class GameController extends AbstractController
             $cardNumbers = $this->getCardNumbers($cardIds);
 
             //add the card to the discovered one
-            $nbCardHidden = count($_SESSION["cards"]["hidden"]);
-            for ($j = 0; $j < $nbCardHidden; $j++) {
-                if (array_sum($cardNumbers) == $_SESSION["cards"]["hidden"][$j]["number"]) {
-                    array_push($_SESSION["cards"]["discovered"], $_SESSION["cards"]["hidden"][$j]);
-                    unset($_SESSION["cards"]["hidden"][$j]);
-                    $this->unsetCardsDiscovered($cardIds);
-                }
-            }
+            $this->addCardToDiscover($cardNumbers, $cardIds);
 
-            /*header("Location: /games/cards?id=" . $id);*/
+            if ($this->isFinished()) {
+                session_destroy();
+                header("Location: /games?id=" . $gameId);
+            }
         }
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
@@ -95,11 +91,10 @@ class GameController extends AbstractController
 
     private function unsetCardsDiscovered(array $cardIds)
     {
-        $nbCardDiscovered = count($_SESSION["cards"]["discovered"]);
-        for ($i = 0; $i < $nbCardDiscovered; $i++) {
-            if (in_array($_SESSION["cards"]["discovered"][$i]["id"], $cardIds)) {
-                array_push($_SESSION["cards"]["used"], $_SESSION["cards"]["discovered"][$i]);
-                unset($_SESSION["cards"]["discovered"][$i]);
+        foreach ($_SESSION["cards"]["discovered"] as $key => $card) {
+            if (in_array($card["id"], $cardIds)) {
+                array_push($_SESSION["cards"]["used"], $card);
+                unset($_SESSION["cards"]["discovered"][$key]);
             }
         }
     }
@@ -115,5 +110,24 @@ class GameController extends AbstractController
             }
         }
         return $cardNumbers;
+    }
+
+    private function isFinished()
+    {
+        if (count($_SESSION["cards"]["hidden"]) === 0) {
+            return true;
+        }
+        return false;
+    }
+
+    private function addCardToDiscover(array $cardNumbers, array $cardIds)
+    {
+        foreach ($_SESSION["cards"]["hidden"] as $key => $card) {
+            if (array_sum($cardNumbers) == $card["number"]) {
+                array_push($_SESSION["cards"]["discovered"], $card);
+                unset($_SESSION["cards"]["hidden"][$key]);
+                $this->unsetCardsDiscovered($cardIds);
+            }
+        }
     }
 }
