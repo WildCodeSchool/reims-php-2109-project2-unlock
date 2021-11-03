@@ -240,8 +240,14 @@ button {
 
 /*  CARD - DETAILS - SHOW */
 
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
 .card-show {
-    height: 65vh;
+    height: 500px;
+    width: 300px;
     margin: 4rem 1rem;
     background-color: var(--gray-web);
     color: var(--isabelline);
@@ -257,11 +263,15 @@ button {
     flex-direction: row;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: 1px solid #f6f4f1;
 }
 
 .card-name {
     padding-left: 1.5rem;
+}
+
+.card-description {
+    padding-top: 1.5rem;
+    font-style: oblique;
 }
 
 @media screen and (min-width: 680px) {
