@@ -1,10 +1,13 @@
 {% extends 'layout.html.twig' %} 
 
 {% block content %}
-{% for card in cards_discovered %}
-    <p>{{ card.name }}</p>
-{% endfor %}
-{% for card in cards_hidden %}
-    <p>{{ card.name }}</p>
-{% endfor %}/**
+
+	<form class="card-list" method="POST" action="">
+		<h1 class="list-title">Select cards you want to add</h1>
+		{% for card in cards_discovered %}
+			{% include "/GameCards/_cardSelect.html.twig" with card %}
+		{% endfor %}
+		<button type="submit">Add</button>
+	</form>
+
 {% endblock %}

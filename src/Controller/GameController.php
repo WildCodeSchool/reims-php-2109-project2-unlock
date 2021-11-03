@@ -57,10 +57,63 @@ class GameController extends AbstractController
             }
             $_SESSION["cards"] = $sessionCards;
         }
+
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $cards = array_map('trim', $_POST);
+
+            //Get Ids of card selected
+            $cardIds = [];
+            foreach ($cards as $key => $value) {
+                if ($value === "on") {
+                    $foundId = [];
+                    preg_match_all("/cardN([0-9]+)/", $key, $foundId, PREG_PATTERN_ORDER);
+                    array_push($cardIds, $foundId[1][0]);
+                }
+            }
+
+            //get Numbers associated to every card
+            $cardNumbers = $this->getCardNumbers($cardIds);
+
+            //add the card to the discovered one
+            $nbCardHidden = count($_SESSION["cards"]["hidden"]);
+            for ($j = 0; $j < $nbCardHidden; $j++) {
+                if (array_sum($cardNumbers) == $_SESSION["cards"]["hidden"][$j]["number"]) {
+                    array_push($_SESSION["cards"]["discovered"], $_SESSION["cards"]["hidden"][$j]);
+                    unset($_SESSION["cards"]["hidden"][$j]);
+                    $this->unsetCardsDiscovered($cardIds);
+                }
+            }
+
+            /*header("Location: /games/cards?id=" . $id);*/
+        }
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
             "cards_hidden" => $_SESSION["cards"]["hidden"],
             "cards_used" => $_SESSION["cards"]["used"]
         ]);
+    }
+
+    private function unsetCardsDiscovered(array $cardIds)
+    {
+        $nbCardDiscovered = count($_SESSION["cards"]["discovered"]);
+        for ($i = 0; $i < $nbCardDiscovered; $i++) {
+            if (in_array($_SESSION["cards"]["discovered"][$i]["id"], $cardIds)) {
+                array_push($_SESSION["cards"]["used"], $_SESSION["cards"]["discovered"][$i]);
+                unset($_SESSION["cards"]["discovered"][$i]);
+            }
+        }
+    }
+
+    private function getCardNumbers(array $cardIds)
+    {
+        $cardNumbers =  [];
+        foreach ($cardIds as $id) {
+            foreach ($_SESSION["cards"]["discovered"] as $card) {
+                if ($card["id"] === $id) {
+                    array_push($cardNumbers, $card["number"]);
+                }
+            }
+        }
+        return $cardNumbers;
     }
 }
