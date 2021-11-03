@@ -11,8 +11,9 @@ CREATE TABLE IF NOT EXISTS `card` (
 
 CREATE TABLE IF NOT EXISTS `game` (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `name` VARCHAR(200),
-  `description` TEXT
+  `name` VARCHAR(50),
+  `description` TEXT,
+  `instruction` VARCHAR(100)
 ) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin ;
 
 CREATE TABLE IF NOT EXISTS `gamecards` (
