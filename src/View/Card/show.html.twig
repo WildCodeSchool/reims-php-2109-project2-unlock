@@ -1,10 +1,13 @@
 {% extends 'layout.html.twig' %} {% block content %}
-
 <h1 class="unlock">UNLOCK !</h1>
 <h2 class="unlock-title2">Sherlock Adventure</h2>
-<div class="car-show">
-    <h2 class="card-name">{{ card.name }}</h2>
-    <img alt="image de la carte">
+<div class="card card-detail">
+    <div class="card-detail-title-container">
+        <img src="/assets/images/card-icon.png" alt="numéro de carte" class="card-number">
+        <p>{{card.number}}</p>
+        <h2 class="card-name ">{{ card.name }}</h2>
+    </div>
+    <img src="/assets/images/key.png" alt="Image de la carte" class="card-img">
     <p class="card-description">{{ card.description }}</p>
 </div>
-{% endblock %}
+</div>{% endblock %}

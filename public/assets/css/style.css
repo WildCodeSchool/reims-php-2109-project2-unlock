@@ -3,6 +3,7 @@
 :root {
     --border-color: #b29e84;
     --jet: #423e3a;
+    --shadow-jet: #70675d;
     --gunmetal: #253439;
     --gray-web: #7c898b;
     --isabelline: #f6f4f1;
@@ -255,28 +256,42 @@ button {
     padding: 0.2rem;
     border: 2px solid var(--jet);
     border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--shadow-jet);
 }
 
-.card-show {
-    margin: 1rem;
-    background-color: var(--gray-web);
-    color: var(--isabelline);
-    border-radius: 1rem;
-    border: 0.2rem solid;
-    border-color: var(--border-color);
+
+/*  CARD - DETAILS - SHOW */
+
+.card-detail {
+    margin: 1rem auto;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.card-detail .card-name {
     text-align: center;
+    margin-left: 2rem;
 }
 
-.card-name {
-    margin: 1.5rem 0;
+.card-detail .card-number {
+    height: 4rem;
 }
 
+.card-detail .card-description {
+    text-align: center;
+    margin-top: 1rem;
+}
 
-/*
-.card-description {
-    padding: 1rem;
-    margin: 2rem 0;
-}*/
+.card-img {
+    width: 20rem;
+    margin-top: 1rem;
+}
 
 
 /* Game play start here */

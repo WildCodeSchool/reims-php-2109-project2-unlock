@@ -1,12 +1,12 @@
 USE `unlock_db`;
 
-INSERT INTO `game` (`name`, `description`) VALUES 
-("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock"),
-("Sherlock et le mystère de Pandore", "Vous serez plongé dans un tout nouvel univers!"),
-("Sherlock dans le égout de londre", "Une aventure nauséabonde et visieuse vous attend"),
-("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !");
+INSERT INTO `game` (`name`, `description`, `instruction`) VALUES 
+("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
+("Sherlock et le mystère de Pandore", "Vous serez plongé dans un tout nouvel univers!","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
+("Sherlock dans le égout de londre", "Une aventure nauséabonde et visieuse vous attend","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
+("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
 
-INSERT INTO `card` (`name`, `description`) VALUES 
+INSERT INTO `card` (`name`, `description`) VALUES
 ("Key", "Here is a key to open door"),
 ("Door", "Here is a door. Find a key to open it"),
 ("Sword", "You can probably kill someone with it, be carefull"),
