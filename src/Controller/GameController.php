@@ -82,10 +82,15 @@ class GameController extends AbstractController
                 header("Location: /games");
             }
         }
+
+        $gameManager = new GameManager();
+        $game = $gameManager->selectOneById($gameId);
+
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
             "cards_hidden" => $_SESSION["cards"]["hidden"],
             "cards_used" => $_SESSION["cards"]["used"],
+            "game" => $game,
         ]);
     }
 
