@@ -115,7 +115,6 @@ button {
 
 .card-title {
     text-align: center;
-    overflow-wrap: break-word;
     min-width: 0;
 }
 
@@ -213,6 +212,12 @@ button {
 
 .game-show-desription-screen {
     height: 100vh;
+    max-width: 600px;
+}
+
+.game-show {
+    display: flex;
+    justify-content: center;
 }
 
 .game-show-unlock {
@@ -367,6 +372,7 @@ button {
 .game-card {
     display: flex;
     flex-direction: column;
+    height: 80vh;
 }
 
 .card-description {

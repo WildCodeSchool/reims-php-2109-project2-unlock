@@ -1,9 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<div class="game-show-unlock">
+		<h1 class="game-show-unlock-h1">UNLOCK !</h1>
+		<h2 class="game-show-unlock-h2">Sherlock Adventure</h2>
+	</div>
 <div class="victory game-show-description">
     <h1 class="unchanging">Félicitations, tu as terminé</h1>
         <h2 class="game-name"> {{ game.name }} </h2>
-    <a class="game-show-link" href="/">Retour à l'acceuil</a>
+    <a class="game-show-link" href="/games">Retour aux jeux</a>
 </div>
 {% endblock %}
