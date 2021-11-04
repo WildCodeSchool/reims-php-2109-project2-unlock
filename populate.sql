@@ -7,7 +7,15 @@ INSERT INTO `game` (`name`, `description`) VALUES
 ("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !");
 
 INSERT INTO `card` (`name`, `description`, `image`) VALUES 
-("Sherlock house", "You wake up in your living room, a little bit drunk. But where are your house key !?!", "Check the cards that you can see over the picture", "/assets/images/start.webp");
+("Salon", "Voici la pièce où vous êtes enfermés. Plusieurs élements sont visibles. Vous pouvez maintenant associer les cartes qui vous mêneront vers la sortie.", ""),
+("Cable", "Voici un cable téléphonique.", ""),
+("Clé", "C'est une clé, qui permet sûrement d'ouvrir une serrure...", ""),
+("Armoire", "Une armoir fermée à clé.", ""),
+("Watson", "Il vous connait bien, il peut peut-être vous aider.", ""),
+("Porte", "La porte d'entrée est fermée à clé.", ""),
+("Carnet téléphonique", "Ce carnet contient le numéro de téléphone de Watson.", ""),
+("Téléphone", "Appel à un ami.", ""),
+("Livre", "Ce livre contient une clé.", "");
 
 
 /* ("Key", "Here is a key to open door", "", ""),
