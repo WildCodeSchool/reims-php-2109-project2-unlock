@@ -79,7 +79,7 @@ class GameController extends AbstractController
 
             if ($this->isFinished()) {
                 session_destroy();
-                header("Location: /games/victory?id=".$gameId);
+                header("Location: /games/victory?id=" . $gameId);
             }
         }
         return $this->twig->render('Game/play.html.twig', [
@@ -131,7 +131,8 @@ class GameController extends AbstractController
         }
     }
 
-    public function victory(int $id){
+    public function victory(int $id)
+    {
 
         $gameManager = new GameManager();
         $games = $gameManager->selectOneById($id);
@@ -139,4 +140,3 @@ class GameController extends AbstractController
         return $this->twig->render('/Game/victoryScreen.html.twig', ['game' => $games]);
     }
 }
-
