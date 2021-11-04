@@ -1,11 +1,7 @@
 USE `unlock_db`;
 
 INSERT INTO `game` (`name`, `description`, `instruction`) VALUES 
-("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
-("Sherlock et le mystère de Pandore", "Vous serez plongé dans un tout nouvel univers!","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
-("Sherlock dans le égout de londre", "Une aventure nauséabonde et visieuse vous attend","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie."),
-("Shreklock Holmes, le retour de Farquaad", "Get out of my swamp !","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
-
+("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
 INSERT INTO `card` (`name`, `description`, `image_url`) VALUES
 ("Salon", "Voici la pièce où vous êtes enfermés. Plusieurs élements sont visibles. Vous pouvez maintenant associer les cartes qui vous mêneront vers la sortie.", ""),
 ("Cable", "Voici un cable téléphonique.", "/assets/images/cable.png"),
@@ -16,7 +12,7 @@ INSERT INTO `card` (`name`, `description`, `image_url`) VALUES
 ("Carnet téléphonique", "Ce carnet contient le numéro de téléphone de Watson.", "/assets/images/carnet.png"),
 ("Téléphone", "Appel à un ami.", "/assets/images/phone.png"),
 ("Livre", "Ce livre contient une clé.", "/assets/images/book.png"),
-("Fil de Téléphone", "Brancher votre téléphone!", "/assets/images/fil.png"),
+("Fil de Téléphone", "Brancher votre téléphone!", "/assets/images/cable.png"),
 ("Fin", "", "");
 
 INSERT INTO `gamecards` (`game_id`, `card_id`, `card_number`, `available_on_begin`) VALUES

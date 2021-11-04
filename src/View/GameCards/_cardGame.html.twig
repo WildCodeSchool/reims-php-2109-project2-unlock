@@ -1,8 +1,9 @@
 <label for="cardN{{ card.id }}">
 	<input type="checkbox" id="cardN{{ card.id }}" name="cardN{{ card.id }}" class="checkbox" hidden>
-	<div class="card">
+	<div class="card game-card">
 		<h2 class="card-title">{{ card.name }}</h2>
-		<p>{{ card.description }}</p>
+		<img class="card-img" src="{{ card.image_url }}">
+		<p class="card-description">{{ card.description }}</p>
         <p class="card-number">{{ card.number }}</p>
 	</div>
 </label>

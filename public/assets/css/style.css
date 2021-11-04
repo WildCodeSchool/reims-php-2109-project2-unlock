@@ -72,6 +72,7 @@ button {
     padding: 1rem;
     transition: ease-out 0.2s;
     overflow-x: hidden;
+    overflow-y: visible;
     display: grid;
     grid-template-rows: 1fr 6fr 4rem;
     grid-template-columns: 1fr;
@@ -299,7 +300,7 @@ button {
 }
 
 .card-img {
-    width: 20rem;
+    width: 100%;
     margin-top: 1rem;
 }
 
@@ -311,6 +312,7 @@ button {
     text-align: center;
     font-size: 1.8rem;
 }
+
 
 /* Game play start here */
 
@@ -354,12 +356,21 @@ button {
     text-align: center;
 }
 
+
 /* ADD Game */
 
 .game_add {
     margin: auto;
     height: 27em;
-  
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-description {
+    overflow-y: scroll;
 }
 
 @media screen and (min-width: 680px) {

@@ -7,7 +7,7 @@
         <p>{{card.number}}</p>
         <h2 class="card-name ">{{ card.name }}</h2>
     </div>
-    <img src="/assets/images/key.png" alt="Image de la carte" class="card-img">
+    <img src="{{ card.image_url }}" alt="Image de la carte" class="card-img">
     <p class="card-description">{{ card.description }}</p>
 </div>
 </div>{% endblock %}
