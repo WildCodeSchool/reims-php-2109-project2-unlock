@@ -75,6 +75,7 @@ button {
     display: grid;
     grid-template-rows: 1fr 6fr 4rem;
     grid-template-columns: 1fr;
+    position: relative;
 }
 
 .game,
@@ -329,6 +330,15 @@ button {
 .Merge:hover {
     transform: scale(0.95);
     transition: ease-out 0.2s;
+}
+
+.Number-hiddenCard {
+    font-size: 1.8rem;
+}
+
+.card-number {
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 @media screen and (min-width: 680px) {
