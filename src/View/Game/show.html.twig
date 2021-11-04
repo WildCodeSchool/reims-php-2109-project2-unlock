@@ -1,15 +1,19 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-	<div class="game-desription-screen">
-		<div class='unlock-title'>
-			<h1 class="unlock">UNLOCK !</h1>
-			<h2>Sherlock Adventure</h2>
+
+	<div class="game-show-desription-screen">
+		<div class="game-show-unlock">
+			<h1 class="game-show-unlock-h1">UNLOCK !</h1>
+			<h2 class="game-show-unlock-h2">Sherlock Adventure</h2>
 		</div>
-		<div class="game-description">
-			<h2 class="game-title">{{ game.name }}</h2>
-			<p class="game-description-p">{{ game.description }}</p>
-			<p>{{ game.instructions }}</p>
-			<button>JOUER</button>
+		<div class="game-show-description">
+			<h2 class="game-show-title">{{ game.name }}</h2>
+			<p class="game-show-description-p">{{ game.description }}</p>
+			<p class="game-show-instruction-p">{{ game.instruction }}</p>
+			<div class="game-show-link">
+				<a href="/games/play?id={{ game.id }}" class="game-show-link-play">JOUER</a>
+				<a href="/games/cards?id={{ game.id }}" class="game-show-link-cards">CARTES</a>
+			</div>
 		</div>
 	</div>
 
