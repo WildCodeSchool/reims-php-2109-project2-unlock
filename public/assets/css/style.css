@@ -217,7 +217,7 @@ button {
 
 .game-show-title {
     font-size: 1.3rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .game-show-description {
@@ -231,7 +231,7 @@ button {
     border: 0.5rem double;
     border-color: var(--border-color);
     border-radius: 1rem;
-    margin: 3rem 2rem 0 2rem;
+    margin: 2rem 0 0 0;
 }
 
 .game-show-description-p {
@@ -239,6 +239,7 @@ button {
     text-align: center;
     padding: 1rem;
     background-image: url("/assets/images/game-the-appartment.png");
+    background-size: cover;
 }
 
 .game-show-instruction-p {
@@ -247,11 +248,17 @@ button {
 }
 
 .game-show-link {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.game-show-link-play,
+.game-show-link-cards {
     text-decoration: none;
     color: var(--isabelline);
     background-color: var(--jet);
-    font-size: 2rem;
-    margin: 1rem 5rem;
+    font-size: 2.4rem;
     padding: 0.2rem;
     border: 2px solid var(--jet);
     border-radius: 10px;
