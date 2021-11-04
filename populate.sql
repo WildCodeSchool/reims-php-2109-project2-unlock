@@ -11,7 +11,7 @@ INSERT INTO `card` (`name`, `description`, `image_url`) VALUES
 ("Porte", "La porte d'entrée est fermée à clé.", "/assets/images/door.png"),
 ("Carnet téléphonique", "Ce carnet contient le numéro de téléphone de Watson.", "/assets/images/carnet.png"),
 ("Téléphone", "Appel à un ami.", "/assets/images/phone.png"),
-("Livre", "Ce livre contient une clé.", "/assets/images/book.png"),
+("Livre", "Ce livre contient une clé.", "/assets/images/keydoor.png"),
 ("Fil de Téléphone", "Brancher votre téléphone!", "/assets/images/cable.png"),
 ("Fin", "", "");
 
