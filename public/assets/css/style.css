@@ -79,17 +79,18 @@ button {
 
 .game,
 .game-image {
-    aspect-ratio: 2/3;
+    height: 65vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 1rem;
     transition: ease-out 0.2s;
     overflow-x: hidden;
-}
-
-.game {
-    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 6fr 4rem;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    font-size: 1.8rem;
 }
 
 .game-figure {
@@ -100,7 +101,6 @@ button {
 
 .game-image {
     padding: 0;
-    aspect-ratio: initial;
     height: 23vh;
 }
 
@@ -124,7 +124,9 @@ button {
     border-radius: 2rem;
     height: 4rem;
     transition: ease-in-out .2s;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-details-span {
