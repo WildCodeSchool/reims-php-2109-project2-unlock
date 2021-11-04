@@ -278,11 +278,13 @@ button {
 
 /*  CARD - DETAILS - SHOW */
 
-.card-detail {
+.card.card-detail {
     margin: 1rem auto;
-    height: 30rem;
     display: flex;
+    height: unset;
+    max-height: unset;
     flex-direction: column;
+    max-width: 450px;
 }
 
 .card-detail-title-container {
