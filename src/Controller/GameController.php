@@ -79,13 +79,18 @@ class GameController extends AbstractController
 
             if ($this->isFinished()) {
                 session_destroy();
-                header("Location: /games");
+                header("Location: /games/victory?id=" . $gameId);
             }
         }
+
+        $gameManager = new GameManager();
+        $game = $gameManager->selectOneById($gameId);
+
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
             "cards_hidden" => $_SESSION["cards"]["hidden"],
             "cards_used" => $_SESSION["cards"]["used"],
+            "game" => $game,
         ]);
     }
 
@@ -129,5 +134,14 @@ class GameController extends AbstractController
                 $this->unsetCardsDiscovered($cardIds);
             }
         }
+    }
+
+    public function victory(int $id)
+    {
+
+        $gameManager = new GameManager();
+        $games = $gameManager->selectOneById($id);
+
+        return $this->twig->render('/Game/victoryScreen.html.twig', ['game' => $games]);
     }
 }

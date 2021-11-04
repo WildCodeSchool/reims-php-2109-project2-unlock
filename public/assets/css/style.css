@@ -51,7 +51,7 @@ button {
 .game-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem 1fr;
+    grid-template-rows: auto 1fr;
     grid-auto-rows: 1fr;
     grid-gap: 1rem;
     grid-auto-flow: row dense;
@@ -74,6 +74,7 @@ button {
     display: grid;
     grid-template-rows: 4rem auto 2rem;
     grid-template-columns: 1fr;
+    position: relative;
 }
 
 .game,
@@ -333,6 +334,15 @@ button {
 .Merge:hover {
     transform: scale(0.95);
     transition: ease-out 0.2s;
+}
+
+.Number-hiddenCard {
+    font-size: 1.8rem;
+}
+
+.card-number {
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 @media screen and (min-width: 680px) {
