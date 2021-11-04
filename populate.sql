@@ -8,7 +8,7 @@ INSERT INTO `game` (`name`, `description`, `instruction`) VALUES
 
 INSERT INTO `card` (`name`, `description`) VALUES
 ("Key", "Here is a key to open door"),
-("Door", "Here is a door. Find a key to open it",
+("Door", "Here is a door. Find a key to open it"),
 ("Smoking pipe", "Probably your best friend"),
 ("Bookshelf", "You can clearly see some inscription on it"),
 ("Book", "Such a great story, reminds me when i was young"),
