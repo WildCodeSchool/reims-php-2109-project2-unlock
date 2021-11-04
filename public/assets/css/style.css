@@ -357,9 +357,13 @@ button {
 /* ADD Game */
 
 .game_add {
-    margin: auto;
-    height: 27em;
-  
+    background-color: var(--jet);
+    height: 65vh;
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    width: 35%;    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (min-width: 680px) {
