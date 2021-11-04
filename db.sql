@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `card` (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` VARCHAR(100),
   `description` TEXT,
-  `type` VARCHAR(100)
+  `image_url` VARCHAR(100)
 ) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin ;
 
 CREATE TABLE IF NOT EXISTS `game` (
