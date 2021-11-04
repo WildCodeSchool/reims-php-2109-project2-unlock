@@ -5,21 +5,19 @@
     <ul class="game-list">
         {% for game in games %}
             <li class="game">
-                <a href="/games/show?id={{ game.id }}">
-                    <figure class="game-figure">
-                        <img class="game-image" src="../assets/images/game-the-appartment.png" alt="{{game.name}}">
-                        <figcaption class="game-caption">{{ game.id }}.{{ game.name }}</figcaption>
-                    </figure>
+                <h2 class="game-title">{{ game.name }}</h2>
+
+                <figure class="game-figure">
+                    <img class="game-image" src="../assets/images/game-the-appartment.png" alt="{{game.name}}">
+                </figure>                
+                <a class="card-link-to-details" href="/games/show?id={{ game.id }}">
+                    <span class="card-details-span">Details</span>
                 </a>
+                
             </li>
         {% endfor %}
-            <li class="game">
-                <a href="/games/add">
-                    <figure class="game-figure">
-                        <img class="game-image" src="../assets/images/game-the-appartment.png" alt="Add Cards">
-                        <figcaption class="game-caption">Add Cards</figcaption>
-                    </figure>
-                </a>
-            </li>
+            <a class="game add-cards-link" href="/games/add">
+                <span class="add-cards-span">AJOUTER UN JEU</span>
+            </a>
     </ul>
 {% endblock %}

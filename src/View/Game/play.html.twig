@@ -4,7 +4,7 @@
 	<form class="card-list" method="POST" action="">
 		<h1 class="list-title">Select cards you want to merge</h1>
 		{% for card in cards_discovered %}
-			{% include "GameCards/_cardSelect.html.twig" with card %}
+			{% include "GameCards/_cardGame.html.twig" with card %}
 		{% endfor %}
 		<button type="submit" class="Merge">Merge</button>
 	</form>
