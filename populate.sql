@@ -8,14 +8,14 @@ INSERT INTO `game` (`name`, `description`, `instruction`) VALUES
 
 INSERT INTO `card` (`name`, `description`) VALUES
 ("Key", "Here is a key to open door"),
-("Door", "Here is a door. Find a key to open it"),
-("Sword", "You can probably kill someone with it, be carefull"),
-("Handkerchief", "Probably usefull, KEEP IT"),
+("Door", "Here is a door. Find a key to open it",
 ("Smoking pipe", "Probably your best friend"),
 ("Bookshelf", "You can clearly see some inscription on it"),
 ("Book", "Such a great story, reminds me when i was young"),
 ("Horse", "Look at my Horse, my horse is amazing!"),
 ("Phone", "You can phone to your best friend with it, can you?"),
+("Sword", "You can probably kill someone with it, be carefull"),
+("Handkerchief", "Probably usefull, KEEP IT"),
 ("Gobelin", "Kill this gobelin"),
 ("Finished", "you finished the game");
 
