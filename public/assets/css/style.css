@@ -303,6 +303,14 @@ button {
     margin-top: 1rem;
 }
 
+.Number-hiddenCard {
+    font-size: 1.8rem;
+}
+
+.card-number {
+    text-align: center;
+    font-size: 1.8rem;
+}
 
 /* Game play start here */
 
@@ -339,14 +347,20 @@ button {
     transition: ease-out 0.2s;
 }
 
-.Number-hiddenCard {
-    font-size: 1.8rem;
+
+/* Victory Screen */
+
+.victory {
+    text-align: center;
 }
 
-.card-number {
-    text-align: center;
-    font-size: 1.8rem;
-}
+/* ADD Game */
+
+.game_add {
+    margin: auto;
+    height: 27em;
+  
+
 
 @media screen and (min-width: 680px) {
     .addTitle,
