@@ -7,7 +7,10 @@
 	</div>
 	{% endif %}
 	<form class="card-list" method="POST" action="" id="cards-form">
-		<h1 class="list-title">{{ game.name }} - Fusionner vos cartes!</h1>
+		<div>
+			<h1 class="list-title">{{ game.name }}</h1>
+			<h2 class="list-title-h2">Fusionner vos cartes !</h2>
+		</div>
 		{% for card in cards_discovered %}
 			{% include "GameCards/_cardGame.html.twig" with card %}
 		{% endfor %}
