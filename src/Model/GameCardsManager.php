@@ -52,7 +52,7 @@ class GameCardsManager extends AbstractManager
     public function selectCardsFromGame(int $id): array
     {
         $query = "select c.name as name, c.description as description, c.id as id,"
-            . " card_number number ,available_on_begin aob from "
+            . " card_number number ,available_on_begin aob, c.image_url image_url from "
             . self::TABLE
             . " right join "
             . CardManager::TABLE

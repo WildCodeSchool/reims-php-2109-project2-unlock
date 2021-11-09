@@ -35,7 +35,13 @@ class GameCardsController extends AbstractController
     {
         $gameCardsManager = new GameCardsManager();
         $cards = $gameCardsManager->selectCardsFromGame($id);
-        return $this->twig->render("GameCards/cardsList.html.twig", ["cards" => $cards, "game_id" => $id]);
+        $gameManager = new GameManager();
+        $game = $gameManager->selectOneById($id);
+        return $this->twig->render("GameCards/cardsList.html.twig", [
+            "cards" => $cards,
+            "game_id" => $id,
+            "game" => $game
+        ]);
     }
 
     public function edit(int $cardId, int $gameId)

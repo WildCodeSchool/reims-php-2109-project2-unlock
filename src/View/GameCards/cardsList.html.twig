@@ -3,7 +3,7 @@
 {% block content %}
 
 	<div class="card-list" method="POST" action="">
-		<h1 class="list-title">Cards of the game</h1>
+		<h1 class="list-title">{{ game.name }} - Liste des cartes</h1>
 		{% for card in cards %}
 			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
