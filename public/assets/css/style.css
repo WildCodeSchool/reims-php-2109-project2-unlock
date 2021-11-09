@@ -53,6 +53,8 @@ button {
 }
 
 .list-title {
+    margin-top: 1rem;
+    text-align: center;
     grid-row: 1;
     grid-column: 1/2;
     font-size: 1.5rem;
@@ -65,6 +67,12 @@ button {
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--border-color);
+}
+
+.list-title-h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .card-list,

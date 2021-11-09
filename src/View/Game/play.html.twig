@@ -1,17 +1,27 @@
-{% extends 'layout.html.twig' %} {% block content %} {% if error is defined %}
-<div class="game-play-merge-info">
-    <p class="game-play-merge-info-description">{{ error }}</p>
-</div>
-{% endif %}
-<form class="card-list" method="POST" action="" id="cards-form">
-    <h1 class="list-title">{{ game.name }} - Fusionnez vos cartes!</h1>
-    {% for card in cards_discovered %} {% include "GameCards/_cardGame.html.twig" with card %} {% endfor %}
-</form>
+{% extends 'layout.html.twig' %}
 
-<button form="cards-form" type="submit" class="Merge">Fusion</button>
+{% block content %}
+	{% if error is defined %}
+	<div class="game-play-merge-info">
+		<p class="game-play-merge-info-description">{{ error }}</p>
+	</div>
+	{% endif %}
+	<form class="card-list" method="POST" action="" id="cards-form">
+		<div>
+			<h1 class="list-title">{{ game.name }}</h1>
+			<h2 class="list-title-h2">Fusionner vos cartes !</h2>
+		</div>
+		{% for card in cards_discovered %}
+			{% include "GameCards/_cardGame.html.twig" with card %}
+		{% endfor %}
+	</form>
+  
+	<button form="cards-form" type="submit" class="Merge">Fusion</button>
 
-<div class="card-list">
-    <h1 class="list-title"></h1>
-    {% for card in cards_hidden %} {% include "GameCards/_cardHidden.html.twig" with card %} {% endfor %}
-</div>
+	<div class="card-list">
+		<h1 class="list-title"></h1>
+		{% for card in cards_hidden %}
+			{% include "GameCards/_cardHidden.html.twig" with card %}
+		{% endfor %}
+	</div>
 {% endblock %}
