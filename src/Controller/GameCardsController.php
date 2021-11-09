@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\GameCardsManager;
+use App\Model\GameManager;
 
 class GameCardsController extends AbstractController
 {

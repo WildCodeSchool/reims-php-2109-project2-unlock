@@ -5,7 +5,7 @@
 	<div class="card-list" method="POST" action="">
 		<h1 class="list-title">Cards of the game</h1>
 		{% for card in cards %}
-			{% include "/GameCards/_cardNumbers.html.twig" with card %}
+			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
 		<a class="card add-cards-link" href="/games/cards/add?id={{ game_id }}">
 			<span class="add-cards-span">ADD NEW CARDS</span>
