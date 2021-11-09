@@ -139,14 +139,15 @@ button {
     text-align: center;
 }
 
-.add_card form {
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+.add-card-form {
     margin-top: 17vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .add_card h1 {
@@ -156,13 +157,11 @@ button {
 
 .add_card label {
     margin-top: 1.2rem;
-    margin-left: 0.4rem;
 }
 
 .add_card button {
     margin-top: 1.8rem;
     width: 35%;
-    margin-left: 5.4rem;
     margin-bottom: 0.6rem;
 }
 
@@ -411,8 +410,5 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
-    }
-    .add_card button {
-        margin-left: 9rem;
     }
 }
