@@ -13,9 +13,9 @@
 		{% endfor %}
 	</form>
   
-	<button form="cards-form" type="submit" class="Merge" id="card-form">Fusion</button>
+	<button form="cards-form" type="submit" class="Merge">Fusion</button>
 
-	<div class="card-list" id="card-list">
+	<div class="card-list">
 		<h1 class="list-title"></h1>
 		{% for card in cards_hidden %}
 			{% include "GameCards/_cardHidden.html.twig" with card %}

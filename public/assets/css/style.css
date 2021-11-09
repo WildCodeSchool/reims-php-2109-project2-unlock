@@ -413,9 +413,6 @@ button {
     justify-content: center;
 }
 
-.game-play-merge-info-description {
-    font-size: 1.5rem;
-}
 @keyframes myframes {
     0% {
         top: -4rem;
@@ -430,12 +427,10 @@ button {
         top: -4rem;
     }
 }
-/* 
-#card-list,
-#cards-form
-#card-form {
-    z-index: 1;
-} */
+
+.game-play-merge-info-description {
+    font-size: 1.5rem;
+}
 
 .game-card-form {
     display: flex;
