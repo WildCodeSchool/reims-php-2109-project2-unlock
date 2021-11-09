@@ -43,6 +43,11 @@ body {
     font-size: 1rem;
 }
 
+.home-link {
+    text-decoration: none;
+    color: var(--isabelline);
+}
+
 button {
     font-family: var(--unlock-button-font);
 }
@@ -259,7 +264,8 @@ button {
     padding: 1rem;
     background-image: url("/assets/images/game-the-appartment.png");
     background-size: cover;
-    color: var(--isabelline); text-shadow: black 0.1em 0.1em 0.2em;
+    color: var(--isabelline);
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .game-show-instruction-p {
