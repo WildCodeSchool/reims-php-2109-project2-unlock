@@ -57,12 +57,16 @@ button {
     text-align: center;
     grid-row: 1;
     grid-column: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .game-list-title {
     text-align: center;
     margin: 2rem;
     font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--border-color);
 }
 
 .list-title-h2 {
