@@ -72,6 +72,7 @@ button {
     padding: 1rem;
     transition: ease-out 0.2s;
     overflow-x: hidden;
+    overflow-y: visible;
     display: grid;
     grid-template-rows: 1fr 6fr 4rem;
     grid-template-columns: 1fr;
@@ -114,7 +115,6 @@ button {
 
 .card-title {
     text-align: center;
-    overflow-wrap: break-word;
     min-width: 0;
 }
 
@@ -139,14 +139,15 @@ button {
     text-align: center;
 }
 
-.add_card form {
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+.add-card-form {
     margin-top: 17vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .add_card h1 {
@@ -156,13 +157,11 @@ button {
 
 .add_card label {
     margin-top: 1.2rem;
-    margin-left: 0.4rem;
 }
 
 .add_card button {
     margin-top: 1.8rem;
     width: 35%;
-    margin-left: 5.4rem;
     margin-bottom: 0.6rem;
 }
 
@@ -212,6 +211,12 @@ button {
 
 .game-show-desription-screen {
     height: 100vh;
+    max-width: 600px;
+}
+
+.game-show {
+    display: flex;
+    justify-content: center;
 }
 
 .game-show-unlock {
@@ -272,11 +277,13 @@ button {
 
 /*  CARD - DETAILS - SHOW */
 
-.card-detail {
+.card.card-detail {
     margin: 1rem auto;
-    height: 30rem;
     display: flex;
+    height: unset;
+    max-height: unset;
     flex-direction: column;
+    max-width: 450px;
 }
 
 .card-detail-title-container {
@@ -290,7 +297,7 @@ button {
 }
 
 .card-name {
-    font-size : 2em;
+    font-size: 2em;
 }
 
 .card-detail .card-number {
@@ -303,7 +310,7 @@ button {
 }
 
 .card-img {
-    width: 20rem;
+    width: 100%;
     margin-top: 1rem;
 }
 
@@ -316,11 +323,6 @@ button {
     font-size: 1.8rem;
 }
 
-.card-image{
-    margin : auto;
-    width:100%;
-    height:100%;
-}
 
 /* Game play start here */
 
@@ -364,16 +366,22 @@ button {
     text-align: center;
 }
 
+
 /* ADD Game */
 
 .game_add {
-    background-color: var(--jet);
-    height: 65vh;
-    border: solid 0.2rem var(--border-color);
-    border-radius: 2rem;
-    width: 35%;    
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    height: 27em;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.card-description {
+    overflow-y: scroll;
 }
 
 @media screen and (min-width: 680px) {
@@ -402,8 +410,5 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
-    }
-    .add_card button {
-        margin-left: 9rem;
     }
 }
