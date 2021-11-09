@@ -43,4 +43,18 @@ class GameCardsController extends AbstractController
             "game" => $game
         ]);
     }
+
+    public function edit(int $cardId, int $gameId)
+    {
+        $gameCardsManager = new GameCardsManager();
+        $card = $gameCardsManager->getCardFromGameById($cardId, $gameId)[0];
+
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $number = array_map("trim", $_POST)["number"];
+            var_dump($number);
+            $gameCardsManager->updateCardNumber($cardId, $gameId, $number);
+            header("Location: /games/cards?id=" . $gameId);
+        }
+        return $this->twig->render("GameCards/edit.html.twig", ["card" => $card]);
+    }
 }
