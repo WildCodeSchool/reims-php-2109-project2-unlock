@@ -3,7 +3,7 @@
 {% block content %}
 
 	<form class="card-list" method="POST" action="">
-		<h1 class="list-title">Selectionnez vos cartes</h1>
+		<h1 class="list-title">Sélectionez les cartes à ajouter</h1>
 		{% for card in cards %}
 			{% include "/GameCards/_cardSelect.html.twig" with card %}
 		{% endfor %}
