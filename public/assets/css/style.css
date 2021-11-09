@@ -53,6 +53,8 @@ button {
 }
 
 .list-title {
+    margin-top: 1rem;
+    text-align: center;
     grid-row: 1;
     grid-column: 1/2;
 }
@@ -60,7 +62,13 @@ button {
 .game-list-title {
     text-align: center;
     margin: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
+}
+
+.list-title-h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .card-list,
