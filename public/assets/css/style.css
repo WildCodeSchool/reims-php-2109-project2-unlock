@@ -162,18 +162,14 @@ button {
 .add_card button {
     margin-top: 1.8rem;
     width: 35%;
-    margin-bottom: 0.6rem;
+    height: 2rem;
+    font-size: 1.5rem;
 }
 
 .add_card input,
 .add_card select,
 .add_card textarea {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0.6rem;
-    margin-bottom: auto;
     width: 90%;
 }
 
@@ -415,7 +411,7 @@ button {
 .game-card-form-input,
 .game-card-form-textarea {
     width: 100%;
-    margin: 10px;
+    margin: .5rem;
 }
 
 .game-card-form-input:read-only,
@@ -463,8 +459,5 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
-    }
-    .add_card button {
-        margin-left: 9rem;
     }
 }
