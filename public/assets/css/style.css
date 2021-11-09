@@ -1,6 +1,6 @@
 @import "../fonts/playfair/stylesheet.css";
 @import "../fonts/teko/stylesheet.css";
-:root {
+ :root {
     --border-color: #b29e84;
     --jet: #423e3a;
     --shadow-jet: #70675d;
@@ -162,18 +162,14 @@ button {
 .add_card button {
     margin-top: 1.8rem;
     width: 35%;
-    margin-bottom: 0.6rem;
+    height: 2rem;
+    font-size: 1.5rem;
 }
 
 .add_card input,
 .add_card select,
 .add_card textarea {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0.6rem;
-    margin-bottom: auto;
     width: 90%;
 }
 
@@ -380,6 +376,13 @@ button {
 /* ADD Game */
 
 .game_add {
+    background-color: var(--jet);
+    height: 65vh;
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
     margin: auto;
     height: 27em;
 }
@@ -416,6 +419,42 @@ button {
     100% {
         top: -4rem;
     }
+}
+
+.game-card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--jet);
+    border: .2rem solid var(--border-color);
+    border-radius: 2rem;
+}
+
+.game-card-form-input,
+.game-card-form-textarea {
+    width: 100%;
+    margin: .5rem;
+}
+
+.game-card-form-input:read-only,
+.game-card-form-textarea:read-only {
+    color: grey;
+}
+
+.game-card-form-input {
+    height: 1.8rem;
+}
+
+.game-card-form-textarea {
+    resize: none;
+}
+
+.game-card-form-submit {
+    height: 2rem;
+    width: 50%;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 680px) {
