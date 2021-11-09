@@ -47,6 +47,7 @@ class GameCardsController extends AbstractController
             $number = array_map("trim", $_POST)["number"];
             var_dump($number);
             $gameCardsManager->updateCardNumber($cardId, $gameId, $number);
+            header("Location: /games/cards?id=" . $gameId);
         }
         return $this->twig->render("GameCards/edit.html.twig", ["card" => $card]);
     }
