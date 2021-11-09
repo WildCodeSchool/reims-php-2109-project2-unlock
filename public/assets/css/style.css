@@ -1,6 +1,6 @@
 @import "../fonts/playfair/stylesheet.css";
 @import "../fonts/teko/stylesheet.css";
-:root {
+ :root {
     --border-color: #b29e84;
     --jet: #423e3a;
     --shadow-jet: #70675d;
@@ -382,6 +382,29 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--jet);
+    border: .2rem solid var(--border-color);
+    border-radius: 2rem;
+}
+
+.game-card-form-input,
+.game-card-form-textarea {
+    width: 100%;
+}
+
+.game-card-form-input:read-only,
+.game-card-form-textarea:read-only {
+    color: grey;
+}
+
+.game-card-form-input {
+    height: 1.8rem;
+}
+
+.game-card-form-textarea {
+    resize: none;
 }
 
 @media screen and (min-width: 680px) {
