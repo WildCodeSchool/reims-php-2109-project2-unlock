@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+	<p>{{ error }}</p>
 	<form class="card-list" method="POST" action="">
 		<h1 class="list-title">{{ game.name }} - Fusionner vos cartes!</h1>
 		{% for card in cards_discovered %}
