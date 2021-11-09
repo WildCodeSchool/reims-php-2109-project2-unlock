@@ -394,6 +394,30 @@ button {
     overflow-y: scroll;
 }
 
+.game-play-merge-info {
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    height: 4rem;
+    top: -4rem;
+    animation: myframes 4s ease-in-out;
+}
+@keyframes myframes {
+    0% {
+        top: -4rem;
+    }
+    20% {
+        top: 0;
+    }
+    80% {
+        top: 0;
+    }
+    100% {
+        top: -4rem;
+    }
+}
+
 @media screen and (min-width: 680px) {
     .addTitle,
     .addFormList {

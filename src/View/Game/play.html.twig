@@ -2,7 +2,7 @@
 
 {% block content %}
 
-	<p>{{ error }}</p>
+	<p class="game-play-merge-info">{{ error }}</p>
 	<form class="card-list" method="POST" action="" id="cards-form">
 		<h1 class="list-title">{{ game.name }} - Fusionner vos cartes!</h1>
 		{% for card in cards_discovered %}
