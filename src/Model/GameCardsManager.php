@@ -68,7 +68,11 @@ class GameCardsManager extends AbstractManager
 
     public function getCardFromGameById(int $cardId, int $gameId)
     {
-        $query = "";
+        $query = "select c.name name, c.description description, card_number number from "
+            . self::TABLE .
+            " join "
+            . CardManager::TABLE .
+            " c on c.id = card_id where game_id = :game_id and c.id = :card_id";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue("game_id", $gameId, \PDO::PARAM_INT);
         $statement->bindValue("card_id", $cardId, \PDO::PARAM_INT);
