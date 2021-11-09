@@ -297,6 +297,10 @@ button {
     margin-left: 2rem;
 }
 
+.card-name {
+    font-size: 2em;
+}
+
 .card-detail .card-number {
     height: 4rem;
 }
