@@ -2,13 +2,13 @@
 
 {% block content %}
 	<p>{{ error }}</p>
-	<form class="card-list" method="POST" action="">
+	<form class="card-list" method="POST" action="" id="cards-form">
 		<h1 class="list-title">{{ game.name }} - Fusionner vos cartes!</h1>
 		{% for card in cards_discovered %}
 			{% include "GameCards/_cardGame.html.twig" with card %}
 		{% endfor %}
 	</form>
-	<button type="submit" class="Merge">Merge</button>
+	<button form="cards-form" type="submit" class="Merge">Merge</button>
 
 
 	<div class="card-list">
