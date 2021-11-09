@@ -1,4 +1,4 @@
-{% extends 'layout.html.twig' %} 
+{% extends 'layout.html.twig' %}
 
 {% block content %}
 	<form class="card-list" method="POST" action="">
@@ -6,13 +6,14 @@
 		{% for card in cards_discovered %}
 			{% include "GameCards/_cardGame.html.twig" with card %}
 		{% endfor %}
-		<button type="submit" class="Merge">Fusion</button>
 	</form>
+	<button type="submit" class="Merge">Merge</button>
 
-    <div class="card-list">
-        <h1 class="list-title"></h1>
-        {% for card in cards_hidden %}
-            {% include "GameCards/_cardHidden.html.twig" with card %}
-        {% endfor %}
-    </div>
+
+	<div class="card-list">
+		<h1 class="list-title"></h1>
+		{% for card in cards_hidden %}
+			{% include "GameCards/_cardHidden.html.twig" with card %}
+		{% endfor %}
+	</div>
 {% endblock %}
