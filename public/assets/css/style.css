@@ -290,7 +290,7 @@ button {
 }
 
 .card-name {
-    font-size : 2em;
+    font-size: 2em;
 }
 
 .card-detail .card-number {
@@ -316,11 +316,12 @@ button {
     font-size: 1.8rem;
 }
 
-.card-image{
-    margin : auto;
-    width:100%;
-    height:100%;
+.card-image {
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
+
 
 /* Game play start here */
 
@@ -364,6 +365,7 @@ button {
     text-align: center;
 }
 
+
 /* ADD Game */
 
 .game_add {
@@ -371,9 +373,15 @@ button {
     height: 65vh;
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
-    width: 35%;    
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.game-card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 680px) {
