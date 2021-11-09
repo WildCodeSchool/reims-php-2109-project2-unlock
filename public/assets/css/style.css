@@ -399,10 +399,10 @@ button {
 
 .game-play-merge-info {
     display: inline-block;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     left: 0;
-    height: 4rem;
+    height: 8vh;
     top: -4rem;
     animation: myframes 4s ease-in-out;
     z-index: 1;
