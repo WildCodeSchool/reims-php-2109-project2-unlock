@@ -65,4 +65,15 @@ class GameCardsManager extends AbstractManager
 
         return $statement->fetchAll();
     }
+
+    public function getCardFromGameById(int $cardId, int $gameId)
+    {
+        $query = "";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue("game_id", $gameId, \PDO::PARAM_INT);
+        $statement->bindValue("card_id", $cardId, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
 }
