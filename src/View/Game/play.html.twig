@@ -2,7 +2,7 @@
 
 {% block content %}
 	<form class="card-list" method="POST" action="">
-		<h1 class="list-title">Select cards you want to merge</h1>
+		<h1 class="list-title">{{ game.name }} - Fusionner vos cartes!</h1>
 		{% for card in cards_discovered %}
 			{% include "GameCards/_cardGame.html.twig" with card %}
 		{% endfor %}
