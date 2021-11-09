@@ -145,7 +145,7 @@ class GameController extends AbstractController
                 $found = $card["number"];
             }
         }
-        $found > 0 ? $error = "Fusion réussi : carte n°" . $found . " obtenue." : $error = "Fusion Echoué";
+        $found > 0 ? $error = "Carte n°" . $found . " obtenue" : $error = "Fusion échouée";
     }
 
     public function victory(int $id)

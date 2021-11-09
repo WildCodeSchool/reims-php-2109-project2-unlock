@@ -397,6 +397,41 @@ button {
     overflow-y: scroll;
 }
 
+.game-play-merge-info {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 8vh;
+    top: -4rem;
+    animation: myframes 4s ease-in-out;
+    z-index: 1;
+    background-color: var(--jet);
+    border-bottom: .2rem solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes myframes {
+    0% {
+        top: -4rem;
+    }
+    20% {
+        top: 0;
+    }
+    80% {
+        top: 0;
+    }
+    100% {
+        top: -4rem;
+    }
+}
+
+.game-play-merge-info-description {
+    font-size: 1.5rem;
+}
+
 .game-card-form {
     display: flex;
     flex-direction: column;
