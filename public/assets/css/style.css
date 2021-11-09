@@ -392,6 +392,7 @@ button {
 .game-card-form-input,
 .game-card-form-textarea {
     width: 100%;
+    margin: 10px;
 }
 
 .game-card-form-input:read-only,
@@ -405,6 +406,12 @@ button {
 
 .game-card-form-textarea {
     resize: none;
+}
+
+.game-card-form-submit {
+    height: 2rem;
+    width: 50%;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 680px) {
