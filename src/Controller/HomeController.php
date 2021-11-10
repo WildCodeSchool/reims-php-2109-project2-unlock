@@ -1,13 +1,8 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: aurelwcs
- * Date: 08/04/19
- * Time: 18:40
- */
-
 namespace App\Controller;
+
+use App\Model\GameManager;
 
 class HomeController extends AbstractController
 {
@@ -21,6 +16,13 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+
+        $gameManager = new GameManager();
+        $games = [];
+        for ($id = 1; $id <= 3; $id++) {
+            $games[] = $gameManager->selectOneById($id);
+        }
+
+        return $this->twig->render('Home/index.html.twig', ["games" => $games]);
     }
 }

@@ -52,6 +52,57 @@ button {
     font-family: var(--unlock-button-font);
 }
 
+.home {
+    height: 80vh;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/assets/images/london-map1.jpeg");
+    border: 0.3rem solid var(--border-color);    
+}
+
+.behind {
+    margin-left: 1rem;
+}
+
+.front {
+    position: absolute;
+    z-index: 1;
+    bottom: -10rem;
+    left: -10rem;
+    height: 40vh;
+    width: 100vw;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    transform: rotate(-40deg);
+    border-top: .2rem solid var(--border-color);
+    background-color: rgb(120, 120, 120, 0.8);
+    padding-left: 20rem;
+    padding-bottom: 20rem;  
+    padding-right: 20rem;
+
+}
+
+.slide{
+    width: 30vw;
+    height: 50vw;
+    background-color: var(--jet);
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
+    display: inline-block;
+    word-break: break-all;
+    text-align: center;
+    font-size: 5vw;
+    border-radius: 15px;
+
+}
+
+.behind .title {
+    text-shadow: 2px 2px 2px #0f1517;
+}
+
 .list-title {
     margin-top: 1rem;
     text-align: center;

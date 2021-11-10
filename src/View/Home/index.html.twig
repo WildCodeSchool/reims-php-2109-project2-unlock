@@ -1,5 +1,20 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
-    <h1>Hello Wilder !</h1>
+<div class="home">
+
+    <div class="behind">
+        <div class="title">
+            <h1 class="unlock-h1">UNLOCK !</h1>
+            <h2 class="unlock-h2">Sherlock Adventure</h2>
+        </div>
+        
+    <div class="front">
+        <a class="slide" href="/games/add">+</a> 
+        {% for game in games %}
+        <a class="slide" href="/games/show?id={{ game.id }}">{{ game.name }}</a>
+        {% endfor %}
+        <a class="slide" href="/games">Liste</a> 
+    </div>
+
+</div>
 {% endblock %}
