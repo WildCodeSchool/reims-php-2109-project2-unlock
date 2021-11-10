@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+	{{ parent() }}
 	<section class="card-list">
 		<h1 class="list-title">Card list</h1>
 		{% for card in cards %}

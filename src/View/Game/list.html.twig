@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+	{{ parent() }}
 	<h1 class="game-list-title">LES JEUX</h1>
 	<ul class="game-list">
 		{% for game in games %}
@@ -15,7 +16,7 @@
 			</li>
 		{% endfor %}
 		<a class="game add-cards-link" href="/games/add">
-			<span class="add-cards-span">AJOUTER UN JEU</span>
+			<span class="add-cards-span">AJOUTER UN JEU<br/>+</span>
 		</a>
 	</ul>
 {% endblock %}
