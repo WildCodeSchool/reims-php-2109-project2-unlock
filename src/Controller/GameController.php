@@ -58,6 +58,9 @@ class GameController extends AbstractController
             $_SESSION["cards"] = $sessionCards;
         }
 
+        $gameManager = new GameManager();
+        $game = $gameManager->selectOneById($gameId);
+
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $cards = array_map('trim', $_POST);
 
@@ -74,17 +77,23 @@ class GameController extends AbstractController
             //get Numbers associated to every card
             $cardNumbers = $this->getCardNumbers($cardIds);
 
-            //add the card to the discovered one
-            $this->addCardToDiscover($cardNumbers, $cardIds);
+            //add the card to the discovered
+            $error = "";
+            $this->addCardToDiscover($cardNumbers, $cardIds, $error);
 
             if ($this->isFinished()) {
                 session_destroy();
                 header("Location: /games/victory?id=" . $gameId);
             }
-        }
 
-        $gameManager = new GameManager();
-        $game = $gameManager->selectOneById($gameId);
+            return $this->twig->render('Game/play.html.twig', [
+                "cards_discovered" => $_SESSION["cards"]["discovered"],
+                "cards_hidden" => $_SESSION["cards"]["hidden"],
+                "cards_used" => $_SESSION["cards"]["used"],
+                "game" => $game,
+                "error" => $error,
+            ]);
+        }
 
         return $this->twig->render('Game/play.html.twig', [
             "cards_discovered" => $_SESSION["cards"]["discovered"],
@@ -125,15 +134,18 @@ class GameController extends AbstractController
         return false;
     }
 
-    private function addCardToDiscover(array $cardNumbers, array $cardIds)
+    private function addCardToDiscover(array $cardNumbers, array $cardIds, string &$error)
     {
+        $found = 0;
         foreach ($_SESSION["cards"]["hidden"] as $key => $card) {
             if (array_sum($cardNumbers) == $card["number"]) {
                 array_push($_SESSION["cards"]["discovered"], $card);
                 unset($_SESSION["cards"]["hidden"][$key]);
                 $this->unsetCardsDiscovered($cardIds);
+                $found = $card["number"];
             }
         }
+        $found > 0 ? $error = "Carte n°" . $found . " obtenue" : $error = "Fusion échouée";
     }
 
     public function victory(int $id)

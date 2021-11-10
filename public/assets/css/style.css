@@ -1,6 +1,6 @@
 @import "../fonts/playfair/stylesheet.css";
 @import "../fonts/teko/stylesheet.css";
-:root {
+ :root {
     --border-color: #b29e84;
     --jet: #423e3a;
     --shadow-jet: #70675d;
@@ -30,6 +30,22 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
+}
+
+.unlock-title {
+    font-size: 1.5rem;
+    font-family: var(--unlock-button-font);
+    text-shadow: 2px 2px 2px #b29e84;
+}
+
+.unlock-h2 {
+    font-family: var(--text-font);
+    font-size: 1rem;
+}
+
+.home-link {
+    text-decoration: none;
+    color: var(--isabelline);
 }
 
 button {
@@ -88,14 +104,26 @@ button {
 }
 
 .list-title {
+    margin-top: 1rem;
+    text-align: center;
     grid-row: 1;
     grid-column: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .game-list-title {
     text-align: center;
     margin: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--border-color);
+}
+
+.list-title-h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .card-list,
@@ -190,14 +218,15 @@ button {
     text-align: center;
 }
 
-.add_card form {
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+.add-card-form {
     margin-top: 17vh;
     background-color: var(--jet);
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     padding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .add_card h1 {
@@ -207,25 +236,19 @@ button {
 
 .add_card label {
     margin-top: 1.2rem;
-    margin-left: 0.4rem;
 }
 
 .add_card button {
     margin-top: 1.8rem;
     width: 35%;
-    margin-left: 5.4rem;
-    margin-bottom: 0.6rem;
+    height: 2rem;
+    font-size: 1.5rem;
 }
 
 .add_card input,
 .add_card select,
 .add_card textarea {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0.6rem;
-    margin-bottom: auto;
     width: 90%;
 }
 
@@ -271,11 +294,6 @@ button {
     justify-content: center;
 }
 
-.game-show-unlock {
-    font-size: 1.5rem;
-    font-family: var(--unlock-button-font);
-}
-
 .game-show-title {
     font-size: 1.3rem;
     margin: 2rem 0;
@@ -301,6 +319,8 @@ button {
     padding: 1rem;
     background-image: url("/assets/images/game-the-appartment.png");
     background-size: cover;
+    color: var(--isabelline);
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .game-show-instruction-p {
@@ -348,6 +368,10 @@ button {
     margin-left: 2rem;
 }
 
+.card-name {
+    font-size: 2em;
+}
+
 .card-detail .card-number {
     height: 4rem;
 }
@@ -360,6 +384,12 @@ button {
 .card-img {
     width: 100%;
     margin-top: 1rem;
+}
+
+.card-image {
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .Number-hiddenCard {
@@ -390,10 +420,19 @@ button {
 .Unlock-hiddenCard {
     font-family: var(--unlock-button-font);
     font-size: 4rem;
+    color: var(--border-color);
+    text-shadow: 2px 2px 2px #253439;
+}
+
+.Game-hiddenCard {
     color: var(--gunmetal);
 }
 
 .Merge {
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
     border-radius: 30px;
     background: #253439;
     box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
@@ -418,6 +457,13 @@ button {
 /* ADD Game */
 
 .game_add {
+    background-color: var(--jet);
+    height: 65vh;
+    border: solid 0.2rem var(--border-color);
+    border-radius: 2rem;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
     margin: auto;
     height: 27em;
 }
@@ -430,6 +476,77 @@ button {
 
 .card-description {
     overflow-y: scroll;
+}
+
+.game-play-merge-info {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 8vh;
+    top: -4rem;
+    animation: myframes 4s ease-in-out;
+    z-index: 1;
+    background-color: var(--jet);
+    border-bottom: .2rem solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes myframes {
+    0% {
+        top: -4rem;
+    }
+    20% {
+        top: 0;
+    }
+    80% {
+        top: 0;
+    }
+    100% {
+        top: -4rem;
+    }
+}
+
+.game-play-merge-info-description {
+    font-size: 1.5rem;
+}
+
+.game-card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--jet);
+    border: .2rem solid var(--border-color);
+    border-radius: 2rem;
+}
+
+.game-card-form-input,
+.game-card-form-textarea {
+    width: 100%;
+    margin: .5rem;
+}
+
+.game-card-form-input:read-only,
+.game-card-form-textarea:read-only {
+    color: grey;
+}
+
+.game-card-form-input {
+    height: 1.8rem;
+}
+
+.game-card-form-textarea {
+    resize: none;
+}
+
+.game-card-form-submit {
+    height: 2rem;
+    width: 50%;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 680px) {
@@ -458,8 +575,5 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
-    }
-    .add_card button {
-        margin-left: 9rem;
     }
 }
