@@ -50,9 +50,8 @@ class GameCardsController extends AbstractController
         $card = $gameCardsManager->getCardFromGameById($cardId, $gameId)[0];
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $number = array_map("trim", $_POST)["number"];
-            var_dump($number);
-            $gameCardsManager->updateCardNumber($cardId, $gameId, $number);
+            $form = array_map("trim", $_POST);
+            $gameCardsManager->updateCardNumber($cardId, $gameId, $form);
             header("Location: /games/cards?id=" . $gameId);
         }
         return $this->twig->render("GameCards/edit.html.twig", ["card" => $card]);

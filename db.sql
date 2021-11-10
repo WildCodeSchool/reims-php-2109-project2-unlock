@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `gamecards` (
   `game_id` INT NOT NULL,
   `card_id` INT NOT NULL,
   `card_number` INT NOT NULL,
-  `available_on_begin` BOOLEAN NOT NULL
+  `available_on_begin` BOOLEAN NOT NULL DEFAULT 1
 ) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin ;
 
 ALTER TABLE `gamecards`

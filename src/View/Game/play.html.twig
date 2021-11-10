@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+	{{ parent() }}
 	{% if error is defined %}
 	<div class="game-play-merge-info">
 		<p class="game-play-merge-info-description">{{ error }}</p>

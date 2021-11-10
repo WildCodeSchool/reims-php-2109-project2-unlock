@@ -81,15 +81,17 @@ class GameCardsManager extends AbstractManager
         return $statement->fetchAll();
     }
 
-    public function updateCardNumber(int $cardId, int $gameId, string $number)
+    public function updateCardNumber(int $cardId, int $gameId, array $form)
     {
         $query = "update "
             . self::TABLE .
-            " set card_number = :number where game_id = :game_id and card_id = :card_id";
+            " set card_number = :number, available_on_begin = :available"
+            . " where game_id = :game_id and card_id = :card_id";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue("game_id", $gameId, \PDO::PARAM_INT);
         $statement->bindValue("card_id", $cardId, \PDO::PARAM_INT);
-        $statement->bindValue("number", intval($number), \PDO::PARAM_INT);
+        $statement->bindValue("number", intval($form["number"]), \PDO::PARAM_INT);
+        $statement->bindValue("available", intval($form["available"]), \PDO::PARAM_INT);
         $statement->execute();
     }
 }

@@ -58,7 +58,7 @@ button {
     overflow: hidden;
     position: relative;
     background-image: url("/assets/images/london-map1.jpeg");
-    border: 0.3rem solid var(--border-color);    
+    border: 0.3rem solid var(--border-color);
 }
 
 .behind {
@@ -79,12 +79,11 @@ button {
     border-top: .2rem solid var(--border-color);
     background-color: rgb(120, 120, 120, 0.8);
     padding-left: 20rem;
-    padding-bottom: 20rem;  
+    padding-bottom: 20rem;
     padding-right: 20rem;
-
 }
 
-.slide{
+.slide {
     width: 30vw;
     height: 50vw;
     background-color: var(--jet);
@@ -92,15 +91,18 @@ button {
     text-decoration: none;
     margin: 1rem;
     display: inline-block;
-    word-break: break-all;
     text-align: center;
     font-size: 5vw;
     border-radius: 15px;
-
 }
 
 .behind .title {
     text-shadow: 2px 2px 2px #0f1517;
+}
+
+.Title {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .list-title {
@@ -109,6 +111,10 @@ button {
     grid-row: 1;
     grid-column: 1/2;
     font-size: 1.5rem;
+    text-align: center;
+}
+
+.game-title {
     text-align: center;
 }
 
@@ -258,10 +264,33 @@ button {
 
 .addFormList {
     list-style-type: none;
+    font-size: 1.5rem;
 }
 
-.addFormList li {
-    margin: 2rem;
+.addFormList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addFormList input,
+.addFormList label,
+.addFormList textarea {
+    width: 80%;
+    padding: .3rem;
+    margin-top: .8rem;
+}
+
+.addFormList textarea {
+    resize: none;
+    height: 5rem;
+}
+
+.addFormList button {
+    width: 30%;
+    height: 3rem;
+    font-size: 2rem;
+    margin-top: .8rem;
 }
 
 .checkbox:checked+.card {
@@ -278,14 +307,15 @@ button {
 .add-cards-span {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 
 /* Game SHOW part */
 
 .game-show-desription-screen {
-    height: 100vh;
     max-width: 600px;
 }
 
@@ -304,7 +334,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: var(--gray-web);
+    background-color: #4c595c;
     text-align: center;
     align-items: stretch;
     border: 0.5rem double;
@@ -461,7 +491,7 @@ button {
     height: 65vh;
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
-    width: 35%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin: auto;
@@ -476,6 +506,8 @@ button {
 
 .card-description {
     overflow-y: scroll;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .game-play-merge-info {
@@ -525,6 +557,7 @@ button {
 }
 
 .game-card-form-input,
+.game-card-form-select,
 .game-card-form-textarea {
     width: 100%;
     margin: .5rem;
@@ -533,6 +566,11 @@ button {
 .game-card-form-input:read-only,
 .game-card-form-textarea:read-only {
     color: grey;
+}
+
+.game-card-form-select {
+    color: black;
+    height: 2rem;
 }
 
 .game-card-form-input {
@@ -550,8 +588,7 @@ button {
 }
 
 @media screen and (min-width: 680px) {
-    .addTitle,
-    .addFormList {
+    .addTitle {
         text-align: center;
     }
     .list-title {

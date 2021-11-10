@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+	{{ parent() }}
 	<form class="game-card-form" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
 
 		<h1>Modifier la carte</h1>
@@ -11,7 +12,11 @@
 		<textarea class="game-card-form-textarea" rows="10" id="description" readonly>{{ card.description }}</textarea>
 		<label class="game-card-form-label" class="game-card-form-label" for="card-number">Nombre</label>
 		<input class="game-card-form-input" type="number" id="card-number" value="{{ card.number }}" name="number">
-
+		<label class="game-card-form-label" class="game-card-form-label" for="card-available">Disponible au départ</label>
+		<select class="game-card-form-select" name="available">
+			<option value="1">Oui</option>
+			<option value="0">Non</option>
+		</select>
 		<button class="game-card-form-submit" type="submit">Modifier</button>
 
 	</form>

@@ -1,21 +1,11 @@
 {# TODO : manage errors display #}
 
-<form method="post">
-	<ul class="addFormList">
-		<li>
-			<label for="name">Titre du jeu</label>
-		</li>
-		<li><input type="text" id="name" name="name"></li>
-		<li>
-			<label for="description">Description du jeu</label>
-		</li>
-		<li><input type="text" id="description" name="description"></li>
-		<li>
-			<label for="instruction">Entrez vos instructions</label>
-		</li>
-		<li><input type="text" id="instruction" name="instruction"></li>
-		<li>
-			<button type="submit">Valider</button>
-		</li>
-	</ul>
+<form method="post" class="addFormList">
+	<label for="name">Titre du jeu</label>
+	<input type="text" id="name" name="name">
+	<label for="description">Description du jeu</label>
+	<textarea id="description" name="description"></textarea>
+	<label for="instruction">Entrez vos instructions</label>
+	<input type="text" id="instruction" name="instruction">
+	<button type="submit">Valider</button>
 </form>
