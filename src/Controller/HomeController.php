@@ -16,10 +16,10 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        
+
         $gameManager = new GameManager();
         $games = [];
-        for($id = 1; $id <= 3; $id++){
+        for ($id = 1; $id <= 3; $id++) {
             $games[] = $gameManager->selectOneById($id);
         }
 
