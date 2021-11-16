@@ -477,7 +477,7 @@ button {
 }
 
 .rules {
-    z-index: 1000;
+    z-index: 6;
     position: absolute;
     right: 1rem;
     bottom: 1rem;
@@ -492,21 +492,21 @@ button {
 }
 
 .rules-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: none;
-    color: var(--jet);
-    background: var(--border-color);
-    z-index: 500;
-    animation: .3s ease;
-    -moz-animation: .3s ease;
-}
-
-.rules-input:checked+.rules-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: var(--jet);
+    background: var(--border-color);
+    z-index: 5;
+    clip-path: circle(1.5rem at calc(100% - 2.5rem) calc(100% - 2.5rem));
+    transition: clip-path 1s;
+}
+
+.rules-input:checked+.rules-container {
+    clip-path: circle(97% at calc(100% - 2.5rem) calc(100% - 2.5rem));
 }
 
 .rules-text {
