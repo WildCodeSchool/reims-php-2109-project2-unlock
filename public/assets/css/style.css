@@ -61,15 +61,9 @@ button {
     border: 0.3rem solid var(--border-color);
 }
 
-.behind {
-    margin-left: 1rem;
-}
-
 .front {
     position: absolute;
-    z-index: 1;/*
-    bottom: -10rem;
-    left: -10rem; */
+    z-index: 1;
     height: 100vw;
     overflow-y: scroll;
     display: grid;
@@ -77,16 +71,20 @@ button {
     transform: rotate(-130deg) translate(5rem ,5rem);
     border-top: .2rem solid var(--border-color);
     background-color: rgb(120, 120, 120, 0.8);
-    /*padding-bottom: 20rem;
-    padding-right: 20rem;
-    padding-top: 20rem;*/
     padding: 20rem 0 10rem 0;
-    font-size: 4vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+.front::-webkit-scrollbar {
+    display: none;
+  }  
 
 .rotate {
     transform: rotate(90deg);
     width: 30vw;
+    display: block;
+    text-align: center;
 }
 
 .slide {
@@ -94,18 +92,26 @@ button {
     height: 30vw;
     background-color: var(--jet);
     color: white;
-    text-decoration: none;
     margin: 1rem;
+    text-decoration: none;
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     border: double;
     border-color: silver;
     border-width: 5px;
+    padding-right: .2rem;
 }
 
-.behind .title {
+.slide-img{
+    width: 30vw;
+    transform: rotate(90deg);
+}
+
+.behind-title {
     text-shadow: 2px 2px 2px #0f1517;
+    margin-left: 1rem;
 }
 /**/
 
@@ -658,5 +664,30 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
+    }
+    .home{
+        height: calc(100vh - 2.5rem);
+    }
+    .unlock-h1{
+        font-size: 4rem;
+    }
+    .unlock-h2{
+        font-size: 3rem;
+    }
+    .slide{
+        max-width: 450px;
+        max-height: 270px;
+    }
+    .slide-img{
+        max-width: 270px;
+    }
+    .rotate{
+        width: 270px;
+        font-size: 2vw;
+    }
+    .front{
+        transform: rotate(-130deg) translate(-10rem, 50rem);
+        height: 50vw;
+        padding-top: 50rem;
     }
 }

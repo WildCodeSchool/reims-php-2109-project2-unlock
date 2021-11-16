@@ -6,16 +6,17 @@
             Sélectionnez les cartes que vous souhaitez associer, puis cliquez sur "fusion" pour valider votre choix. Si c'est validé, une nouvelle carte sera débloquée, sinon essayez une autre association.
         </p>
     </div>
-    <div class="behind">
-        <div class="title">
-            <h1 class="unlock-h1">UNLOCK !</h1>
-            <h2 class="unlock-h2">Sherlock Adventure</h2>
-        </div>
+    <div class="behind-title">
+        <h1 class="unlock-h1">UNLOCK !</h1>
+        <h2 class="unlock-h2">Sherlock Adventure</h2>
     </div>
     <div class="front">
         <a class="slide" href="/games/add"><span class="rotate">Ajouter</br>+</span></a> 
             {% for game in games %}
-            <a class="slide" href="/games/show?id={{ game.id }}" style="background-image: url('{{ game.image_url }}');"><span class="rotate">{{ game.name }}<span></a>
+            <a class="slide" href="/games/show?id={{ game.id }}">
+                <img class="slide-img" src="{{ game.image_url }}">
+                <span class="rotate">{{ game.name }}</span>
+            </a>
             {% endfor %}
         <a class="slide" href="/games"><span class="rotate">Liste des jeux</span></a> 
     </div>
