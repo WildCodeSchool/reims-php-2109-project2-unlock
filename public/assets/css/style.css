@@ -705,8 +705,36 @@ button {
         align-self: center;
     }
 
-    .agencement-page{
+    .agencement-page-show{
         display : flex;
         justify-content: space-evenly;
+        height : 100vh;
     }
+
+    .game-show{
+        align-self: center;
+    }
+
+    .agencement-page-play{
+        display : flex;
+        justify-content: space-around;
+    }
+    
+    .agencement-page-play .unlock-title, .unlock-h2{
+        font-size : 2rem;
+    }
+
+    .agencement-page-play .unlock-h2{
+        margin-bottom: 3rem;
+    }
+
+    .agencement-page-play div{
+        padding-right: 25rem;
+        align-self: center;
+    }
+
+    .agencement-page-play div .list-title{
+        font-size: 2.2rem;
+    }
+    
 }
