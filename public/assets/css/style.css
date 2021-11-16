@@ -298,8 +298,6 @@ button {
 }
 
 .addFormList button {
-    /* width: 30%; */
-    /* height: 3rem; */
     font-size: 2rem;
     margin-top: .8rem;
     position: unset;
