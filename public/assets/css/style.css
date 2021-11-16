@@ -587,7 +587,6 @@ button {
 }
 
 .card-description {
-    overflow-y: scroll;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -721,7 +720,7 @@ button {
         align-self: center;
     }
 
-    .agencement-page-play{
+    .agencement-page-play, .agencement-page-cards-list{
         display : flex;
         justify-content: space-around;
     }
@@ -730,7 +729,7 @@ button {
         font-size : 2rem;
     }
 
-    .agencement-page-play .unlock-h2{
+    .agencement-page-play .unlock-h2, .agencement-page-cards-list .unlock-h2{
         margin-bottom: 3rem;
     }
 
@@ -739,8 +738,19 @@ button {
         align-self: center;
     }
 
-    .agencement-page-play div .list-title{
+    .agencement-page-play div .list-title, .list-title-cards h1{
         font-size: 2.2rem;
     }
-    
+
+    .agencement-page-cards-list div{
+        align-self: center;
+    }
+
+    .agencement-page-cards-list{
+        padding-right: 25rem;
+    }
+
+    .agencement-page-cards-list .parent{
+        margin-right: 25rem;
+    }
 }

@@ -1,11 +1,18 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-	{{ parent() }}
-
+<div class="agencement-page-cards-list">
+	<div class="title-list-card">
+		{{ parent() }}
+	</div>
+	<div>
+		<div class="list-title-cards">
+					<h1 class="list-title">{{ game.name }}</h1>
+					<h2 class="list-title-h2">Fusionner vos cartes !</h2>
+		</div>
+	</div>
+</div>
 	<div class="card-list" method="POST" action="">
-		<h1 class="list-title">{{ game.name }}
-			- Liste des cartes</h1>
 		{% for card in cards %}
 			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
@@ -13,5 +20,5 @@
 			<span class="add-cards-span">NOUVELLES CARTES</span>
 		</a>
 	</div>
-
+</div>
 {% endblock %}
