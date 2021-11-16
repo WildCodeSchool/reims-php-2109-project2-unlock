@@ -11,13 +11,13 @@
             <h1 class="unlock-h1">UNLOCK !</h1>
             <h2 class="unlock-h2">Sherlock Adventure</h2>
         </div>
-        
+    </div>
     <div class="front">
-        <a class="slide" href="/games/add"><h2><p>Ajouter</br>+</p></h2></a> 
+        <a class="slide" href="/games/add"><span class="rotate">Ajouter</br>+</span></a> 
             {% for game in games %}
-            <a class="slide" href="/games/show?id={{ game.id }}">{{ game.name }}</a>
+            <a class="slide" href="/games/show?id={{ game.id }}" style="background-image: url('{{ game.image_url }}');"><span class="rotate">{{ game.name }}<span></a>
             {% endfor %}
-        <a class="slide" href="/games"><h2>Liste des jeux</h2></a> 
+        <a class="slide" href="/games"><span class="rotate">Liste des jeux</span></a> 
     </div>
 
     <label class="rules" for="rules-input"><span>?</span></label>

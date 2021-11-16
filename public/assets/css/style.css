@@ -67,43 +67,41 @@ button {
 
 .front {
     position: absolute;
-    z-index: 1;
+    z-index: 1;/*
     bottom: -10rem;
-    left: -10rem;
-    height: 40vh;
-    width: 100vw;
-    overflow-x: scroll;
+    left: -10rem; */
+    height: 100vw;
+    overflow-y: scroll;
     display: grid;
-    grid-auto-flow: column;
-    transform: rotate(-40deg);
+    grid-auto-flow: row;
+    transform: rotate(-130deg) translate(5rem ,5rem);
     border-top: .2rem solid var(--border-color);
     background-color: rgb(120, 120, 120, 0.8);
-    padding-left: 20rem;
-    padding-bottom: 20rem;
+    /*padding-bottom: 20rem;
     padding-right: 20rem;
+    padding-top: 20rem;*/
+    padding: 20rem 0 10rem 0;
+    font-size: 4vw;
 }
 
-.front a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: double;
-    border-color: silver;
-    border-width: 5px;
+.rotate {
+    transform: rotate(90deg);
+    width: 30vw;
 }
 
 .slide {
-    width: 30vw;
-    height: 50vw;
+    width: 50vw;
+    height: 30vw;
     background-color: var(--jet);
     color: white;
     text-decoration: none;
     margin: 1rem;
-    display: inline-block;
+    display: flex;
     text-align: center;
-    font-size: 5vw;
-    border-radius: 15px;
-
+    justify-content: center;
+    border: double;
+    border-color: silver;
+    border-width: 5px;
 }
 
 .behind .title {
