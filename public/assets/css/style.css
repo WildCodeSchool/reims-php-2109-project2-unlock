@@ -97,6 +97,45 @@ button {
     border-radius: 15px;
 }
 
+.first {
+    opacity: 0;
+    animation: fades 1s infinite, moves 1s infinite ease-out;
+}
+
+.second {
+    animation: moves 1s infinite ease-in-out;
+}
+
+.third {
+    animation: moves 1s infinite ease-in, fades 1s reverse infinite;
+}
+
+.svg {
+    position: fixed;
+    z-index: 6;
+    transform: scaleY(0.8);
+    margin-left: 12rem;
+    margin-top: 2rem;
+}
+
+@keyframes fades {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moves {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(40px);
+    }
+}
+
 .behind .unlock-title {
     text-shadow: 2px 2px 2px #0f1517;
     color: var(--shadow-jet);
