@@ -1,11 +1,13 @@
 {# TODO : manage errors display #}
 
-<form method="post" class="addFormList">
+<form method="post" class="addFormList" accept-charset="UTF-8" enctype="multipart/form-data">
 	<label for="name">Titre du jeu</label>
 	<input type="text" id="name" name="name">
 	<label for="description">Description du jeu</label>
 	<textarea id="description" name="description"></textarea>
 	<label for="instruction">Entrez vos instructions</label>
 	<input type="text" id="instruction" name="instruction">
+	<label for="imageUpload">Ajouter une image au jeu</label>    
+	<input type="file" name="image_url" id="imageUpload"/>
 	<button type="submit">Valider</button>
 </form>

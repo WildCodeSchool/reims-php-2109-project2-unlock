@@ -281,15 +281,15 @@ button {
 .addFormList {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .addFormList input,
 .addFormList label,
 .addFormList textarea {
-    width: 80%;
+    /* width: 80%;
     padding: .3rem;
-    margin-top: .8rem;
+    margin-top: .8rem; */
 }
 
 .addFormList textarea {
