@@ -1,7 +1,11 @@
-{% extends 'layout.html.twig' %}
-{% block content %}
+{% extends 'layout.html.twig' %} {% block content %}
 <div class="home">
-
+    <input class="rules-input" id="rules-input" type="checkbox" hidden>
+    <div class="rules-container">
+        <p class="rules-text">
+            Sélectionnez les cartes que vous souhaitez associer, puis cliquez sur "fusion" pour valider votre choix. Si c'est validé, une nouvelle carte sera débloquée, sinon essayez une autre association.
+        </p>
+    </div>
     <div class="behind">
         <div class="title">
             <h1 class="unlock-h1">UNLOCK !</h1>
@@ -16,5 +20,6 @@
         <a class="slide" href="/games"><h2>Liste des jeux</h2></a> 
     </div>
 
+    <label class="rules" for="rules-input"><span>?</span></label>
 </div>
 {% endblock %}
