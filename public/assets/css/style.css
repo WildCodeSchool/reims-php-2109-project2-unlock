@@ -476,6 +476,44 @@ button {
     transition: ease-out 0.2s;
 }
 
+.rules {
+    z-index: 1000;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: var(--jet);
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    color: var(--jet);
+    background: var(--border-color);
+    z-index: 500;
+    animation: .3s ease;
+    -moz-animation: .3s ease;
+}
+
+.rules-input:checked+.rules-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 
 /* Victory Screen */
 
