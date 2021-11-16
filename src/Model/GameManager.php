@@ -9,7 +9,8 @@ class GameManager extends AbstractManager
     //name, description, image url
     public function insert(array $game): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name`, `description`, `instruction`, `image_url`)
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
+        " (`name`, `description`, `instruction`, `image_url`)
          VALUES (:name, :description, :instruction, :image_url)");
         $statement->bindValue('name', $game['name'], \PDO::PARAM_STR);
         $statement->bindValue('description', $game['description'], \PDO::PARAM_STR);

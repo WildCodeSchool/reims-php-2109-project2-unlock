@@ -24,7 +24,7 @@ class GameController extends AbstractController
             $extension = pathinfo($_FILES['image_url']['name'], PATHINFO_EXTENSION);
             $authorizedExtensions = ['jpg','png','jpeg','webp'];
             $maxFileSize = 2000000;
-            
+
             if ((!in_array($extension, $authorizedExtensions))) {
                 $errors[] = 'Veuillez sélectionner une image de type jpg, png ou webp !';
             }
@@ -42,14 +42,14 @@ class GameController extends AbstractController
             } else {
                 $game['image_url'] = 'london-map1.jpeg';
             }
-            
+
             $gameManager = new GameManager();
             $gameManager->insert($game);
             header('Location:/games');
         }
 
         return $this->twig->render('Game/add.html.twig');
-    } 
+    }
 
     /**
      * Show informations for a specific game
@@ -175,7 +175,4 @@ class GameController extends AbstractController
 
         return $this->twig->render('/Game/victoryScreen.html.twig', ['game' => $games]);
     }
-
-    
 }
-

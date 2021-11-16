@@ -282,14 +282,16 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .addFormList input,
 .addFormList label,
 .addFormList textarea {
-    /* width: 80%;
-    padding: .3rem;
-    margin-top: .8rem; */
+    width: 80%;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
 }
 
 .addFormList textarea {
@@ -298,10 +300,13 @@ button {
 }
 
 .addFormList button {
-    width: 30%;
-    height: 3rem;
+    /* width: 30%; */
+    /* height: 3rem; */
     font-size: 2rem;
     margin-top: .8rem;
+    position: unset;
+    margin-bottom: .8rem;
+    box-shadow: unset;
 }
 
 .checkbox:checked+.card {
@@ -537,14 +542,10 @@ button {
 
 .game_add {
     background-color: var(--jet);
-    height: 65vh;
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     margin: auto;
-    height: 27em;
+
 }
 
 .game-card {
