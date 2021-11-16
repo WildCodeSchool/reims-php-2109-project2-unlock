@@ -109,7 +109,46 @@ button {
     transform: rotate(90deg);
 }
 
-.behind-title {
+.first {
+    opacity: 0;
+    animation: fades 1s infinite, moves 1s infinite ease-out;
+}
+
+.second {
+    animation: moves 1s infinite ease-in-out;
+}
+
+.third {
+    animation: moves 1s infinite ease-in, fades 1s reverse infinite;
+}
+
+.svg {
+    position: fixed;
+    z-index: 6;
+    transform: scaleY(0.8);
+    margin-left: 12rem;
+    margin-top: 2rem;
+}
+
+@keyframes fades {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moves {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(40px);
+    }
+}
+
+.behind .title 
     text-shadow: 2px 2px 2px #0f1517;
     margin-left: 1rem;
 }
@@ -494,6 +533,41 @@ button {
     transition: ease-out 0.2s;
 }
 
+.rules-play {
+    z-index: 6;
+    position: fixed;
+    right: 1rem;
+    top: 2rem;
+    background-color: var(--jet);
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-1rem, -1rem);
+}
+
+.rules-play-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    color: var(--jet);
+    background: var(--border-color);
+    z-index: 5;
+    clip-path: circle(1.5rem at calc(100% - 3.5rem) 2.5rem);
+    transition: clip-path 1s;
+    transform: translate(-1rem, -1rem);
+}
+
+.rules-play-input:checked+.rules-play-container {
+    clip-path: circle(97% at calc(100% - 3.5rem) 2.5rem);
+}
+
 .rules {
     z-index: 6;
     position: absolute;
@@ -530,6 +604,7 @@ button {
 .rules-text {
     font-size: 1.2rem;
     text-align: center;
+    padding: 0 1rem;
 }
 
 
