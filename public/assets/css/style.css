@@ -51,7 +51,7 @@ body {
 button {
     font-family: var(--unlock-button-font);
 }
-
+/* home */
 .home {
     height: 80vh;
     padding: 0;
@@ -83,6 +83,15 @@ button {
     padding-right: 20rem;
 }
 
+.front a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: double;
+    border-color: silver;
+    border-width: 5px;
+}
+
 .slide {
     width: 30vw;
     height: 50vw;
@@ -94,11 +103,13 @@ button {
     text-align: center;
     font-size: 5vw;
     border-radius: 15px;
+
 }
 
 .behind .title {
     text-shadow: 2px 2px 2px #0f1517;
 }
+/**/
 
 .Title {
     text-align: center;

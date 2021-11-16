@@ -9,10 +9,10 @@
         </div>
         
     <div class="front">
-        <a class="slide" href="/games/add">+</a> 
-        {% for game in games %}
-        <a class="slide" href="/games/show?id={{ game.id }}">{{ game.name }}</a>
-        {% endfor %}
+        <a class="slide" href="/games/add"><h2><p>Ajouter</br>+</p></h2></a> 
+            {% for game in games %}
+            <a class="slide" href="/games/show?id={{ game.id }}">{{ game.name }}</a>
+            {% endfor %}
         <a class="slide" href="/games">Liste</a> 
     </div>
 
