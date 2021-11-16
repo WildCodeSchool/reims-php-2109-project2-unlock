@@ -41,6 +41,7 @@ body {
 .unlock-h2 {
     font-family: var(--text-font);
     font-size: 1rem;
+    text-shadow: none;
 }
 
 .home-link {
@@ -96,8 +97,9 @@ button {
     border-radius: 15px;
 }
 
-.behind .title {
+.behind .unlock-title {
     text-shadow: 2px 2px 2px #0f1517;
+    color: var(--shadow-jet);
 }
 
 .Title {
@@ -686,5 +688,25 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
+    }
+
+    .game-show-description{
+        width : 25vw;
+        height : unset;
+        margin : unset;
+    }
+
+    .game-show-desription-screen{
+        text-align : center;
+    }
+
+    .unlock-title, .unlock-h2{
+        font-size: 3rem;
+        align-self: center;
+    }
+
+    .agencement-page{
+        display : flex;
+        justify-content: space-evenly;
     }
 }

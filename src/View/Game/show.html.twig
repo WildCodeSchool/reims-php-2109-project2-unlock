@@ -1,17 +1,19 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-	{{ parent() }}
-	<section class="game-show">
-		<div class="game-show-desription-screen">
-			<div class="game-show-description">
-				<h2 class="game-show-title">{{ game.name }}</h2>
-				<p class="game-show-description-p">{{ game.description }}</p>
-				<p class="game-show-instruction-p">{{ game.instruction }}</p>
-				<div class="game-show-link">
-					<a href="/games/play?id={{ game.id }}" class="game-show-link-play">JOUER</a>
-					<a href="/games/cards?id={{ game.id }}" class="game-show-link-cards">CARTES</a>
+	<div class="agencement-page">
+		{{ parent() }}
+		<section class="game-show">
+			<div class="game-show-desription-screen">
+				<div class="game-show-description">
+					<h2 class="game-show-title">{{ game.name }}</h2>
+					<p class="game-show-description-p">{{ game.description }}</p>
+					<p class="game-show-instruction-p">{{ game.instruction }}</p>
+					<div class="game-show-link">
+						<a href="/games/play?id={{ game.id }}" class="game-show-link-play">JOUER</a>
+						<a href="/games/cards?id={{ game.id }}" class="game-show-link-cards">CARTES</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 {% endblock %}
