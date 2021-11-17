@@ -1,12 +1,14 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	{{ parent() }}
-	<div class="victory game-show-description">
-		<h1 class="unchanging">Félicitations, tu as terminé</h1>
-		<h2 class="game-name">
-			{{ game.name }}
-		</h2>
-		<a class="game-show-link-play" href="/games">Retour aux jeux</a>
+	<div class="agencement-page-play">
+		{{ parent() }}
+		<div class="victory game-show-description" id="victory">
+			<h1 class="unchanging">Félicitations, tu as terminé</h1>
+			<h2 class="game-name">
+				{{ game.name }}
+			</h2>
+			<a class="game-show-link-play" href="/games">Retour aux jeux</a>
+		</div>
 	</div>
 {% endblock %}

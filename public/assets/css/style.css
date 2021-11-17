@@ -795,4 +795,10 @@ button {
     .game{
         height : 65vh;
     }
+
+    /* Victory screen resized */
+    #victory{
+        margin-top: 2rem;
+    }
+
 }
