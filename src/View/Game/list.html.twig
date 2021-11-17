@@ -1,8 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	{{ parent() }}
-	<h1 class="game-list-title">LES JEUX</h1>
+	<div class="agencement-page-play">
+		{{ parent() }}
+		<h1 class="game-list-title">LES JEUX</h1>
+	</div>
 	<ul class="game-list">
 		{% for game in games %}
 			<li class="game">
