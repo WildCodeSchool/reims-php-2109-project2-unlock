@@ -10,7 +10,7 @@
 			<li class="game">
 				<h2 class="game-title">{{ game.name }}</h2>
 				<figure class="game-figure">
-					<img class="game-image" src="../assets/images/game-the-appartment.png" alt="{{game.name}}">
+					<img class="game-image" src="{{ game.image_url}}" alt="{{game.name}}">
 				</figure>
 				<a class="card-link-to-details" href="/games/show?id={{ game.id }}">
 					<span class="card-details-span">Détails</span>

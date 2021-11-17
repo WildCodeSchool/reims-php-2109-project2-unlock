@@ -53,50 +53,75 @@ button {
     font-family: var(--unlock-button-font);
 }
 
+
+/* home */
+
 .home {
     height: 80vh;
-    padding: 0;
     overflow: hidden;
     position: relative;
     background-image: url("/assets/images/london-map1.jpeg");
     border: 0.3rem solid var(--border-color);
 }
 
-.behind {
-    margin-left: 1rem;
-}
-
 .front {
     position: absolute;
-    z-index: 1;
-    bottom: -10rem;
-    left: -10rem;
-    height: 40vh;
-    width: 100vw;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(50deg);
+    background-color: rgb(44, 44, 44, .5);
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.front-content {
     overflow-x: scroll;
-    display: grid;
-    grid-auto-flow: column;
-    transform: rotate(-40deg);
-    border-top: .2rem solid var(--border-color);
-    background-color: rgb(120, 120, 120, 0.8);
-    padding-left: 20rem;
-    padding-bottom: 20rem;
-    padding-right: 20rem;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 60vh;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.front-content::-webkit-scrollbar {
+    display: none;
 }
 
 .slide {
-    width: 30vw;
-    height: 50vw;
+    width: 50vw;
+    height: 30vw;
     background-color: var(--jet);
     color: white;
-    text-decoration: none;
     margin: 1rem;
-    display: inline-block;
-    text-align: center;
-    font-size: 5vw;
+    text-decoration: none;
+    border: double;
+    border-color: silver;
+    border-width: 5px;
+    padding-right: .2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 auto;
     border-radius: 15px;
     word-wrap: break-word;
     hyphens : auto;
+}
+
+.slide-img {
+    transform: rotate(-90deg);
+    width: 80%;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    width: 30vw;
+    font-size: 5vw;
+    text-align: center;
 }
 
 .first {
@@ -114,9 +139,10 @@ button {
 
 .svg {
     position: absolute;
-    top: 5%;
-    left: 20%;
-    transform: scale(-0.6, 0.6);
+    left: 50%;
+    top: 50%;
+    transform-origin: top left;
+    transform: scale(1) rotate(90deg) translate(-50%, -50%);
 }
 
 @keyframes fades {
@@ -137,10 +163,14 @@ button {
     }
 }
 
-.behind .unlock-title {
+.behind-title {
     text-shadow: 2px 2px 2px #0f1517;
+    margin-left: 1rem;
     color: var(--shadow-jet);
 }
+
+
+/**/
 
 .Title {
     text-align: center;
@@ -201,7 +231,7 @@ button {
     overflow-x: hidden;
     overflow-y: visible;
     display: grid;
-    grid-template-rows: 1fr 6fr 4rem;
+    grid-template-rows: 1fr 6fr 2fr;
     grid-template-columns: 1fr;
     position: relative;
 }
@@ -255,6 +285,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .card-details-span {
@@ -312,6 +343,7 @@ button {
 .addFormList {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -319,8 +351,8 @@ button {
 .addFormList label,
 .addFormList textarea {
     width: 80%;
-    padding: .3rem;
     margin-top: .8rem;
+    margin-bottom: .8rem;
 }
 
 .addFormList textarea {
@@ -329,10 +361,11 @@ button {
 }
 
 .addFormList button {
-    width: 30%;
-    height: 3rem;
     font-size: 2rem;
     margin-top: .8rem;
+    position: unset;
+    margin-bottom: .8rem;
+    box-shadow: unset;
 }
 
 .checkbox:checked+.card {
@@ -638,11 +671,7 @@ button {
     height: 65vh;
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     margin: auto;
-    height: 27em;
 }
 
 .game-card {
@@ -738,11 +767,28 @@ button {
     font-size: 1.2rem;
 }
 
+.card-link-to-details-add{
+    text-decoration: none;
+    color : black;
+    background-color: white;
+    border: solid 2px var(--border-color);
+    border-radius: 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: --text-font;
+    width : auto;
+}
+
+.add-buttons-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 @media screen and (min-width: 680px) {
-    .svg {
-        left: 45%;
-        top: 30%
-    }
     .addTitle {
         text-align: center;
     }
@@ -765,11 +811,28 @@ button {
         grid-template-columns: repeat(5, 1fr);
     }
     .add_card form {
-        max-width: 30vw;
+        max-width: 30%;
         margin: auto;
     }
-    Mise en page version bureau de games/show,
-    games/play et de games/cards */ .game-show-description {
+    .home {
+        height: 90vh;
+    }
+    .front-content {
+        height: 110vh;
+    }
+    .slide {
+        max-width: 250px;
+        max-height: 150px;
+    }
+    .rotate {
+        font-size: 1.8vw;
+    }
+    .svg {
+        transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
+    }
+    /*Mise en page version bureau de games/show,
+    games/play et de games/cards */
+    .game-show-description {
         width: 400px;
         height: 80vh;
         margin: 0;
@@ -831,4 +894,27 @@ button {
     .game {
         height: 65vh;
     }
+
+    /* Victory screen resized */
+    #victory{
+        margin-top: 2rem;
+    }
+
+    .game_add{
+        width : 50%;
+        height : 65vh;
+    }
+
+    .card_edit{
+
+        width : 50%;
+        height : 70vh;
+        text-align: center;
+        margin: auto;
+    }
+
+    .game-card-form{
+        margin-top: 1rem;
+    }
+
 }

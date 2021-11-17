@@ -17,13 +17,32 @@ class GameController extends AbstractController
     //name, description, image url
     public function add(): string
     {
+        $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
+            $uploadDir = 'assets/images/';
+            $uploadFile = $uploadDir . basename($_FILES['image_url']['name']);
+            $extension = pathinfo($_FILES['image_url']['name'], PATHINFO_EXTENSION);
+            $authorizedExtensions = ['jpg','png','jpeg','webp'];
+            $maxFileSize = 2000000;
+
+            if ((!in_array($extension, $authorizedExtensions))) {
+                $errors[] = 'Veuillez sélectionner une image de type jpg, png ou webp !';
+            }
+
+            $sizeReajust = filesize($_FILES['image_url']['tmp_name']);
+            if (file_exists($_FILES['image_url']['tmp_name']) &&  $sizeReajust > $maxFileSize) {
+                $errors[] = "Votre fichier doit faire moins de 2M !";
+            }
+
             $game = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
+            if (empty($errors)) {
+                move_uploaded_file($_FILES['image_url']['tmp_name'], $uploadFile);
+                $game['image_url'] = $_FILES['image_url']['name'];
+            } else {
+                $game['image_url'] = 'london-map1.jpeg';
+            }
 
-            // if validation is ok, insert and redirection
             $gameManager = new GameManager();
             $gameManager->insert($game);
             header('Location:/games');
