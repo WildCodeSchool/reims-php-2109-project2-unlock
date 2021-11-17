@@ -758,6 +758,9 @@ button {
     .game-show {
         align-self: center;
     }
+    .rules-input:checked+.rules-container {
+        clip-path: circle(100% at calc(90% - 4.5rem) calc(100% - 2.5rem));
+    }
     .rules-play-input:checked+.rules-play-container {
         clip-path: circle(100% at calc(90% - 4.5rem) 2.5rem);
     }
