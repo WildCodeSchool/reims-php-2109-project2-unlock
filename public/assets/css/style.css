@@ -499,6 +499,10 @@ button {
     grid-template-rows: 4rem auto 2rem;
     grid-template-columns: 1fr;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Unlock-hiddenCard {
@@ -510,6 +514,16 @@ button {
 
 .Game-hiddenCard {
     color: var(--gunmetal);
+}
+
+.Number-hiddenCard {
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--isabelline);
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
 }
 
 .Merge {
@@ -672,6 +686,10 @@ button {
 
 .game-play-merge-info-description {
     font-size: 1.5rem;
+}
+
+.game-play-space {
+    height: 15vh;
 }
 
 .game-card-form {
