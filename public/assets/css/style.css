@@ -30,8 +30,6 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
-    word-wrap: break-word;
-    hyphens: auto;
 }
 
 .unlock-title {
@@ -109,6 +107,9 @@ button {
     justify-content: flex-start;
     align-items: center;
     flex: 0 0 auto;
+    border-radius: 15px;
+    word-wrap: break-word;
+    hyphens : auto;
 }
 
 .slide-img {
@@ -435,7 +436,7 @@ button {
 .game-show-link {
     display: flex;
     justify-content: space-around;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 .game-show-link-play,
@@ -454,6 +455,13 @@ button {
     word-spacing: 3px;
 }
 
+.game-show-link-play {
+    margin-right: 0.5rem;
+}
+
+.game-show-link-cards {
+    margin-left: 0.5rem;
+}
 
 /*  CARD - DETAILS - SHOW */
 
@@ -528,6 +536,10 @@ button {
     grid-template-rows: 4rem auto 2rem;
     grid-template-columns: 1fr;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Unlock-hiddenCard {
@@ -539,6 +551,16 @@ button {
 
 .Game-hiddenCard {
     color: var(--gunmetal);
+}
+
+.Number-hiddenCard {
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--isabelline);
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
 }
 
 .Merge {
@@ -697,6 +719,10 @@ button {
 
 .game-play-merge-info-description {
     font-size: 1.5rem;
+}
+
+.game-play-space {
+    height: 15vh;
 }
 
 .game-card-form {
