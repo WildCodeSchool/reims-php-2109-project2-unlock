@@ -8,12 +8,16 @@
 		{% for card in cards %}
 			{% include "/GameCards/_cardSelect.html.twig" with card %}
 		{% endfor %}
-		<button type="submit">Ajouter</button>
 		
-		<a class="card add-cards-link" href="/cards/add">
-			<span class="add-cards-span">CREATE NEW CARD</span>
-		</a>
-		
+		<div class="add-buttons-cards">
+			<button class="card-link-to-details-add" type="submit">
+				<span class="card-details-span">Ajouter une carte</span> 
+			</button>
+			<a class="card-link-to-details-add" href="/cards/add">
+				<span class="card-details-span">Nouvelle carte</span>
+			</a>
+		</div>
+
 	</form>
 
 {% endblock %}

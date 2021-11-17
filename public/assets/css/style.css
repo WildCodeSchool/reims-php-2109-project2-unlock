@@ -230,7 +230,7 @@ button {
     overflow-x: hidden;
     overflow-y: visible;
     display: grid;
-    grid-template-rows: 1fr 6fr 4rem;
+    grid-template-rows: 1fr 6fr 2fr;
     grid-template-columns: 1fr;
     position: relative;
 }
@@ -284,6 +284,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .card-details-span {
@@ -740,6 +741,27 @@ button {
     font-size: 1.2rem;
 }
 
+.card-link-to-details-add{
+    text-decoration: none;
+    color : black;
+    background-color: white;
+    border: solid 2px var(--border-color);
+    border-radius: 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: --text-font;
+    width : auto;
+}
+
+.add-buttons-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 @media screen and (min-width: 680px) {
     .addTitle {
         text-align: center;
@@ -846,4 +868,27 @@ button {
     .game {
         height: 65vh;
     }
+
+    /* Victory screen resized */
+    #victory{
+        margin-top: 2rem;
+    }
+
+    .game_add{
+        width : 50%;
+        height : 65vh;
+    }
+
+    .card_edit{
+
+        width : 50%;
+        height : 70vh;
+        text-align: center;
+        margin: auto;
+    }
+
+    .game-card-form{
+        margin-top: 1rem;
+    }
+
 }
