@@ -95,6 +95,10 @@ button {
     text-align: center;
     font-size: 5vw;
     border-radius: 15px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 .first {
@@ -777,11 +781,19 @@ button {
         align-self: center;
     }
 
-    .agencement-page-play div .list-title, .list-title-cards h1{
+    .agencement-page-play div .list-title, .list-title-cards h1, .game-list-title{
         font-size: 2.2rem;
     }
 
     .agencement-page-cards-list div{
         align-self: center;
+    }
+
+    .game-list-title{
+        color : var(--isabelline);
+    }
+
+    .game{
+        height : 65vh;
     }
 }
