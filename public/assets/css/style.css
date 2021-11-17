@@ -83,7 +83,7 @@ button {
     overflow-x: scroll;
     display: flex;
     flex-direction: column-reverse;
-    height: 100vw;
+    height: 60vh;
     position: relative;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -758,14 +758,14 @@ button {
         grid-template-columns: repeat(5, 1fr);
     }
     .add_card form {
-        max-width: 30vw;
+        max-width: 30%;
         margin: auto;
     }
     .home {
         height: 90vh;
     }
     .front-content {
-        height: 50vw;
+        height: 110vh;
     }
     .slide {
         max-width: 250px;
