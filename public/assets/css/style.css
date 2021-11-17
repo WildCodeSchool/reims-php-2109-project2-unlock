@@ -113,9 +113,9 @@ button {
 .svg {
     position: fixed;
     z-index: 6;
-    margin-left: 12rem;
-    margin-top: 4%;
+    margin-top: 2rem;
     transform: scale(-0.6, 0.6);
+    transform: translateX(170px);
 }
 
 @keyframes fades {
@@ -709,6 +709,9 @@ button {
 }
 
 @media screen and (min-width: 680px) {
+    .svg {
+        transform: translateX(300px);
+    }
     .addTitle {
         text-align: center;
     }
@@ -756,11 +759,11 @@ button {
         align-self: center;
     }
     .rules-play-input:checked+.rules-play-container {
-        clip-path: circle(80% at calc(100% - 3.5rem) 2.5rem);
+        clip-path: circle(100% at calc(90% - 4.5rem) 2.5rem);
     }
     .rules-text {
-        padding-left: 39rem;
-        padding-right: 6rem;
+        margin: 4rem;
+        padding: 4rem;
         line-height: 2rem;
     }
     .agencement-page-play,
