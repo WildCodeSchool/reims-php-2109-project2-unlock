@@ -644,12 +644,8 @@ button {
 /* ADD Game */
 
 .game_add {
-<<<<<<< HEAD
-    background-color: var(--jet);
-=======
     background-color: var(--gray-web);
     height: 65vh;
->>>>>>> master
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     margin: auto;
