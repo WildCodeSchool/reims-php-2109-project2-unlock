@@ -471,10 +471,10 @@ button {
     text-align: center;
     font-size: 1.8rem;
     border-radius: 50%;
-    border : 2px solid var(--isabelline);
+    border: 2px solid var(--isabelline);
     align-self: center;
-    width : 3rem;
-    height : 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 
@@ -594,6 +594,7 @@ button {
     font-size: 1.2rem;
     text-align: center;
     padding: 0 1rem;
+    line-height: 1.8rem;
 }
 
 
@@ -733,54 +734,56 @@ button {
         max-width: 30vw;
         margin: auto;
     }
-
-    .game-show-description{
-        width : 65%;
-        height : unset;
-        margin : unset;
+    .game-show-description {
+        width: 65%;
+        height: unset;
+        margin: unset;
     }
-
-    .game-show-desription-screen{
-        text-align : center;
+    .game-show-desription-screen {
+        text-align: center;
     }
-
-    .unlock-title, .unlock-h2{
+    .unlock-title,
+    .unlock-h2 {
         font-size: 3rem;
         align-self: center;
     }
-
-    .agencement-page-show{
-        display : flex;
+    .agencement-page-show {
+        display: flex;
         justify-content: space-evenly;
-        height : 100vh;
+        height: 100vh;
     }
-
-    .game-show{
+    .game-show {
         align-self: center;
     }
-
-    .agencement-page-play, .agencement-page-cards-list{
-        display : flex;
+    .rules-play-input:checked+.rules-play-container {
+        clip-path: circle(80% at calc(100% - 3.5rem) 2.5rem);
+    }
+    .rules-text {
+        padding-left: 39rem;
+        padding-right: 6rem;
+        line-height: 2rem;
+    }
+    .agencement-page-play,
+    .agencement-page-cards-list {
+        display: flex;
         justify-content: space-around;
     }
-    
-    .agencement-page-play .unlock-title, .unlock-h2{
-        font-size : 2rem;
+    .agencement-page-play .unlock-title,
+    .unlock-h2 {
+        font-size: 2rem;
     }
-
-    .agencement-page-play .unlock-h2, .agencement-page-cards-list .unlock-h2{
+    .agencement-page-play .unlock-h2,
+    .agencement-page-cards-list .unlock-h2 {
         margin-bottom: 3rem;
     }
-
-    .agencement-page-play div{
+    .agencement-page-play div {
         align-self: center;
     }
-
-    .agencement-page-play div .list-title, .list-title-cards h1{
+    .agencement-page-play div .list-title,
+    .list-title-cards h1 {
         font-size: 2.2rem;
     }
-
-    .agencement-page-cards-list div{
+    .agencement-page-cards-list div {
         align-self: center;
     }
 }
