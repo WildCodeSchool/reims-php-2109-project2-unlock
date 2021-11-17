@@ -735,7 +735,7 @@ button {
     }
 
     .game-show-description{
-        width : 25vw;
+        width : 65%;
         height : unset;
         margin : unset;
     }
@@ -773,7 +773,6 @@ button {
     }
 
     .agencement-page-play div{
-        padding-right: 25rem;
         align-self: center;
     }
 
@@ -783,13 +782,5 @@ button {
 
     .agencement-page-cards-list div{
         align-self: center;
-    }
-
-    .agencement-page-cards-list{
-        padding-right: 25rem;
-    }
-
-    .agencement-page-cards-list .parent{
-        margin-right: 25rem;
     }
 }
