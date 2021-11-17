@@ -82,6 +82,12 @@ button {
     flex-direction: column-reverse;
     height: 100vw;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.front-content::-webkit-scrollbar {
+    display: none;
 }
 
 .slide {
@@ -132,7 +138,7 @@ button {
     left: 50%;
     top: 50%;
     transform-origin: top left;
-    transform: scale(1) rotate(-90deg) translate(-50%, -50%);
+    transform: scale(1) rotate(90deg) translate(-50%, -50%);
 }
 
 @keyframes fades {
@@ -744,5 +750,21 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
+    }
+    .home {
+        height: 90vh;
+    }
+    .front-content {
+        height: 50vw;
+    }
+    .slide {
+        max-width: 250px;
+        max-height: 150px;
+    }
+    .rotate {
+        font-size: 1.8vw;
+    }
+    .svg {
+        transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
     }
 }
