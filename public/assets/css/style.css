@@ -30,6 +30,8 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
+    word-wrap: break-word;
+    hyphens : auto;
 }
 
 .unlock-title {
@@ -95,10 +97,6 @@ button {
     text-align: center;
     font-size: 5vw;
     border-radius: 15px;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 
 .first {
