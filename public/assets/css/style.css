@@ -202,7 +202,7 @@ button {
     overflow-x: hidden;
     overflow-y: visible;
     display: grid;
-    grid-template-rows: 1fr 6fr 4rem;
+    grid-template-rows: 1fr 6fr 2fr;
     grid-template-columns: 1fr;
     position: relative;
 }
@@ -256,6 +256,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2px;
 }
 
 .card-details-span {
