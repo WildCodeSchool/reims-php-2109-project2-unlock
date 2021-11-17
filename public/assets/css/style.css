@@ -801,4 +801,9 @@ button {
         margin-top: 2rem;
     }
 
+    .game_add{
+        width : 50%;
+        height : 65vh;
+    }
+
 }
