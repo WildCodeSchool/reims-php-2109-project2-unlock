@@ -66,28 +66,23 @@ button {
 
 .front {
     position: absolute;
-    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(50deg);
+    background-color: rgb(44, 44, 44, .5);
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.front-content {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column-reverse;
     height: 100vw;
-    overflow-y: scroll;
-    display: grid;
-    grid-auto-flow: row;
-    border-top: .2rem solid var(--border-color);
-    background-color: rgb(120, 120, 120, 0.8);
-    transform: rotate(-130deg) translate(5rem, 5rem);
-    padding: 20rem 0 10rem 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.front::-webkit-scrollbar {
-    display: none;
-}
-
-.rotate {
-    transform: rotate(90deg);
-    width: 30vw;
-    display: block;
-    text-align: center;
+    position: relative;
 }
 
 .slide {
@@ -97,19 +92,27 @@ button {
     color: white;
     margin: 1rem;
     text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     border: double;
     border-color: silver;
     border-width: 5px;
     padding-right: .2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 auto;
 }
 
 .slide-img {
+    rotate: -90deg;
+    width: 80%;
+}
+
+.rotate {
+    transform: rotate(-90deg);
     width: 30vw;
-    transform: rotate(90deg);
+    font-size: 5vw;
+    text-align: center;
 }
 
 .first {
@@ -126,11 +129,11 @@ button {
 }
 
 .svg {
-    position: fixed;
-    z-index: 6;
-    transform: scaleY(0.8);
-    margin-left: 12rem;
-    margin-top: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: top left;
+    transform: scale(1.5) rotate(-90deg) translate(-50%, -50%);
 }
 
 @keyframes fades {
@@ -742,35 +745,5 @@ button {
     .add_card form {
         max-width: 30vw;
         margin: auto;
-    }
-    .home {
-        height: calc(100vh - 2.5rem);
-    }
-    .unlock-h1 {
-        font-size: 4rem;
-    }
-    .unlock-h2 {
-        font-size: 3rem;
-    }
-    .slide {
-        max-width: 450px;
-        max-height: 270px;
-        flex-direction: row-reverse;
-    }
-    .slide-img {
-        max-width: 270px;
-    }
-    .rotate {
-        width: 270px;
-        font-size: 2vw;
-        transform: rotate(-90deg);
-    }
-    .front {
-        bottom: 0;
-        transform-origin: bottom left;
-        transform: translateX(calc(23vw - 8.34rem)) rotate(50deg);
-        height: 50vw;
-        padding-top: 536px;
-        padding-bottom: 377px;
     }
 }
