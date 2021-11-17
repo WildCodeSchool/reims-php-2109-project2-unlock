@@ -25,12 +25,6 @@
             </a>
             {% endfor %}
         <a class="slide" href="/games"><span class="rotate">Liste des jeux</span></a> 
-        
-        
-        <a class="slide" href="/games/add">+</a> {% for game in games %}
-        <a class="slide" href="/games/show?id={{ game.id }}">{{ game.name }}</a> {% endfor %}
-        <a class="slide" href="/games">Liste</a>
-
     </div>
 
     <label class="rules" for="rules-input"><span>?</span></label>

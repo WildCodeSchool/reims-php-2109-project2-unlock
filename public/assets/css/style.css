@@ -51,7 +51,10 @@ body {
 button {
     font-family: var(--unlock-button-font);
 }
+
+
 /* home */
+
 .home {
     height: 80vh;
     padding: 0;
@@ -68,9 +71,9 @@ button {
     overflow-y: scroll;
     display: grid;
     grid-auto-flow: row;
-    transform: rotate(-130deg) translate(5rem ,5rem);
     border-top: .2rem solid var(--border-color);
     background-color: rgb(120, 120, 120, 0.8);
+    transform: rotate(-130deg) translate(5rem, 5rem);
     padding: 20rem 0 10rem 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -78,7 +81,7 @@ button {
 
 .front::-webkit-scrollbar {
     display: none;
-  }  
+}
 
 .rotate {
     transform: rotate(90deg);
@@ -104,7 +107,7 @@ button {
     padding-right: .2rem;
 }
 
-.slide-img{
+.slide-img {
     width: 30vw;
     transform: rotate(90deg);
 }
@@ -148,10 +151,12 @@ button {
     }
 }
 
-.behind .title 
+.behind .title {
     text-shadow: 2px 2px 2px #0f1517;
     margin-left: 1rem;
 }
+
+
 /**/
 
 .Title {
@@ -326,7 +331,6 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .addFormList input,
@@ -622,7 +626,6 @@ button {
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
     margin: auto;
-
 }
 
 .game-card {
@@ -740,29 +743,34 @@ button {
         max-width: 30vw;
         margin: auto;
     }
-    .home{
+    .home {
         height: calc(100vh - 2.5rem);
     }
-    .unlock-h1{
+    .unlock-h1 {
         font-size: 4rem;
     }
-    .unlock-h2{
+    .unlock-h2 {
         font-size: 3rem;
     }
-    .slide{
+    .slide {
         max-width: 450px;
         max-height: 270px;
+        flex-direction: row-reverse;
     }
-    .slide-img{
+    .slide-img {
         max-width: 270px;
     }
-    .rotate{
+    .rotate {
         width: 270px;
         font-size: 2vw;
+        transform: rotate(-90deg);
     }
-    .front{
-        transform: rotate(-130deg) translate(-10rem, 50rem);
+    .front {
+        bottom: 0;
+        transform-origin: bottom left;
+        transform: translateX(calc(23vw - 8.34rem)) rotate(50deg);
         height: 50vw;
-        padding-top: 50rem;
+        padding-top: 536px;
+        padding-bottom: 377px;
     }
 }
