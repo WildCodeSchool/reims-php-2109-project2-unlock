@@ -30,8 +30,6 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
-    word-wrap: break-word;
-    hyphens : auto;
 }
 
 .unlock-title {
@@ -97,6 +95,8 @@ button {
     text-align: center;
     font-size: 5vw;
     border-radius: 15px;
+    word-wrap: break-word;
+    hyphens : auto;
 }
 
 .first {
@@ -404,7 +404,7 @@ button {
 .game-show-link {
     display: flex;
     justify-content: space-around;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 .game-show-link-play,
@@ -419,6 +419,13 @@ button {
     box-shadow: 5px 5px 5px var(--shadow-jet);
 }
 
+.game-show-link-play {
+    margin-right: 0.5rem;
+}
+
+.game-show-link-cards {
+    margin-left: 0.5rem;
+}
 
 /*  CARD - DETAILS - SHOW */
 
