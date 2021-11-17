@@ -30,6 +30,8 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
+    word-wrap: break-word;
+    hyphens : auto;
 }
 
 .unlock-title {
@@ -737,10 +739,14 @@ button {
         max-width: 30vw;
         margin: auto;
     }
-    .game-show-description {
-        width: 65%;
-        height: unset;
-        margin: unset;
+
+
+ Mise en page version bureau de games/show, games/play et de games/cards */
+    .game-show-description{
+        width : 400px;
+        height : 80vh;
+        margin : 0;
+
     }
     .game-show-desription-screen {
         text-align: center;
@@ -782,11 +788,19 @@ button {
     .agencement-page-play div {
         align-self: center;
     }
-    .agencement-page-play div .list-title,
-    .list-title-cards h1 {
+
+    .agencement-page-play div .list-title, .list-title-cards h1, .game-list-title{
         font-size: 2.2rem;
     }
     .agencement-page-cards-list div {
         align-self: center;
+    }
+
+    .game-list-title{
+        color : var(--isabelline);
+    }
+
+    .game{
+        height : 65vh;
     }
 }

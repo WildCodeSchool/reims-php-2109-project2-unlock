@@ -37,7 +37,17 @@ cardTitles.forEach(cardTitle => {
 	const textCardTitle = cardTitle.textContent;
 	cardTitle.style.fontSize = "2rem";
 	if (textCardTitle.length > 9) {
-		cardTitle.style.fontSize = "1.6rem";
+		cardTitle.style.fontSize = "1.5rem";
+	}
+});
+
+// _cardNumbers.html.twig
+const gameTitles = document.querySelectorAll('.game-title');
+gameTitles.forEach(gameTitle => {
+	const textgameTitle = gameTitle.textContent;
+	gameTitle.style.fontSize = "2rem";
+	if (textgameTitle.length > 9) {
+		gameTitle.style.fontSize = "1.5rem";
 	}
 });
 
