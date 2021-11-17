@@ -835,5 +835,16 @@ button {
         height : 65vh;
     }
 
+    .card_edit{
+
+        width : 50%;
+        height : 70vh;
+        text-align: center;
+        margin: auto;
+    }
+
+    .game-card-form{
+        margin-top: 1rem;
+    }
 
 }
