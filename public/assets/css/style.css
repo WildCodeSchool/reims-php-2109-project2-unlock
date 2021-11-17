@@ -57,7 +57,6 @@ button {
 
 .home {
     height: 80vh;
-    padding: 0;
     overflow: hidden;
     position: relative;
     background-image: url("/assets/images/london-map1.jpeg");
@@ -133,7 +132,7 @@ button {
     left: 50%;
     top: 50%;
     transform-origin: top left;
-    transform: scale(1.5) rotate(-90deg) translate(-50%, -50%);
+    transform: scale(1) rotate(-90deg) translate(-50%, -50%);
 }
 
 @keyframes fades {
@@ -154,7 +153,7 @@ button {
     }
 }
 
-.behind .title {
+.behind-title {
     text-shadow: 2px 2px 2px #0f1517;
     margin-left: 1rem;
 }
