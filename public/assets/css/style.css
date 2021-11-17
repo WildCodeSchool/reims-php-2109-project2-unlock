@@ -806,4 +806,24 @@ button {
         height : 65vh;
     }
 
+    .card-link-to-details-add{
+        text-decoration: none;
+        color : black;
+        background-color: white;
+        border: solid 2px var(--border-color);
+        border-radius: 2rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+        font-family: --text-font;
+        width : auto;
+    }
+
+    .add-buttons-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
