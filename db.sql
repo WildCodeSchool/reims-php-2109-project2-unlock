@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `card` (
 
 CREATE TABLE IF NOT EXISTS `game` (
   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `name` VARCHAR(50),
+  `name` VARCHAR(150),
   `description` TEXT,
   `instruction` VARCHAR(100),
   `image_url` VARCHAR(100)

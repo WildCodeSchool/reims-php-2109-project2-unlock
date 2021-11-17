@@ -30,6 +30,8 @@ body {
     background-color: var(--gunmetal);
     color: var(--isabelline);
     padding: 1rem;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .unlock-title {
@@ -41,6 +43,7 @@ body {
 .unlock-h2 {
     font-family: var(--text-font);
     font-size: 1rem;
+    text-shadow: none;
 }
 
 .home-link {
@@ -162,6 +165,7 @@ button {
 .behind-title {
     text-shadow: 2px 2px 2px #0f1517;
     margin-left: 1rem;
+    color: var(--shadow-jet);
 }
 
 
@@ -498,6 +502,11 @@ button {
 .card-number {
     text-align: center;
     font-size: 1.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--isabelline);
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
 }
 
 
@@ -617,6 +626,7 @@ button {
     font-size: 1.2rem;
     text-align: center;
     padding: 0 1rem;
+    line-height: 1.8rem;
 }
 
 
@@ -639,11 +649,11 @@ button {
 .game-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 80vh;
 }
 
 .card-description {
-    overflow-y: scroll;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -766,5 +776,69 @@ button {
     }
     .svg {
         transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
+    }
+    /*Mise en page version bureau de games/show,
+    games/play et de games/cards */
+    .game-show-description {
+        width: 400px;
+        height: 80vh;
+        margin: 0;
+    }
+    .game-show-desription-screen {
+        text-align: center;
+    }
+    .unlock-title,
+    .unlock-h2 {
+        font-size: 3rem;
+        align-self: center;
+    }
+    .agencement-page-show {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+    .game-show {
+        align-self: center;
+    }
+    .rules-input:checked+.rules-container {
+        clip-path: circle(100% at calc(90% - 4.5rem) calc(100% - 2.5rem));
+    }
+    .rules-play-input:checked+.rules-play-container {
+        clip-path: circle(100% at calc(90% - 4.5rem) 2.5rem);
+    }
+    .rules-text {
+        margin: 4rem;
+        padding: 4rem;
+        line-height: 2rem;
+    }
+    .agencement-page-play,
+    .agencement-page-cards-list {
+        display: flex;
+        justify-content: space-around;
+    }
+    .agencement-page-play .unlock-title,
+    .unlock-h2 {
+        font-size: 2rem;
+    }
+    .agencement-page-play .unlock-h2,
+    .agencement-page-cards-list .unlock-h2 {
+        margin-bottom: 3rem;
+    }
+    .agencement-page-play div {
+        align-self: center;
+    }
+    .agencement-page-play div .list-title,
+    .list-title-cards h1,
+    .game-list-title {
+        font-size: 2.2rem;
+    }
+    .agencement-page-cards-list div {
+        align-self: center;
+    }
+    .game-list-title {
+        color: var(--isabelline);
+    }
+    .game {
+        height: 65vh;
     }
 }
