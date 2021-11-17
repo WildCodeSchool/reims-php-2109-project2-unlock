@@ -5,7 +5,7 @@
     --jet: #423e3a;
     --shadow-jet: #70675d;
     --gunmetal: #253439;
-    --gray-web: #7c898b;
+    --gray-web: #515d61;
     --isabelline: #f6f4f1;
     /* first font to use */
     --text-font: "playfair_displayregular", serif;
@@ -377,10 +377,10 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #4c595c;
+    background-color: #4d5d5f;
     text-align: center;
     align-items: stretch;
-    border: 0.5rem double;
+    border: 0.2rem solid;
     border-color: var(--border-color);
     border-radius: 1rem;
     margin: 2rem 0 0 0;
@@ -413,10 +413,14 @@ button {
     color: var(--isabelline);
     background-color: var(--jet);
     font-size: 2.4rem;
-    padding: 0.2rem;
-    border: 2px solid var(--jet);
+    padding: 0.4rem;
+    margin: 0 2rem;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px var(--shadow-jet);
+    background: #253439;
+    box-shadow: 5px -5px 10px #0f1517;
+    font-family: var(--unlock-button-font);
+    word-spacing: 3px;
 }
 
 
@@ -610,7 +614,7 @@ button {
 /* ADD Game */
 
 .game_add {
-    background-color: var(--jet);
+    background-color: var(--gray-web);
     height: 65vh;
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
