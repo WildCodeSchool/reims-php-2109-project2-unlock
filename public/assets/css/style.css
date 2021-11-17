@@ -31,7 +31,7 @@ body {
     color: var(--isabelline);
     padding: 1rem;
     word-wrap: break-word;
-    hyphens : auto;
+    hyphens: auto;
 }
 
 .unlock-title {
@@ -113,11 +113,10 @@ button {
 }
 
 .svg {
-    position: fixed;
-    z-index: 6;
-    transform: scaleY(0.8);
-    margin-left: 12rem;
-    margin-top: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    transform: scale(-0.6, 0.6);
 }
 
 @keyframes fades {
@@ -474,10 +473,10 @@ button {
     text-align: center;
     font-size: 1.8rem;
     border-radius: 50%;
-    border : 2px solid var(--isabelline);
+    border: 2px solid var(--isabelline);
     align-self: center;
-    width : 3rem;
-    height : 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 
@@ -597,6 +596,7 @@ button {
     font-size: 1.2rem;
     text-align: center;
     padding: 0 1rem;
+    line-height: 1.8rem;
 }
 
 
@@ -711,6 +711,10 @@ button {
 }
 
 @media screen and (min-width: 680px) {
+    .svg {
+        left: 45%;
+        top: 30%
+    }
     .addTitle {
         text-align: center;
     }
@@ -736,64 +740,68 @@ button {
         max-width: 30vw;
         margin: auto;
     }
-
-/*   Mise en page version bureau de games/show, games/play et de games/cards */
-    .game-show-description{
-        width : 400px;
-        height : 80vh;
-        margin : 0;
+    Mise en page version bureau de games/show,
+    games/play et de games/cards */ .game-show-description {
+        width: 400px;
+        height: 80vh;
+        margin: 0;
     }
-
-    .game-show-desription-screen{
-        text-align : center;
+    .game-show-desription-screen {
+        text-align: center;
     }
-
-    .unlock-title, .unlock-h2{
+    .unlock-title,
+    .unlock-h2 {
         font-size: 3rem;
         align-self: center;
     }
-
-    .agencement-page-show{
-        display : flex;
+    .agencement-page-show {
+        display: flex;
         justify-content: space-evenly;
-        height : 100vh;
+        height: 100vh;
     }
-
-    .game-show{
+    .game-show {
         align-self: center;
     }
-
-    .agencement-page-play, .agencement-page-cards-list{
-        display : flex;
+    .rules-input:checked+.rules-container {
+        clip-path: circle(100% at calc(90% - 4.5rem) calc(100% - 2.5rem));
+    }
+    .rules-play-input:checked+.rules-play-container {
+        clip-path: circle(100% at calc(90% - 4.5rem) 2.5rem);
+    }
+    .rules-text {
+        margin: 4rem;
+        padding: 4rem;
+        line-height: 2rem;
+    }
+    .agencement-page-play,
+    .agencement-page-cards-list {
+        display: flex;
         justify-content: space-around;
     }
-    
-    .agencement-page-play .unlock-title, .unlock-h2{
-        font-size : 2rem;
+    .agencement-page-play .unlock-title,
+    .unlock-h2 {
+        font-size: 2rem;
     }
-
-    .agencement-page-play .unlock-h2, .agencement-page-cards-list .unlock-h2{
+    .agencement-page-play .unlock-h2,
+    .agencement-page-cards-list .unlock-h2 {
         margin-bottom: 3rem;
     }
-
-    .agencement-page-play div{
+    .agencement-page-play div {
         align-self: center;
     }
-
-    .agencement-page-play div .list-title, .list-title-cards h1, .game-list-title{
+    .agencement-page-play div .list-title,
+    .list-title-cards h1,
+    .game-list-title {
         font-size: 2.2rem;
     }
-
-    .agencement-page-cards-list div{
+    .agencement-page-cards-list div {
         align-self: center;
     }
-
-    .game-list-title{
-        color : var(--isabelline);
+    .game-list-title {
+        color: var(--isabelline);
     }
-
-    .game{
-        height : 65vh;
+    .game {
+        height: 65vh;
     }
 
     /* Victory screen resized */
