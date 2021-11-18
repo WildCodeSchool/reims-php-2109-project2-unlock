@@ -184,11 +184,6 @@ button {
     text-align: center;
 }
 
-.Title {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 .game-title {
     text-align: center;
 }
@@ -199,12 +194,6 @@ button {
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--border-color);
-}
-
-.list-title-h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
 }
 
 .card-list,
@@ -798,9 +787,6 @@ button {
     }
     .addTitle {
         text-align: center;
-    }
-    .list-title {
-        grid-column: 1/6;
     }
     .card {
         max-height: 450px;
