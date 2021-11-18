@@ -869,11 +869,6 @@ button {
         height: 65vh;
     }
 
-    /* Victory screen resized */
-    #victory{
-        margin-top: 2rem;
-    }
-
     .game_add{
         width : 50%;
         height : 65vh;
@@ -891,4 +886,19 @@ button {
         margin-top: 1rem;
     }
 
+    /* Victory screen resized */
+
+    .victory{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        width: 400px;
+        height: 80vh;
+        margin-top: 4rem;
+    }
+
+    #agencement-victory{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
