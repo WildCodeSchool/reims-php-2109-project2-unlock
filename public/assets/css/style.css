@@ -53,7 +53,6 @@ button {
     font-family: var(--unlock-button-font);
 }
 
-
 /* home */
 
 .home {
@@ -397,6 +396,8 @@ button {
 .game-show {
     display: flex;
     justify-content: center;
+    box-shadow: 10px -10px 20px #0f1517;
+
 }
 
 .game-show-title {
@@ -661,6 +662,7 @@ button {
 
 .victory {
     text-align: center;
+    box-shadow: 10px -10px 20px #0f1517;
 }
 
 
@@ -802,6 +804,24 @@ button {
 
 .card-link-to-details {
     align-self: stretch;
+}
+
+.new-game-cards {
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    border-radius: 30px;
+    background: #253439;
+    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    text-align:center;
+    font-size: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 @media screen and (min-width: 680px) {
