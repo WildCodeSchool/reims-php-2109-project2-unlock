@@ -195,7 +195,7 @@ button {
     margin: 2rem;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    color: var(--border-color);
+    color: var(--isabelline);
 }
 
 .list-title-h2 {
@@ -786,6 +786,22 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.list-games {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 65vh;
+}
+
+.list-description {
+    text-align: center;
+}
+
+.card-link-to-details {
+    align-self: stretch;
 }
 
 @media screen and (min-width: 680px) {
