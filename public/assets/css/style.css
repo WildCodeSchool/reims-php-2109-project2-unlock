@@ -33,14 +33,14 @@ body {
 }
 
 .unlock-title {
-    font-size: 1.5rem;
     font-family: var(--unlock-button-font);
     text-shadow: 2px 2px 2px #b29e84;
+    font-size: 1.7rem;
 }
 
 .unlock-h2 {
     font-family: var(--text-font);
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-shadow: none;
 }
 
@@ -109,7 +109,7 @@ button {
     flex: 0 0 auto;
     border-radius: 15px;
     word-wrap: break-word;
-    hyphens : auto;
+    hyphens: auto;
 }
 
 .slide-img {
@@ -165,8 +165,10 @@ button {
 
 .behind-title {
     text-shadow: 2px 2px 2px #0f1517;
-    margin-left: 1rem;
-    color: var(--shadow-jet);
+    margin-left: 0.5rem;
+    color: var(--jet);
+    font-size: 1.7rem;
+    font-family: var(--unlock-button-font);
 }
 
 
@@ -462,6 +464,7 @@ button {
 .game-show-link-cards {
     margin-left: 0.5rem;
 }
+
 
 /*  CARD - DETAILS - SHOW */
 
@@ -767,9 +770,9 @@ button {
     font-size: 1.2rem;
 }
 
-.card-link-to-details-add{
+.card-link-to-details-add {
     text-decoration: none;
-    color : black;
+    color: black;
     background-color: white;
     border: solid 2px var(--border-color);
     border-radius: 2rem;
@@ -779,16 +782,19 @@ button {
     justify-content: center;
     margin-top: 1rem;
     font-family: --text-font;
-    width : auto;
+    width: auto;
 }
 
-.add-buttons-cards{
+.add-buttons-cards {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 @media screen and (min-width: 680px) {
+    .behind-title {
+        font-size: 3rem;
+    }
     .addTitle {
         text-align: center;
     }
@@ -840,10 +846,12 @@ button {
     .game-show-desription-screen {
         text-align: center;
     }
-    .unlock-title,
-    .unlock-h2 {
-        font-size: 3rem;
+    .unlock-title {
         align-self: center;
+        font-size: 3rem;
+    }
+    .unlock-h2 {
+        font-size: 1.8rem;
     }
     .agencement-page-show {
         display: flex;
@@ -870,9 +878,7 @@ button {
         justify-content: space-around;
     }
     .agencement-page-play .unlock-title,
-    .unlock-h2 {
-        font-size: 2rem;
-    }
+    .unlock-h2 {}
     .agencement-page-play .unlock-h2,
     .agencement-page-cards-list .unlock-h2 {
         margin-bottom: 3rem;
@@ -894,27 +900,21 @@ button {
     .game {
         height: 65vh;
     }
-
     /* Victory screen resized */
-    #victory{
+    #victory {
         margin-top: 2rem;
     }
-
-    .game_add{
-        width : 50%;
-        height : 65vh;
+    .game_add {
+        width: 50%;
+        height: 65vh;
     }
-
-    .card_edit{
-
-        width : 50%;
-        height : 70vh;
+    .card_edit {
+        width: 50%;
+        height: 70vh;
         text-align: center;
         margin: auto;
     }
-
-    .game-card-form{
+    .game-card-form {
         margin-top: 1rem;
     }
-
 }
