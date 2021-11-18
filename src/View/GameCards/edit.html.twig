@@ -1,23 +1,32 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+<div class="desktop-form">
 	{{ parent() }}
-	<div class = "card_edit">
+	<form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+		
 		<h1>Modifier la carte</h1>
-		<form class="game-card-form" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+		<div>
 			<label class="game-card-form-label" for="name">Nom</label>
 			<input class="game-card-form-input" type="text" id="name" value="{{ card.name }}" readonly/>
+		</div>
+		<div>
 			<label class="game-card-form-label" for="description">Description</label>
 			<textarea class="game-card-form-textarea" rows="10" id="description" readonly>{{ card.description }}</textarea>
+		</div>
+		<div>
 			<label class="game-card-form-label" class="game-card-form-label" for="card-number">Nombre</label>
 			<input class="game-card-form-input" type="number" id="card-number" value="{{ card.number }}" name="number">
+		</div>
+		<div>
 			<label class="game-card-form-label" class="game-card-form-label" for="card-available">Disponible au départ</label>
 			<select class="game-card-form-select" name="available">
 				<option value="1">Oui</option>
 				<option value="0">Non</option>
 			</select>
-			<button class="game-card-form-submit" type="submit">Modifier</button>
+		</div>
+		<button class="Merge" type="submit">Modifier</button>
 
-		</form>
-	</div>
+	</form>
+</div>
 {% endblock %}

@@ -7,11 +7,9 @@
 	</div>
 	<ul class="game-list">
 		{% for game in games %}
-			<li class="game">
+			<li class="game list-games">
 				<h2 class="game-title">{{ game.name }}</h2>
-				<figure class="game-figure">
-					<img class="game-image" src="{{ game.image_url}}" alt="{{game.name}}">
-				</figure>
+				<p class="list-description">{{ game.description }}</p>
 				<a class="card-link-to-details" href="/games/show?id={{ game.id }}">
 					<span class="card-details-span">Détails</span>
 				</a>
