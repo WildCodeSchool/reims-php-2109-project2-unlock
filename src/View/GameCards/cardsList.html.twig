@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+<div class="add-card">
 <div class="agencement-page-cards-list">
 	<div class="title-list-card">
 		{{ parent() }}
@@ -20,5 +21,5 @@
 		<a class="new-game-cards" href="/games/cards/add?id={{ game_id }}">
 			NOUVELLES CARTES
 		</a>
-
+</div>
 {% endblock %}

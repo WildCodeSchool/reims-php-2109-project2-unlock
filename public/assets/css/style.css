@@ -53,7 +53,6 @@ button {
     font-family: var(--unlock-button-font);
 }
 
-
 /* home */
 
 .home {
@@ -804,6 +803,9 @@ button {
     font-size: 4rem;
     text-decoration: none;
     text-align:center;
+    font-size: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 @media screen and (min-width: 680px) {
