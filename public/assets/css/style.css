@@ -223,7 +223,7 @@ button {
 
 .game-list {
     list-style: none;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .card {
@@ -473,7 +473,7 @@ button {
 /* Game play start here */
 
 .card-hidden {
-    aspect-ratio: 2/3;
+    height: 65vh;
     background-color: var(--gray-web);
     border-radius: 2rem;
     padding: 1rem;
@@ -700,7 +700,7 @@ button {
 }
 
 .game-play-space {
-    height: 15vh;
+    height: 10vh;
 }
 
 .card-link-to-details-add {
@@ -844,6 +844,9 @@ padding-bottom: 1rem;
         text-align: center;
     }
     .card {
+        max-height: 450px;
+    }
+    .card-hidden {
         max-height: 450px;
     }
     .card:hover {
