@@ -6,7 +6,7 @@
 			<div class="game-show-desription-screen">
 				<div class="game-show-description">
 					<h2 class="game-show-title">{{ game.name }}</h2>
-					<p class="game-show-description-p">{{ game.description }}</p>
+					<p class="game-show-description-p" style="background-image: url('{{ game.image_url }}')">{{ game.description }} </p>
 					<p class="game-show-instruction-p">{{ game.instruction }}</p>
 					<div class="game-show-link">
 						<a href="/games/play?id={{ game.id }}" class="game-show-link-play">JOUER</a>
