@@ -33,14 +33,15 @@ body {
 }
 
 .unlock-title {
-    font-size: 1.5rem;
     font-family: var(--unlock-button-font);
     text-shadow: 2px 2px 2px #b29e84;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
 }
 
 .unlock-h2 {
     font-family: var(--text-font);
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-shadow: none;
 }
 
@@ -165,12 +166,23 @@ button {
 
 .behind-title {
     text-shadow: 2px 2px 2px #0f1517;
-    margin-left: 1rem;
-    color: var(--shadow-jet);
+    margin-left: 0.5rem;
+    color: var(--jet);
+    font-size: 1.7rem;
+    font-family: var(--unlock-button-font);
 }
 
 
 /**/
+
+.agencement-page-play {
+    margin-bottom: 1rem;
+}
+
+.title-page {
+    margin: auto;
+    text-align: center;
+}
 
 .list-title {
     margin-top: 1rem;
@@ -191,12 +203,6 @@ button {
     font-size: 1.5rem;
     letter-spacing: 1px;
     color: var(--isabelline);
-}
-
-.list-title-h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
 }
 
 .card-list,
@@ -762,12 +768,52 @@ button {
     transition: ease-out 0.2s;
 }
 
+.agencement-page-play div {
+    align-self: center;
+}
+
+.agencement-page-play div .list-title,
+.list-title-cards h1,
+.game-list-title {
+    font-size: 2.2rem;
+}
+
+.agencement-page-cards-list div {
+    align-self: center;
+}
+
+.game-list-title {
+    color: var(--isabelline);
+}
+
+.game {
+    height: 65vh;
+}
+
+
+/* Victory screen resized */
+
+#victory {
+    margin-top: 2rem;
+}
+
+.card_edit {
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    margin: auto;
+}
+
+.game-card-form {
+    margin-top: 1rem;
+}
+
 @media screen and (min-width: 680px) {
+    .behind-title {
+        font-size: 3rem;
+    }
     .addTitle {
         text-align: center;
-    }
-    .list-title {
-        grid-column: 1/6;
     }
     .card {
         max-height: 450px;
@@ -810,10 +856,12 @@ button {
     .game-show-desription-screen {
         text-align: center;
     }
-    .unlock-title,
-    .unlock-h2 {
-        font-size: 3rem;
+    .unlock-title {
         align-self: center;
+        font-size: 3rem;
+    }
+    .unlock-h2 {
+        font-size: 1.8rem;
     }
     .agencement-page-show {
         display: flex;
@@ -837,32 +885,8 @@ button {
     .agencement-page-play,
     .agencement-page-cards-list {
         display: flex;
-        justify-content: space-around;
-    }
-    .agencement-page-play .unlock-title,
-    .unlock-h2 {
-        font-size: 2rem;
-    }
-    .agencement-page-play .unlock-h2,
-    .agencement-page-cards-list .unlock-h2 {
-        margin-bottom: 3rem;
-    }
-    .agencement-page-play div {
-        align-self: center;
-    }
-    .agencement-page-play div .list-title,
-    .list-title-cards h1,
-    .game-list-title {
-        font-size: 2.2rem;
-    }
-    .agencement-page-cards-list div {
-        align-self: center;
-    }
-    .game-list-title {
-        color: var(--isabelline);
-    }
-    .game {
-        height: 65vh;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
     }
     /* Victory screen resized */
     #victory {
