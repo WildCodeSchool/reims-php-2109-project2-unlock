@@ -216,6 +216,10 @@ button {
     align-items: stretch;
 }
 
+.card-list+.card-list {
+    margin-top: 1rem;
+}
+
 .game-list {
     list-style: none;
     grid-template-rows: 1fr 1fr;
@@ -761,11 +765,11 @@ button {
     font-family: var(--unlock-button-font);
     color: white;
     font-size: 4rem;
+    transition: transform 0.2s ease-in;
 }
 
 .Merge:hover {
     transform: scale(0.95);
-    transition: ease-out 0.2s;
 }
 
 .agencement-page-play div {
