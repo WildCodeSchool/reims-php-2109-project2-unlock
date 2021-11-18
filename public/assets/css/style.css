@@ -36,6 +36,7 @@ body {
     font-family: var(--unlock-button-font);
     text-shadow: 2px 2px 2px #b29e84;
     font-size: 1.7rem;
+    margin-bottom: 1.5rem;
 }
 
 .unlock-h2 {
@@ -174,18 +175,18 @@ button {
 
 /**/
 
-.Title {
-    text-align: center;
+.agencement-page-play {
     margin-bottom: 1rem;
 }
 
-.list-title {
-    margin-top: 1rem;
+.title-page {
+    margin: auto;
     text-align: center;
-    grid-row: 1;
-    grid-column: 1/2;
-    font-size: 1.5rem;
+}
+
+.Title {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .game-title {
@@ -875,46 +876,55 @@ button {
     .agencement-page-play,
     .agencement-page-cards-list {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
     }
-    .agencement-page-play .unlock-title,
-    .unlock-h2 {}
-    .agencement-page-play .unlock-h2,
-    .agencement-page-cards-list .unlock-h2 {
-        margin-bottom: 3rem;
-    }
-    .agencement-page-play div {
-        align-self: center;
-    }
-    .agencement-page-play div .list-title,
-    .list-title-cards h1,
-    .game-list-title {
-        font-size: 2.2rem;
-    }
-    .agencement-page-cards-list div {
-        align-self: center;
-    }
-    .game-list-title {
-        color: var(--isabelline);
-    }
-    .game {
-        height: 65vh;
-    }
-    /* Victory screen resized */
-    #victory {
-        margin-top: 2rem;
-    }
-    .game_add {
-        width: 50%;
-        height: 65vh;
-    }
-    .card_edit {
-        width: 50%;
-        height: 70vh;
-        text-align: center;
-        margin: auto;
-    }
-    .game-card-form {
-        margin-top: 1rem;
-    }
+}
+
+.agencement-page-play div {
+    align-self: center;
+}
+
+.agencement-page-play div .list-title,
+.list-title-cards h1,
+.game-list-title {
+    font-size: 2.2rem;
+}
+
+.agencement-page-cards-list div {
+    align-self: center;
+}
+
+.game-list-title {
+    color: var(--isabelline);
+}
+
+.game {
+    height: 65vh;
+}
+
+
+/* Victory screen resized */
+
+#victory {
+    margin-top: 2rem;
+}
+
+.game_add {
+    width: 50%;
+    height: 65vh;
+}
+
+.card_edit {
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    margin: auto;
+}
+
+.game-card-form {
+    margin-top: 1rem;
+}
+
+
 }

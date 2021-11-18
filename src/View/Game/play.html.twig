@@ -9,42 +9,41 @@
 			<p>
 				Sélectionnez les cartes que vous souhaitez associer, puis cliquez sur "fusion" pour valider votre choix. Si c'est validé, une nouvelle carte sera débloquée, sinon essayez une autre association.
 			</p>
-		<article></div>
-		<label class="rules-play" for="rules-input">
-			<span>?</span>
-		</label>
+			<article></div>
+			<label class="rules-play" for="rules-input">
+				<span>?</span>
+			</label>
 
-		<!-- title unlock / home link -->
-		<div class="agencement-page-play">
-			{{ parent() }}
-			<div>
-				<h1 class="list-title">{{ game.name }}</h1>
-				<h2 class="list-title-h2">Fusionner vos cartes !</h2>
+			<!-- title unlock / home link -->
+			<div class="agencement-page-play">
+				{{ parent() }}
+				<div class="title-page">
+					<h1>{{ game.name }}</h1>
+					<h2>Fusionner vos cartes !</h2>
+				</div>
 			</div>
-		</div>
 
-		<!-- fusion information -->
-		{% if error is defined %}
-			<div class="game-play-merge-info">
-				<p class="game-play-merge-info-description">{{ error }}</p>
+			<!-- fusion information -->
+			{% if error is defined %}
+				<div class="game-play-merge-info">
+					<p class="game-play-merge-info-description">{{ error }}</p>
+				</div>
+			{% endif %}
+
+			<!-- let's play -->
+			<form class="card-list" method="POST" action="" id="cards-form">
+				{% for card in cards_discovered %}
+					{% include "GameCards/_cardGame.html.twig" with card %}
+				{% endfor %}
+			</form>
+
+			<button form="cards-form" type="submit" class="Merge">Fusion</button>
+
+			<div class="card-list">
+				<h1 class="list-title"></h1>
+				{% for card in cards_hidden %}
+					{% include "GameCards/_cardHidden.html.twig" with card %}
+				{% endfor %}
 			</div>
-		{% endif %}
-
-		<!-- let's play -->
-		<form class="card-list" method="POST" action="" id="cards-form">
-			{% for card in cards_discovered %}
-				{% include "GameCards/_cardGame.html.twig" with card %}
-			{% endfor %}
-		</form>
-
-		<button form="cards-form" type="submit" class="Merge">Fusion</button>
-
-		<div class="card-list">
-			<h1 class="list-title"></h1>
-			{% for card in cards_hidden %}
-				{% include "GameCards/_cardHidden.html.twig" with card %}
-			{% endfor %}
-	</div>
-	<div class="game-play-space">
-	</div>
-{% endblock %}
+			<div class="game-play-space"></div>
+		{% endblock %}
