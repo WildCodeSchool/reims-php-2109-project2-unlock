@@ -114,7 +114,8 @@ button {
 .slide-img {
     transform: rotate(-90deg);
     max-height: 100%;
-    max-width: 100%;
+    max-width: 80%;
+    border-radius: 10px;
 }
 
 .rotate {
@@ -841,8 +842,10 @@ button {
         max-height: 150px;
     }
     .rotate {
-        font-size: 1.6vw;
+        font-size: 1vw;
+        text-align: center;
     }
+
     .svg {
         transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
     }
