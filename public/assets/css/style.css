@@ -397,6 +397,8 @@ button {
 .game-show {
     display: flex;
     justify-content: center;
+    box-shadow: 10px -10px 20px #0f1517;
+
 }
 
 .game-show-title {
@@ -661,6 +663,7 @@ button {
 
 .victory {
     text-align: center;
+    box-shadow: 10px -10px 20px #0f1517;
 }
 
 
