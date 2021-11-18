@@ -1,13 +1,13 @@
 USE `unlock_db`;
 
 INSERT INTO `game` (`name`, `description`, `instruction`) VALUES 
-("Sherlock, découverte","Inité vous au jeu UNLOCK et les histoire de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
+("Sherlock, découverte","Initié vous au jeu UNLOCK et les histoires de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
 INSERT INTO `card` (`name`, `description`, `image_url`) VALUES
-("Salon", "Voici la pièce où vous êtes enfermés. Plusieurs élements sont visibles. Vous pouvez maintenant associer les cartes qui vous mêneront vers la sortie.", ""),
-("Cable", "Voici un cable téléphonique.", "/assets/images/cable.png"),
+("Salon", "Voici la pièce où vous êtes enfermés. Plusieurs éléments sont visibles. Vous pouvez maintenant associer les cartes qui vous mèneront vers la sortie.", ""),
+("Câble", "Voici un câble téléphonique.", "/assets/images/cable.png"),
 ("Clé", "C'est une clé, qui permet sûrement d'ouvrir une serrure...", "/assets/images/key.png"),
-("Armoire", "Une armoir fermée à clé.", "/assets/images/armoire.png"),
-("Watson", "Il vous connait bien, il peut peut-être vous aider.", "/assets/images/watson.png"),
+("Armoire", "Une armoire fermée à clé.", "/assets/images/armoire.png"),
+("Watson", "Il vous connaît bien, il peut peut-être vous aider.", "/assets/images/watson.png"),
 ("Porte", "La porte d'entrée est fermée à clé.", "/assets/images/door.png"),
 ("Carnet téléphonique", "Ce carnet contient le numéro de téléphone de Watson.", "/assets/images/carnet.png"),
 ("Téléphone", "Appel à un ami.", "/assets/images/phone.png"),

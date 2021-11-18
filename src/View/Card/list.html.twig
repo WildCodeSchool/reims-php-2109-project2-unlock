@@ -3,12 +3,12 @@
 {% block content %}
 	{{ parent() }}
 	<section class="card-list">
-		<h1 class="list-title">Card list</h1>
+		<h1 class="list-title">Liste des cartes</h1>
 		{% for card in cards %}
 			{% include "Card/_card.html.twig" with card %}
 		{% endfor %}
 		<a class="card add-cards-link" href="/cards/add">
-			<span class="add-cards-span">CREATE NEW CARD</span>
+			<span class="add-cards-span">Créer un nouveau jeu</span>
 		</a>
 	</section>
 {% endblock %}
