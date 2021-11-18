@@ -1,20 +1,20 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	{{ parent() }}
-    <section class="add_card">
-    
-        <form class="add-card-form" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    <section class="desktop-form">
+        {{ parent() }}
+        
+        <form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
             
-            <h1>New Card : </h1>
+            <h1>Nouvelle carte</h1>
             
-            <label for="name">Title : </label>
-            <input type="text" placeholder="Your card title" name="name" id="name"/>
-            <label for="description">Description : </label>
-            <textarea rows="10" placeholder="Your card description" name="description" id="description"></textarea>
-            <label for="imageUpload">Upload an profile image</label>    
+            <label for="name">Titre</label>
+            <input type="text" placeholder="Sherlock découverte" name="name" id="name"/>
+            <label for="description">Description</label>
+            <textarea rows="10" placeholder="Initié vous au jeu UNLOCK" name="description" id="description"></textarea>
+            <label for="imageUpload">Image</label>    
             <input type="file" name="image_url" id="imageUpload" />
-            <button type="submit">Create</button> 
+            <button type="submit" class="Merge">Créer</button> 
 
         </form>
     </section>

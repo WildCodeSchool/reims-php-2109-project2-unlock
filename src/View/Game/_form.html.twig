@@ -1,13 +1,15 @@
 {# TODO : manage errors display #}
 
-<form method="post" class="addFormList" accept-charset="UTF-8" enctype="multipart/form-data">
-	<div><label for="name">Titre du jeu</label>
-	<input type="text" id="name" name="name"></div>
-	<div><label for="description">Description du jeu</label>
-	<textarea id="description" name="description"></textarea></div>
-	<div><label for="instruction">Entrez vos instructions</label>
-	<input type="text" id="instruction" name="instruction"></div>
-	<div><label for="imageUpload">Ajouter une image au jeu</label>    
-	<input type="file" name="image_url" id="imageUpload"/></div>
+<form method="post" class="form game_add" accept-charset="UTF-8" enctype="multipart/form-data">
+	
+	<h1>Nouveau jeu</h1>
+	<label for="name">Titre du jeu</label>
+	<input type="text" id="name" name="name">
+	<label for="description">Description du jeu</label>
+	<textarea id="description" name="description"></textarea>
+	<label for="instruction">Entrez vos instructions</label>
+	<input type="text" id="instruction" name="instruction">
+	<label for="imageUpload">Ajouter une image au jeu</label>    
+	<input type="file" name="image_url" id="imageUpload"/>
 	<button type="submit" class="Merge">Valider</button>
 </form>
