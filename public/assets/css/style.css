@@ -184,6 +184,15 @@ button {
     text-align: center;
 }
 
+.list-title {
+    margin-top: 1rem;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .game-title {
     text-align: center;
 }
@@ -193,7 +202,7 @@ button {
     margin: 2rem;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    color: var(--border-color);
+    color: var(--isabelline);
 }
 
 .card-list,
@@ -284,8 +293,7 @@ button {
     font-size: 1.5rem;
 }
 
-.addTitle,
-.addFormList {
+.addTitle {
     text-align: center;
 }
 
@@ -298,66 +306,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.add_card h1 {
-    margin-top: 3%;
-    margin-bottom: 10%;
-}
-
-.add_card label {
-    margin-top: 1.2rem;
-}
-
-.add_card button {
-    margin-top: 1.8rem;
-    width: 35%;
-    height: 2rem;
-    font-size: 1.5rem;
-}
-
-.add_card input,
-.add_card select,
-.add_card textarea {
-    margin-top: 0.6rem;
-    width: 90%;
-}
-
-.add_card select {
-    text-align: center;
-}
-
-.addFormList {
-    list-style-type: none;
-    font-size: 1.5rem;
-}
-
-.addFormList {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.addFormList input,
-.addFormList label,
-.addFormList textarea {
-    width: 80%;
-    margin-top: .8rem;
-    margin-bottom: .8rem;
-}
-
-.addFormList textarea {
-    resize: none;
-    height: 5rem;
-}
-
-.addFormList button {
-    font-size: 2rem;
-    margin-top: .8rem;
-    position: unset;
-    margin-bottom: .8rem;
-    box-shadow: unset;
 }
 
 .checkbox:checked+.card {
@@ -389,6 +337,7 @@ button {
 .game-show {
     display: flex;
     justify-content: center;
+    box-shadow: 10px -10px 20px #0f1517;
 }
 
 .game-show-title {
@@ -556,24 +505,6 @@ button {
     height: 3rem;
 }
 
-.Merge {
-    position: fixed;
-    bottom: 1rem;
-    width: 90%;
-    left: 5%;
-    border-radius: 30px;
-    background: #253439;
-    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
-    font-family: var(--unlock-button-font);
-    color: white;
-    font-size: 4rem;
-}
-
-.Merge:hover {
-    transform: scale(0.95);
-    transition: ease-out 0.2s;
-}
-
 .rules-play {
     z-index: 6;
     position: fixed;
@@ -654,17 +585,63 @@ button {
 
 .victory {
     text-align: center;
+    box-shadow: 10px -10px 20px #0f1517;
 }
 
 
 /* ADD Game */
 
-.game_add {
-    background-color: var(--gray-web);
-    height: 65vh;
+.form {
     border: solid 0.2rem var(--border-color);
     border-radius: 2rem;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form * {
+    margin-top: .8rem;
+    text-align: center;
+    min-height: 1.5rem;
+    border-radius: 1rem;
+}
+
+.form textarea {
+    resize: none;
+    height: 5rem;
+}
+
+.form button {
+    font-size: 2rem;
+    margin-top: .8rem;
+    position: unset;
+    margin-bottom: .8rem;
+    box-shadow: unset;
+}
+
+.form div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form input:read-only,
+.form textarea:read-only {
+    color: grey;
+}
+
+.card-add {
+    background-color: var(--jet);
+}
+
+.game_add {
+    background-color: var(--gray-web);
 }
 
 .game-card {
@@ -718,48 +695,6 @@ button {
     height: 15vh;
 }
 
-.game-card-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    font-size: 1.2rem;
-    background-color: var(--jet);
-    border: .2rem solid var(--border-color);
-    border-radius: 2rem;
-}
-
-.game-card-form-input,
-.game-card-form-select,
-.game-card-form-textarea {
-    width: 100%;
-    margin: .5rem;
-}
-
-.game-card-form-input:read-only,
-.game-card-form-textarea:read-only {
-    color: grey;
-}
-
-.game-card-form-select {
-    color: black;
-    height: 2rem;
-}
-
-.game-card-form-input {
-    height: 1.8rem;
-}
-
-.game-card-form-textarea {
-    resize: none;
-}
-
-.game-card-form-submit {
-    height: 2rem;
-    width: 50%;
-    font-size: 1.2rem;
-}
-
 .card-link-to-details-add {
     text-decoration: none;
     color: black;
@@ -779,6 +714,98 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.list-games {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 65vh;
+}
+
+.list-description {
+    text-align: center;
+}
+
+.card-link-to-details {
+    align-self: stretch;
+}
+
+.new-game-cards {
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    border-radius: 30px;
+    background: #253439;
+    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.Merge {
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    border-radius: 30px;
+    background: #253439;
+    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+}
+
+.Merge:hover {
+    transform: scale(0.95);
+    transition: ease-out 0.2s;
+}
+
+.agencement-page-play div {
+    align-self: center;
+}
+
+.agencement-page-play div .list-title,
+.list-title-cards h1,
+.game-list-title {
+    font-size: 2.2rem;
+}
+
+.agencement-page-cards-list div {
+    align-self: center;
+}
+
+.game-list-title {
+    color: var(--isabelline);
+}
+
+.game {
+    height: 65vh;
+}
+
+
+/* Victory screen resized */
+
+#victory {
+    margin-top: 2rem;
+}
+
+.card_edit {
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    margin: auto;
+}
+
+.game-card-form {
+    margin-top: 1rem;
 }
 
 @media screen and (min-width: 680px) {
@@ -802,10 +829,6 @@ button {
     .card-list,
     .game-list {
         grid-template-columns: repeat(5, 1fr);
-    }
-    .add_card form {
-        max-width: 30%;
-        margin: auto;
     }
     .home {
         height: 90vh;
@@ -865,52 +888,23 @@ button {
         justify-content: flex-start;
         margin-bottom: 2rem;
     }
-}
-
-.agencement-page-play div {
-    align-self: center;
-}
-
-.agencement-page-play div .list-title,
-.list-title-cards h1,
-.game-list-title {
-    font-size: 2.2rem;
-}
-
-.agencement-page-cards-list div {
-    align-self: center;
-}
-
-.game-list-title {
-    color: var(--isabelline);
-}
-
-.game {
-    height: 65vh;
-}
-
-
-/* Victory screen resized */
-
-#victory {
-    margin-top: 2rem;
-}
-
-.game_add {
-    width: 50%;
-    height: 65vh;
-}
-
-.card_edit {
-    width: 50%;
-    height: 70vh;
-    text-align: center;
-    margin: auto;
-}
-
-.game-card-form {
-    margin-top: 1rem;
-}
-
-
+    /* Victory screen resized */
+    #victory {
+        margin-top: 2rem;
+    }
+    .card_edit {
+        width: 50%;
+        height: 70vh;
+        text-align: center;
+        margin: auto;
+    }
+    .desktop-form {
+        display: grid;
+        grid-template-columns: 7fr 1fr 5fr 1fr;
+        height: 90vh;
+        text-align: center;
+    }
+    .form {
+        grid-column: 3/4;
+    }
 }
