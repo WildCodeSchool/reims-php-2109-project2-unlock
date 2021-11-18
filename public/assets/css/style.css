@@ -739,6 +739,7 @@ button {
     align-self: stretch;
 }
 
+
 .new-game-cards {
     position: fixed;
     bottom: 1rem;
@@ -769,6 +770,25 @@ button {
     color: white;
     font-size: 4rem;
     transition: transform 0.2s ease-in;
+}
+
+.game-card-add{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    box-shadow: unset;
+}
+
+.merge-button{
+    position: unset;
+    border:1px solid white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: unset;
+padding-bottom: 1rem;
 }
 
 .Merge:hover {
