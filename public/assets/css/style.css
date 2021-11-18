@@ -791,6 +791,21 @@ button {
     justify-content: space-evenly;
 }
 
+.new-game-cards {
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    border-radius: 30px;
+    background: #253439;
+    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
+    font-family: var(--unlock-button-font);
+    color: white;
+    font-size: 4rem;
+    text-decoration: none;
+    text-align:center;
+}
+
 @media screen and (min-width: 680px) {
     .addTitle {
         text-align: center;

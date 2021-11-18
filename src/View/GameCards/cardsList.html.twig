@@ -16,9 +16,9 @@
 		{% for card in cards %}
 			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
-		<a class="card add-cards-link" href="/games/cards/add?id={{ game_id }}">
-			<span class="add-cards-span">NOUVELLES CARTES</span>
-		</a>
 	</div>
-</div>
+		<a class="new-game-cards" href="/games/cards/add?id={{ game_id }}">
+			NOUVELLES CARTES
+		</a>
+
 {% endblock %}
