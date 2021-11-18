@@ -6,7 +6,7 @@ gameShowTitles.forEach(gameShowTitle => {
 	const textGameShowTitle = gameShowTitle.textContent;
 	gameShowTitle.style.fontSize = "2rem";
 	if (textGameShowTitle.length > 20) {
-		gameShowTitle.style.fontSize = "1.5rem";
+		gameShowTitle.style.fontSize = "1.8rem";
 	}
 });
 
