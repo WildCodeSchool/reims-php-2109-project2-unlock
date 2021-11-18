@@ -1,25 +1,21 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-<div class="add-card">
-<div class="agencement-page-cards-list">
-	<div class="title-list-card">
+	<div class="agencement-page-play">
 		{{ parent() }}
-	</div>
-	<div>
-		<div class="list-title-cards">
-				<h1 class="list-title">{{ game.name }}</h1>
-				<h2 class="list-title-h2">Fusionner vos cartes !</h2>
+		<div class="title-page">
+			<h1>{{ game.name }}</h1>
+			<h2>Fusionner vos cartes</h2>
 		</div>
 	</div>
-</div>
-	<div class="card-list" method="POST" action="">
-		{% for card in cards %}
-			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
-		{% endfor %}
+	<div>
+		<div class="card-list" method="POST" action="">
+			{% for card in cards %}
+				{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
+			{% endfor %}
+			<a class="card add-cards-link" href="/games/cards/add?id={{ game_id }}">
+				<span class="add-cards-span">NOUVELLES CARTES</span>
+			</a>
+		</div>
 	</div>
-		<a class="new-game-cards" href="/games/cards/add?id={{ game_id }}">
-			NOUVELLES CARTES
-		</a>
-</div>
 {% endblock %}

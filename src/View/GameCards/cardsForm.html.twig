@@ -1,17 +1,18 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-	{{ parent() }}
-
+	<div class="agencement-page-play">
+		{{ parent() }}
+		<h1 class="title-page">Sélectionez les cartes à ajouter</h1>
+	</div>
 	<form class="card-list" method="POST" action="">
-		<h1 class="list-title">Sélectionnez les cartes à ajouter</h1>
 		{% for card in cards %}
 			{% include "/GameCards/_cardSelect.html.twig" with card %}
 		{% endfor %}
-		
+
 		<div class="add-buttons-cards">
 			<button class="card-link-to-details-add" type="submit">
-				<span class="card-details-span">Ajouter une carte</span> 
+				<span class="card-details-span">Ajouter une carte</span>
 			</button>
 			<a class="card-link-to-details-add" href="/cards/add">
 				<span class="card-details-span">Nouvelle carte</span>
