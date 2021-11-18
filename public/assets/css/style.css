@@ -703,6 +703,10 @@ button {
     height: 10vh;
 }
 
+.game-play-space-card-add {
+    height: 12vh;
+}
+
 .card-link-to-details-add {
     text-decoration: none;
     color: black;
