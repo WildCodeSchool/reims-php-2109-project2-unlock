@@ -597,7 +597,6 @@ button {
 }
 
 .form * {
-    width: 80%;
     margin-top: .8rem;
     text-align: center;
     min-height: 1.5rem;
@@ -615,6 +614,13 @@ button {
     position: unset;
     margin-bottom: .8rem;
     box-shadow: unset;
+}
+
+.form div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .card-add {
