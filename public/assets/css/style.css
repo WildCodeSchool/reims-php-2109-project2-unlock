@@ -623,6 +623,11 @@ button {
     align-items: stretch;
 }
 
+.form input:read-only,
+.form textarea:read-only {
+    color: grey;
+}
+
 .card-add {
     background-color: var(--jet);
 }
@@ -680,48 +685,6 @@ button {
 
 .game-play-space {
     height: 15vh;
-}
-
-.game-card-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    font-size: 1.2rem;
-    background-color: var(--jet);
-    border: .2rem solid var(--border-color);
-    border-radius: 2rem;
-}
-
-.game-card-form-input,
-.game-card-form-select,
-.game-card-form-textarea {
-    width: 100%;
-    margin: .5rem;
-}
-
-.game-card-form-input:read-only,
-.game-card-form-textarea:read-only {
-    color: grey;
-}
-
-.game-card-form-select {
-    color: black;
-    height: 2rem;
-}
-
-.game-card-form-input {
-    height: 1.8rem;
-}
-
-.game-card-form-textarea {
-    resize: none;
-}
-
-.game-card-form-submit {
-    height: 2rem;
-    width: 50%;
-    font-size: 1.2rem;
 }
 
 .card-link-to-details-add {
@@ -874,9 +837,6 @@ button {
         height: 70vh;
         text-align: center;
         margin: auto;
-    }
-    .game-card-form {
-        margin-top: 1rem;
     }
     .desktop-form {
         display: grid;
