@@ -36,14 +36,14 @@
 					{% include "GameCards/_cardGame.html.twig" with card %}
 				{% endfor %}
 			</form>
-
-			<button form="cards-form" type="submit" class="Merge">Fusion</button>
-
+			
 			<div class="card-list">
-				<h1 class="list-title"></h1>
 				{% for card in cards_hidden %}
 					{% include "GameCards/_cardHidden.html.twig" with card %}
 				{% endfor %}
 			</div>
+
+			<button form="cards-form" type="submit" class="Merge">Fusion</button>
+
 			<div class="game-play-space"></div>
 		{% endblock %}

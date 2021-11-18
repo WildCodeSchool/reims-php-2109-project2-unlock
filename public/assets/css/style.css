@@ -217,6 +217,10 @@ button {
     align-items: stretch;
 }
 
+.card-list+.card-list {
+    margin-top: 1rem;
+}
+
 .game-list {
     list-style: none;
     grid-template-rows: 1fr 1fr;
@@ -511,7 +515,8 @@ button {
     position: fixed;
     right: 1rem;
     top: 2rem;
-    background-color: var(--jet);
+    background-color: var(--border-color);
+    color: var(--gunmetal);
     width: 3rem;
     height: 3rem;
     font-size: 1.4rem;
@@ -540,6 +545,8 @@ button {
 .rules-play-input:checked+.rules-play-container {
     clip-path: circle(97% at calc(100% - 3.5rem) 2.5rem);
 }
+
+/* info bulle acceuil version */
 
 .rules {
     z-index: 6;
@@ -733,6 +740,7 @@ button {
     align-self: stretch;
 }
 
+
 .new-game-cards {
     position: fixed;
     bottom: 1rem;
@@ -762,11 +770,30 @@ button {
     font-family: var(--unlock-button-font);
     color: white;
     font-size: 4rem;
+    transition: transform 0.2s ease-in;
+}
+
+.game-card-add{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 1rem;
+    width: 90%;
+    left: 5%;
+    box-shadow: unset;
+}
+
+.merge-button{
+    position: unset;
+    border:1px solid white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: unset;
+padding-bottom: 1rem;
 }
 
 .Merge:hover {
     transform: scale(0.95);
-    transition: ease-out 0.2s;
 }
 
 .agencement-page-play div {
@@ -891,16 +918,24 @@ button {
         justify-content: flex-start;
         margin-bottom: 2rem;
     }
-    /* Victory screen resized */
-    #victory {
-        margin-top: 2rem;
+
+    .game_add{
+        width : 50%;
+        height : 65vh;
     }
+
     .card_edit {
         width: 50%;
         height: 70vh;
         text-align: center;
         margin: auto;
     }
+
+    /* Victory screen resized */
+    #victory {
+        margin-top: 2rem;
+    }
+
     .desktop-form {
         display: grid;
         grid-template-columns: 7fr 1fr 5fr 1fr;
@@ -909,5 +944,35 @@ button {
     }
     .form {
         grid-column: 3/4;
+    }
+
+
+    /* Victory screen resized */
+
+    .victory{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        width: 400px;
+        height: 80vh;
+        margin-top: 4rem;
+    }
+
+    #agencement-victory{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .game-show-link-play{
+        margin-right: 2rem;
+    }
+
+    .unchanging{
+        margin: 1.5rem;
+    }
+
+    .game-name{
+        font-size : xx-large;
+        color : var(--border-color);
     }
 }
