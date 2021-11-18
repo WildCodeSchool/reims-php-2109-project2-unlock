@@ -947,4 +947,8 @@ button {
         display: flex;
         justify-content: space-evenly;
     }
+
+    .game-show-link-play{
+        margin-right: 2rem;
+    }
 }
