@@ -1,25 +1,24 @@
-{% extends 'layout.html.twig' %} {% block content %}
-<div class="desktop-form">
-    {{ parent() }}
+{% extends 'layout.html.twig' %}
+{% block content %}
+	<div class="desktop-form">
+		{{ parent() }}
+        <form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
 
-    <form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+			<h1>Nouvelle carte</h1>
 
-        <h1>Nouvelle carte</h1>
-
-        <div>
-            <label for="name">Titre de la carte</label>
-            <input type="text" placeholder="Sherlock découverte" name="name" id="name" />
-        </div>
-        <div>
-            <label for="description">Description de la carte</label>
-            <textarea rows="10" placeholder="Initié vous au jeu UNLOCK" name="description" id="description"></textarea>
-        </div>
-        <div>
-            <label for="imageUpload">Image de la carte</label>
-            <input type="file" name="image_url" id="imageUpload" />
-        </div>
-        <button type="submit" class="Merge">Créer</button>
-
-    </form>
-</div>
+			<div>
+				<label for="name">Titre de la carte</label>
+				<input type="text" placeholder="Sherlock découverte" name="name" id="name"/>
+			</div>
+			<div>
+				<label for="description">Description de la carte</label>
+				<textarea rows="10" placeholder="Initié vous au jeu UNLOCK" name="description" id="description"></textarea>
+			</div>
+			<div>
+				<label for="imageUpload">Image de la carte</label>
+				<input type="file" name="image_url" id="imageUpload"/>
+			</div>
+			<button type="submit" class="Merge">Créer</button>
+        </form>
+    </div>
 {% endblock %}

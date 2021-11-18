@@ -342,7 +342,6 @@ button {
 .game-show {
     display: flex;
     justify-content: center;
-    box-shadow: 10px -10px 20px #0f1517;
 }
 
 .game-show-title {
@@ -362,6 +361,7 @@ button {
     border-color: var(--border-color);
     border-radius: 1rem;
     margin: 2rem 0 0 0;
+    box-shadow: 10px -10px 20px #0f1517;
 }
 
 .game-show-description-p {
