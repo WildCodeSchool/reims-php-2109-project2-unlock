@@ -951,4 +951,13 @@ button {
     .game-show-link-play{
         margin-right: 2rem;
     }
+
+    .unchanging{
+        margin: 1.5rem;
+    }
+
+    .game-name{
+        font-size : xx-large;
+        color : var(--border-color);
+    }
 }
