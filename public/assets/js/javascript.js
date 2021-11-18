@@ -50,4 +50,3 @@ gameTitles.forEach(gameTitle => {
 		gameTitle.style.fontSize = "1.5rem";
 	}
 });
-
