@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+<div class="add-card">
 <div class="agencement-page-cards-list">
 	<div class="title-list-card">
 		{{ parent() }}
@@ -16,9 +17,9 @@
 		{% for card in cards %}
 			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
-		<a class="card add-cards-link" href="/games/cards/add?id={{ game_id }}">
-			<span class="add-cards-span">NOUVELLES CARTES</span>
-		</a>
 	</div>
+		<a class="new-game-cards" href="/games/cards/add?id={{ game_id }}">
+			NOUVELLES CARTES
+		</a>
 </div>
 {% endblock %}
