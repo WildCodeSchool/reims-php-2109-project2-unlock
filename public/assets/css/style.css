@@ -112,8 +112,7 @@ button {
 
 .slide-img {
     transform: rotate(-90deg);
-    max-height: 100%;
-    max-width: 80%;
+    max-width: 60%;
     border-radius: 10px;
 }
 
@@ -400,6 +399,7 @@ button {
     word-spacing: 3px;
 }
 
+
 /*  CARD - DETAILS - SHOW */
 
 .card.card-detail {
@@ -458,6 +458,7 @@ button {
     width: 3rem;
     height: 3rem;
 }
+
 
 /* Game play start here */
 
@@ -926,7 +927,6 @@ button {
         display: flex;
         justify-content: space-evenly;
     }
-
     .unchanging {
         margin: 1.5rem;
     }
