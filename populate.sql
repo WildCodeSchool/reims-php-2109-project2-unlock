@@ -1,7 +1,7 @@
 USE `unlock_db`;
 
-INSERT INTO `game` (`name`, `description`, `instruction`) VALUES 
-("Sherlock, découverte","Initié vous au jeu UNLOCK et les histoires de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.");
+INSERT INTO `game` (`name`, `description`, `instruction`, `image_url`) VALUES 
+("Sherlock, découverte","Initié vous au jeu UNLOCK et les histoires de Sherlock","A l'aide des différentes combinaisons de cartes, recherche la clé qui te mènera vers la sortie.","assets/images/carnet.png");
 INSERT INTO `card` (`name`, `description`, `image_url`) VALUES
 ("Salon", "Voici la pièce où vous êtes enfermés. Plusieurs éléments sont visibles. Vous pouvez maintenant associer les cartes qui vous mèneront vers la sortie.", ""),
 ("Câble", "Voici un câble téléphonique.", "/assets/images/cable.png"),
