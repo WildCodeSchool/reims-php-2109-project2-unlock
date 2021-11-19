@@ -401,15 +401,6 @@ button {
     word-spacing: 3px;
 }
 
-.game-show-link-play {
-    margin-right: 0.5rem;
-}
-
-.game-show-link-cards {
-    margin-left: 0.5rem;
-}
-
-
 /*  CARD - DETAILS - SHOW */
 
 .card.card-detail {
@@ -468,7 +459,6 @@ button {
     width: 3rem;
     height: 3rem;
 }
-
 
 /* Game play start here */
 
@@ -957,9 +947,7 @@ button {
         display: flex;
         justify-content: space-evenly;
     }
-    .game-show-link-play {
-        margin-right: 2rem;
-    }
+
     .unchanging {
         margin: 1.5rem;
     }
