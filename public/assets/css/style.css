@@ -105,24 +105,25 @@ button {
     padding-right: .2rem;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex: 0 0 auto;
     border-radius: 15px;
-    word-wrap: break-word;
-    hyphens: auto;
 }
 
 .slide-img {
     transform: rotate(-90deg);
-    width: 80%;
+    max-height: 100%;
+    max-width: 80%;
+    border-radius: 10px;
 }
 
 .rotate {
     transform: rotate(-90deg);
     width: 30vw;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
+    margin: 0.5rem;
 }
 
 .first {
@@ -222,7 +223,7 @@ button {
 
 .game-list {
     list-style: none;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .card {
@@ -374,7 +375,7 @@ button {
 }
 
 .game-show-instruction-p {
-    text-align: justify;
+    text-align: center;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -472,7 +473,7 @@ button {
 /* Game play start here */
 
 .card-hidden {
-    aspect-ratio: 2/3;
+    height: 65vh;
     background-color: var(--gray-web);
     border-radius: 2rem;
     padding: 1rem;
@@ -700,7 +701,11 @@ button {
 }
 
 .game-play-space {
-    height: 15vh;
+    height: 10vh;
+}
+
+.game-play-space-card-add {
+    height: 12vh;
 }
 
 .card-link-to-details-add {
@@ -845,6 +850,9 @@ button {
     .card {
         max-height: 450px;
     }
+    .card-hidden {
+        max-height: 450px;
+    }
     .card:hover {
         transform: scale(1.05);
     }
@@ -868,8 +876,10 @@ button {
         max-height: 150px;
     }
     .rotate {
-        font-size: 1.8vw;
+        font-size: 1vw;
+        text-align: center;
     }
+
     .svg {
         transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
     }

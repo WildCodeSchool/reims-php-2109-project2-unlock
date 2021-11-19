@@ -2,8 +2,7 @@
 {% block content %}
 	<div class="desktop-form">
 		{{ parent() }}
-
-		<form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+        <form class="form card-add" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
 
 			<h1>Nouvelle carte</h1>
 
@@ -20,7 +19,6 @@
 				<input type="file" name="image_url" id="imageUpload"/>
 			</div>
 			<button type="submit" class="Merge">Créer</button>
-
-		</form>
-	</div>
+        </form>
+    </div>
 {% endblock %}
