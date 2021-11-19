@@ -5,19 +5,17 @@
 		{{ parent() }}
 		<h1 class="title-page">Sélectionez les cartes à ajouter</h1>
 	</div>
-	<form class="card-list" method="POST" action="">
+	<form id="form-card-list" class="card-list" method="POST" action="">
 		{% for card in cards %}
 			{% include "/GameCards/_cardSelect.html.twig" with card %}
 		{% endfor %}
-
-		<div class="game-card-add">
-			<button class="Merge merge-button" type="submit">
-				<span class="card-details-span">Ajouter une carte</span>
-			</button>
-			<div></div>
-			<a class="Merge merge-button" href="/cards/add">
-				<span class="card-details-span">Nouvelle carte</span>
-			</a>
-		</div>
 	</form>
+	<div class="game-card-add">
+		<button class="Merge" type="submit" form="form-card-list">
+			<span>Ajouter une carte</span>
+		</button>
+		<a class="Merge" href="/cards/add">
+			<span>Nouvelle carte</span>
+		</a>
+	</div>
 {% endblock %}

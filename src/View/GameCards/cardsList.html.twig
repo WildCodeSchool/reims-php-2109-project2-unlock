@@ -10,6 +10,7 @@
 					<h1>{{ game.name }}</h1>
 					<h2>Liste des cartes</h2>
 			</div>
+	
 		</div>
 	</div>
 	<div class="card-list" method="POST" action="">
@@ -17,8 +18,8 @@
 			{% include "/GameCards/_cardNumbers.html.twig" with {card, game_id} %}
 		{% endfor %}
 	</div>
-	<a class="new-game-cards" href="/games/cards/add?id={{ game_id }}">
-		NOUVELLES CARTES
-	</a>
 </div>
+<a class="Merge" href="/games/cards/add?id={{ game_id }}">
+NOUVELLES CARTES
+</a>
 {% endblock %}

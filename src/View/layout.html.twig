@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>
-        {% block title %}{% endblock %}
-    </title>
-    {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="icon" href="/assets/images/favicon.png"> {% endblock %}
-</head>
-<body> 
-        {% block content %}<div class="unlock-title">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        {% block stylesheet %}
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="icon" href="/assets/images/favicon.png"> {% endblock %}
+    </head>
+    <body> 
+        {% block content %}
+        <div class="unlock-title">
             <a href="/index.php" class="home-link">
                 <h1>UNLOCK !</h1>
                 <h2 class="unlock-h2">Sherlock Adventures</h2>
             </a>
-        </div>{% endblock %}
-    {% block javascript %}
-			<script type="text/javascript" src="/assets/js/javascript.js"></script>
-		{% endblock %}
-	</body>
+        </div>
+        {% endblock %}
+        {% block javascript %}
+            <script type="text/javascript" src="/assets/js/javascript.js"></script>
+        {% endblock %}
+    </body>
 </html>

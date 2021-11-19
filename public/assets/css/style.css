@@ -19,8 +19,7 @@
     padding: 0;
 }
 
-html,
-body {
+html {
     overflow-x: hidden;
 }
 
@@ -611,6 +610,7 @@ button {
     font-size: 1.2rem;
     margin-top: 1rem;
     width: 100%;
+    padding: .8rem;
 }
 
 .form * {
@@ -745,55 +745,35 @@ button {
     align-self: stretch;
 }
 
-.new-game-cards {
-    position: fixed;
-    bottom: 1rem;
-    width: 90%;
-    left: 5%;
-    border-radius: 30px;
-    background: #253439;
-    box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
-    font-family: var(--unlock-button-font);
-    color: white;
-    font-size: 4rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: 3rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-}
-
 .Merge {
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
     bottom: 1rem;
-    width: 90%;
-    left: 5%;
+    width: 100%;
     border-radius: 30px;
+    border: .2rem solid white;
     background: #253439;
     box-shadow: 10px -10px 20px #0f1517, -10px 10px 20px #3b535b;
     font-family: var(--unlock-button-font);
     color: white;
-    font-size: 4rem;
+    font-size: 2.5rem;
     transition: transform 0.2s ease-in;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
 }
 
 .game-card-add {
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    position: sticky;
     bottom: 1rem;
-    width: 90%;
-    left: 5%;
+    width: 100%;
     box-shadow: unset;
-}
-
-.merge-button {
-    position: unset;
-    border: 1px solid white;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: unset;
-    padding-bottom: 1rem;
 }
 
 .Merge:hover {
@@ -879,7 +859,6 @@ button {
         font-size: 1vw;
         text-align: center;
     }
-
     .svg {
         transform: scale(1.5) rotate(90deg) translate(-50%, -50%);
     }
@@ -966,5 +945,8 @@ button {
     .game-name {
         font-size: xx-large;
         color: var(--border-color);
+    }
+    .Merge {
+        font-size: 3.5rem;
     }
 }
